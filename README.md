@@ -205,8 +205,9 @@ and all six other reviewed hashes must match — see `RELEASE_NOTES.md` §5.
 
 The historical genetic/memetic raw branches (109,440 branches, ~336 MB, 2,003 files) plus four
 large historical analysis JSONs (~227 MB) exceed the core-repo size budget and are distributed as
-compressed tarballs (total ~127 MB compressed), staged in `../release_assets/` and uploaded to
-**GitHub Releases / Zenodo** (DOI placeholder below). The core repo already contains everything
+compressed tarballs (total ~127 MB compressed), published as **GitHub Release
+[v1.0.0](https://github.com/qiekenao12/jssp-fixed-point/releases/tag/v1.0.0)** (Zenodo DOI:
+placeholder, to be added). The core repo already contains everything
 needed for the primary + extension verification; the archives are only for *historical* replay.
 
 | Archive | Content | Extracted path |
@@ -220,7 +221,8 @@ needed for the primary + extension verification; the archives are only for *hist
 Download and extract (verify checksums first):
 
 ```bash
-# from the GitHub Release page (or Zenodo record), download the five tarballs + SHA256SUMS.txt
+# download the five tarballs + SHA256SUMS.txt from
+# https://github.com/qiekenao12/jssp-fixed-point/releases/tag/v1.0.0
 sha256sum -c SHA256SUMS.txt
 mkdir -p raw_extracted
 for f in historical_raw_*.tar.gz historical_analysis_large_jsons.tar.gz; do
@@ -291,7 +293,8 @@ Taillard mirror copies if you prefer to fetch them yourself.
   author  = {[AUTHOR INPUT REQUIRED]},
   journal = {Swarm and Evolutionary Computation},
   year    = {2026},
-  note    = {Submitted; repository: [GitHub URL placeholder], DOI: [Zenodo DOI placeholder]}
+  note    = {Submitted; repository: https://github.com/qiekenao12/jssp-fixed-point,
+             data release: v1.0.0, DOI: [Zenodo DOI placeholder]}
 }
 ```
 

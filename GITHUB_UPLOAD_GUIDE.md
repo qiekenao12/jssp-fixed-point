@@ -1,7 +1,14 @@
 # GITHUB UPLOAD GUIDE — exact commands and pre-push checklist
 
-Prepared 2026-11-20. Two deliverables were staged from the private workspace
-(`/data/Myfile/paper`, never modified):
+> **Status (2026-11-20): DONE.** Core repo pushed to
+> `git@github.com:qiekenao12/jssp-fixed-point.git` (commit `220bf87`, 2,058 files, verified via
+> the GitHub API). Release **v1.0.0** published with all 7 assets; every GitHub-reported SHA256
+> digest matches `release_assets/SHA256SUMS.txt`, and a test download re-verified byte integrity.
+> Remaining: Zenodo DOI (§4) and the author inputs in §6. The commands below are kept as the
+> reproducible record of what was executed.
+
+Prepared 2026-11-20. Two deliverables were staged from the private source workspace
+(never modified):
 
 - `github_release/` — the core Git repository (this directory).
 - `release_assets/` — five bulky historical tarballs for GitHub Releases / Zenodo
