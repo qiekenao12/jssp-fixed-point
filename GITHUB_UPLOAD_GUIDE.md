@@ -1,8 +1,9 @@
 # GITHUB UPLOAD GUIDE — exact commands and pre-push checklist
 
 > **Status (2026-11-20): DONE.** Core repo pushed to
-> `git@github.com:qiekenao12/jssp-fixed-point.git` (commit `220bf87`, 2,058 files, verified via
-> the GitHub API). Release **v1.0.0** published with all 7 assets; every GitHub-reported SHA256
+> `git@github.com:qiekenao12/jssp-fixed-point.git` (HEAD `1e48ba1`, 2,269 files incl. the
+> historical trigger cohort added same day; verified via the GitHub API). Release **v1.0.0**
+> published with all 7 assets; every GitHub-reported SHA256
 > digest matches `release_assets/SHA256SUMS.txt`, and a test download re-verified byte integrity.
 > Remaining: Zenodo DOI (§4) and the author inputs in §6. The commands below are kept as the
 > reproducible record of what was executed.
