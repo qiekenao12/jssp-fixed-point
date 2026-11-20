@@ -348,6 +348,10 @@ def check_figures(sb: Path, env: dict):
                     'fig7_action_window']
         missing = [f for f in expected if not (fig / f'{f}.png').exists()]
         ext_fig = sb / 'experiments/ext_standard_jssp/outputs/fig_ext_summary.png'
+        mc = fig / 'manuscript_current'
+        mc_expected = ['fig1_overview_architecture.jpeg', 'fig4_scorer_sensitivity.png',
+                       'fig5_choices_and_scope.jpeg', 'fig6_ext_summary.png', 'PROVENANCE.md']
+        missing += [f'manuscript_current/{f}' for f in mc_expected if not (mc / f).exists()]
         record(name, not missing and ext_fig.exists(), f'missing: {missing}')
     except Exception as e:
         record(name, False, str(e))

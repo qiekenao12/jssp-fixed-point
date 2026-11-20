@@ -73,7 +73,7 @@ would break the locked code and the lock hashes, so the layout below is intentio
 | Prospective 50-instance extension (locked) | `experiments/ext_standard_jssp/`: `code/` (10 scripts), `outputs/` (`manifest_lock.json`, `verification_report.json`, `verification_replay.json`, `verification_schedules_*.json`, `code_amendment_001–003.json`, 7 `table_ext_*.csv`, `ext_*.csv/json`, `SUMMARY.md`, `fig_ext_summary.png/pdf`), `models/` (dev-frozen ridge/RFF/GBDT bundles), `benchmarks/` (attributed snapshots + `provenance.json`), `raw/` (24,000 branches), `instances.json`, `step0/` |
 | Independent verifiers (extension) | `experiments/ext_standard_jssp/code/verify_ext_schedules.py` (stdlib-only), `verify_ext_replay.py` (numpy+stdlib only) |
 | Paper figures + editable tables | `projects/submission/fp_decision_study/{figures,tables}/`, `projects/analysis/fp_decision_study/figures/` |
-| Plotting scripts | `scripts/build_fp_overview_figure.py`, `scripts/build_fp_decision_figures_v2.py`, `scripts/build_fp_fig4_fig5.py`, `experiments/ext_standard_jssp/code/plot_ext_summary.py` (updated 2×2 Figure 8); wrapper `scripts/regenerate_figures.py` |
+| Plotting scripts | `scripts/build_fp_overview_figure.py`, `scripts/build_fp_decision_figures_v2.py`, `scripts/build_fp_fig4_fig5.py`, `experiments/ext_standard_jssp/code/plot_ext_summary.py` (1×3 panels; the manuscript's 2×2 master is archived in `figures/manuscript_current/`); wrapper `scripts/regenerate_figures.py` |
 | Historical protocols / benchmark texts | `projects/experiments/fp_v2_*`, `fp_submission_*_protocol.json`, `fp_empirical_repeatability_protocol.json`, `jobshop1.txt`, `projects/experiments/benchmark_jobshop.txt`, `fp_v2_jobshop.txt` |
 | Historical collection / independent audits | `scripts/run_fp_empirical_confirmation.py`, `scripts/fp_empirical_repeatability.py`, `scripts/audit_fp_action_data.py`, `scripts/audit_fp_empirical_confirmation.py`, `scripts/analyze_fp_empirical_repeatability.py`, `scripts/fp_submission_frozen_models.py` |
 | Historical closed-loop trigger comparison (800 runs, 30,000 queries/run, 10 benchmarks × 20 paired seeds × 4 policy arms + probe) | `results/trigger_controlled_20runs/` (run JSONs, `events.csv`, `summary.json/csv`, `per_instance.csv`, `protocol.json`, `report.md`, figures) + `run_trigger_comparison.py`, `analyze_trigger_comparison.py`; re-audited and replayed byte-identically by `verify_all.py` (provenance note: `RELEASE_NOTES.md` §8) |
@@ -146,7 +146,13 @@ names the exact artifact.
 | Figure 5 | `fig5_choices_and_scope` | `ART/a2b_tuned_choice_counts.json`, `ART/a1_cost_normalized_gain.json`, `ART/a4_per_scale_statistics.json` | `scripts/build_fp_fig4_fig5.py` |
 | Figure 6 | `fig6_independent_repeat_winners` | `results/fp_decision_study/tabu/final/` raw + frozen historical constants (traceable to `AN/history_final_repeat_effects.csv`) | `scripts/build_fp_decision_figures_v2.py` (emits `fig5_independent_repeat_winners`, renamed) |
 | Figure 7 | `fig7_action_window` | `AN/figure_source_data.json` + frozen historical constants (traceable to `AN/history_final_matched_window_effects.csv`) | `scripts/build_fp_decision_figures_v2.py` (emits `fig6_action_window`, renamed) |
-| Figure 8 | `EXT/fig_ext_summary.png/pdf` (2×2) | `EXT/table_ext_raw_gain_scorers.csv`, `table_ext_cost_normalized_scorers.csv`, `table_ext_split_repeat_diagnostics.csv`, `table_ext_transition_errors.csv` | `experiments/ext_standard_jssp/code/plot_ext_summary.py` (updated 2×2 layout, amendment 003) |
+| Figure 8 | `EXT/fig_ext_summary.png/pdf` (1×3 panels) | `EXT/table_ext_raw_gain_scorers.csv`, `table_ext_cost_normalized_scorers.csv`, `table_ext_split_repeat_diagnostics.csv`, `table_ext_transition_errors.csv` | `experiments/ext_standard_jssp/code/plot_ext_summary.py` (amendment 003 = cosmetic legend fix) |
+
+The renderings embedded in the current manuscript (overview, scorer sensitivity, choices/scope,
+and the 2×2 extension summary) are archived byte-identically in
+`projects/submission/fp_decision_study/figures/manuscript_current/` — see its `PROVENANCE.md` for
+SHA256s and the DOCX media-part correspondence. The shipped builders reproduce the earlier
+vector-based renderings from the frozen tables; all panel data remains shipped.
 
 Figures 1–7 live in `projects/submission/fp_decision_study/figures/` (Figure 1/4/5 also in
 `AN/figures/`). Regenerate **all eight** with final naming:
