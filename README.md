@@ -99,7 +99,8 @@ pins are for dev-only refitting, extension analysis, GBDT model loading and plot
 ## 4. Paper-to-artifact mapping
 
 Every table/figure below is regenerated from frozen records only (no search, no refits on test
-data). Paths are relative to the repository root. `AN = projects/analysis/fp_decision_study`,
+data). Numbering is aligned with the **finalized manuscript (DOCX, 2026-11-20): Tables 1–15,
+Figures 1–8**. Paths are relative to the repository root. `AN = projects/analysis/fp_decision_study`,
 `ART = projects/analysis/revision_response_artifacts`,
 `EXT = experiments/ext_standard_jssp/outputs`,
 `TAB = projects/submission/fp_decision_study/tables`.
@@ -115,14 +116,14 @@ data). Paths are relative to the repository root. `AN = projects/analysis/fp_dec
 | Table 5 | Prespecified selected-gain contrasts (primary family, Holm) | `AN/primary_results.json`, `TAB/primary_contrasts.csv` | `scripts/analyze_fp_decision_study.py`; independent: `scripts/verify_fp_decision_statistics.py` |
 | Table 6 | Complete critical-block arm results (gain + event scorers) | `AN/tabu_final_analysis.json`, `AN/tabu_decisions.csv`, `AN/tabu_instance_metrics.csv` | `scripts/analyze_fp_decision_study.py` |
 | Table 7 | Post-collection scorer sensitivity (LOOCV-tuned ridge, RFF) | `ART/a2_tuned_ridge_nonlinear.json`, `ART/a2b_tuned_choice_counts.json` | `scripts/revision_response_analysis.py` |
-| Table 8 | Per-size state statistics, 12,000 final CB branches | `ART/a4_per_scale_statistics.json` | `scripts/revision_response_analysis.py` |
-| Table 9 | Actual critical-block action intensity (decodes, accepted moves) | `AN/tabu_instance_metrics.csv`, `AN/tabu_final_data_audit.json` (`cost_totals`) | `scripts/audit_fp_decision_collection.py`; `scripts/analyze_fp_decision_study.py` |
-| Table 10 | Fixed-action returns: raw vs per decoder request | `ART/a1_cost_normalized_gain.json` | `scripts/revision_response_analysis.py` |
-| Table 11 | Scorers refitted on per-request target (dev-only) | `ART/a1b_cost_normalised_refit.json` | `scripts/revision_response_analysis.py` |
-| Table 12 | Extension: transition prediction errors (conditioned/pooled/identity) | `EXT/table_ext_transition_errors.csv`, `EXT/ext_transition_errors.csv` | `experiments/ext_standard_jssp/code/analyze_ext.py` |
-| Table 13 | Extension: raw-reward gain scorers (4 scorers × 6 arms) | `EXT/table_ext_raw_gain_scorers.csv` | `experiments/ext_standard_jssp/code/analyze_ext.py` |
-| Table 14 | Extension: cost-normalized scorers | `EXT/table_ext_cost_normalized_scorers.csv` | `experiments/ext_standard_jssp/code/analyze_ext.py` |
-| Table 15 | Extension: split-repeat sample-winner diagnostics (both targets/directions) | `EXT/table_ext_split_repeat_diagnostics.csv` | `experiments/ext_standard_jssp/code/analyze_ext.py`; independent: `verify_ext_replay.py` |
+| Table 8 | Supporting historical closed-loop comparison: four online VND trigger policies, 10 OR-Library/Taillard benchmarks × 20 paired seeds (800 runs, 30,000 queries/run) | `results/trigger_controlled_20runs/summary.json` (+ `summary.csv`, `per_instance.csv`, `events.csv`, `protocol.json`, run JSONs) | `run_trigger_comparison.py` (collection); `analyze_trigger_comparison.py` (audit + summary); replayed byte-identically by `scripts/verify_all.py` |
+| Table 9 | Two-stage attribution funnel summary (genetic/memetic + independent critical-block stacks) | Compiled from `AN/history_final_dynamics_effects.csv`, `AN/history_final_selected_gain_effects.csv` (genetic hurdles), `AN/primary_results.json` + `AN/tabu_final_analysis.json` (CB hurdles), `EXT/ext_analysis.json` (extension) | narrative summary table; every cell traceable to the shipped analyses above |
+| Table 10 | Per-size state statistics, 12,000 final CB branches | `ART/a4_per_scale_statistics.json` | `scripts/revision_response_analysis.py` |
+| Table 11 | Prospective extension main results: 30 held-out standard benchmarks (1,200 test states, 18,000 branches) | `EXT/table_ext_raw_gain_scorers.csv`, `EXT/table_ext_cost_normalized_scorers.csv`, `EXT/table_ext_transition_errors.csv`, `EXT/table_ext_paired_contrasts.csv` (+ `EXT/ext_analysis.json`) | `experiments/ext_standard_jssp/code/analyze_ext.py`; independent: `verify_ext_replay.py` |
+| Table 12 | Extension split-repeat sample-winner diagnostics (both targets/directions) | `EXT/table_ext_split_repeat_diagnostics.csv` | `experiments/ext_standard_jssp/code/analyze_ext.py`; independent: `verify_ext_replay.py` |
+| Table 13 | Actual critical-block action intensity (decodes, accepted moves) | `AN/tabu_instance_metrics.csv`, `AN/tabu_final_data_audit.json` (`cost_totals`) | `scripts/audit_fp_decision_collection.py`; `scripts/analyze_fp_decision_study.py` |
+| Table 14 | Fixed-action returns: raw vs per decoder request | `ART/a1_cost_normalized_gain.json` | `scripts/revision_response_analysis.py` |
+| Table 15 | Scorers refitted on per-request target (dev-only) | `ART/a1b_cost_normalised_refit.json` | `scripts/revision_response_analysis.py` |
 
 Extension supporting tables (supplementary): `EXT/table_ext_per_size_descriptives.csv` (per-size
 stratification), `EXT/table_ext_paired_contrasts.csv` (all 72 paired contrasts incl. arm-vs-best-fixed),
@@ -130,10 +131,11 @@ stratification), `EXT/table_ext_paired_contrasts.csv` (all 72 paired contrasts i
 `EXT/ext_predictions.csv`, `EXT/ext_state_decisions.csv`, `EXT/ext_instance_metrics.csv`.
 Historical-cohort supporting tables: `AN/history_*.csv` and `TAB/history_*.csv` (editable copies).
 
-*Numbering note:* the workspace Markdown/LaTeX snapshot contains Tables 1–11 / Figures 1–7;
-the extension items are numbered 12–15 / Figure 8 following the submitted version's order
-(cf. `EXT/SUMMARY.md` §11). If your copy numbers them differently, match by content — each row
-names the exact artifact.
+*Numbering note:* numbers follow the **finalized manuscript (DOCX, 2026-11-20)**: Tables 1–15 and
+Figures 1–8. The workspace Markdown/LaTeX snapshot (Nov 19) uses an older order; if your copy
+numbers items differently, match by content — each row names the exact artifact. Figure file
+names `fig6_independent_repeat_winners` and `fig7_action_window` retain legacy builder indices
+and correspond to manuscript **Figures 7 and 8** respectively (byte-identical to the DOCX embeds).
 
 ### Figures
 
@@ -143,10 +145,10 @@ names the exact artifact.
 | Figure 2 | `fig2_transition_errors` | `AN/tabu_transition_errors.csv`, `AN/original_final_analysis.json` | `scripts/build_fp_decision_figures_v2.py` |
 | Figure 3 | `fig3_primary_decision_contrasts` | `AN/primary_results.json` | `scripts/build_fp_decision_figures_v2.py` |
 | Figure 4 | `fig4_scorer_sensitivity` | `ART/a2_tuned_ridge_nonlinear.json`, `ART/a1b_cost_normalised_refit.json` | `scripts/build_fp_fig4_fig5.py` |
-| Figure 5 | `fig5_choices_and_scope` | `ART/a2b_tuned_choice_counts.json`, `ART/a1_cost_normalized_gain.json`, `ART/a4_per_scale_statistics.json` | `scripts/build_fp_fig4_fig5.py` |
-| Figure 6 | `fig6_independent_repeat_winners` | `results/fp_decision_study/tabu/final/` raw + frozen historical constants (traceable to `AN/history_final_repeat_effects.csv`) | `scripts/build_fp_decision_figures_v2.py` (emits `fig5_independent_repeat_winners`, renamed) |
-| Figure 7 | `fig7_action_window` | `AN/figure_source_data.json` + frozen historical constants (traceable to `AN/history_final_matched_window_effects.csv`) | `scripts/build_fp_decision_figures_v2.py` (emits `fig6_action_window`, renamed) |
-| Figure 8 | `EXT/fig_ext_summary.png/pdf` (1×3 panels) | `EXT/table_ext_raw_gain_scorers.csv`, `table_ext_cost_normalized_scorers.csv`, `table_ext_split_repeat_diagnostics.csv`, `table_ext_transition_errors.csv` | `experiments/ext_standard_jssp/code/plot_ext_summary.py` (amendment 003 = cosmetic legend fix) |
+| Figure 5 | `fig5_choices_and_scope` — CB gain-policy action distributions + descriptive D−B by size | `ART/a2b_tuned_choice_counts.json`, `ART/a1_cost_normalized_gain.json`, `ART/a4_per_scale_statistics.json` | `scripts/build_fp_fig4_fig5.py` |
+| Figure 6 | `EXT/fig_ext_summary.png/pdf` (1×3 panels); manuscript master (2×2): `figures/manuscript_current/fig6_ext_summary.png` | `EXT/table_ext_raw_gain_scorers.csv`, `table_ext_cost_normalized_scorers.csv`, `table_ext_split_repeat_diagnostics.csv`, `table_ext_transition_errors.csv` | `experiments/ext_standard_jssp/code/plot_ext_summary.py` (amendment 003 = cosmetic legend fix) |
+| Figure 7 | `fig6_independent_repeat_winners` (legacy file index; = DOCX `image7`) | `results/fp_decision_study/tabu/final/` raw + frozen historical constants (traceable to `AN/history_final_repeat_effects.csv`) | `scripts/build_fp_decision_figures_v2.py` (emits `fig5_independent_repeat_winners`, renamed) |
+| Figure 8 | `fig7_action_window` (legacy file index; = DOCX `image8`) | `AN/figure_source_data.json` + frozen historical constants (traceable to `AN/history_final_matched_window_effects.csv`) | `scripts/build_fp_decision_figures_v2.py` (emits `fig6_action_window`, renamed) |
 
 The renderings embedded in the current manuscript (overview, scorer sensitivity, choices/scope,
 and the 2×2 extension summary) are archived byte-identically in
@@ -154,8 +156,9 @@ and the 2×2 extension summary) are archived byte-identically in
 SHA256s and the DOCX media-part correspondence. The shipped builders reproduce the earlier
 vector-based renderings from the frozen tables; all panel data remains shipped.
 
-Figures 1–7 live in `projects/submission/fp_decision_study/figures/` (Figure 1/4/5 also in
-`AN/figures/`). Regenerate **all eight** with final naming:
+Figure files `fig1`–`fig7` live in `projects/submission/fp_decision_study/figures/` (`fig1/4/5`
+also in `AN/figures/`); the extension figure (manuscript Figure 6) lives in `EXT/`. Regenerate
+**all eight** with final naming:
 
 ```bash
 python scripts/regenerate_figures.py
