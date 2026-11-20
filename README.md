@@ -76,6 +76,7 @@ would break the locked code and the lock hashes, so the layout below is intentio
 | Plotting scripts | `scripts/build_fp_overview_figure.py`, `scripts/build_fp_decision_figures_v2.py`, `scripts/build_fp_fig4_fig5.py`, `experiments/ext_standard_jssp/code/plot_ext_summary.py` (updated 2×2 Figure 8); wrapper `scripts/regenerate_figures.py` |
 | Historical protocols / benchmark texts | `projects/experiments/fp_v2_*`, `fp_submission_*_protocol.json`, `fp_empirical_repeatability_protocol.json`, `jobshop1.txt`, `projects/experiments/benchmark_jobshop.txt`, `fp_v2_jobshop.txt` |
 | Historical collection / independent audits | `scripts/run_fp_empirical_confirmation.py`, `scripts/fp_empirical_repeatability.py`, `scripts/audit_fp_action_data.py`, `scripts/audit_fp_empirical_confirmation.py`, `scripts/analyze_fp_empirical_repeatability.py`, `scripts/fp_submission_frozen_models.py` |
+| Historical closed-loop trigger comparison (800 runs, 30,000 queries/run, 10 benchmarks × 20 paired seeds × 4 policy arms + probe) | `results/trigger_controlled_20runs/` (run JSONs, `events.csv`, `summary.json/csv`, `per_instance.csv`, `protocol.json`, `report.md`, figures) + `run_trigger_comparison.py`, `analyze_trigger_comparison.py`; re-audited and replayed byte-identically by `verify_all.py` (provenance note: `RELEASE_NOTES.md` §8) |
 | Frozen historical source snapshots (replay) | `projects/experiments/fp_v2_full_replay_sources.zip`, `fp_empirical_repeatability_collection_sources.zip`, `fp_submission_final_replay_sources.zip` (+ manifests). The fp_v2 cohorts lock pre-2026-10-26 versions of three solver modules; `verify_all.py --historical` extracts the canonical snapshot over its sandbox before auditing them |
 | Unit tests | `tests/test_fp_decision_study.py`, `tests/test_independent_tabu_jssp.py` |
 | One-command verification | `scripts/verify_all.py` |
@@ -176,7 +177,11 @@ This runs, **from inside this repository**, using only numpy + stdlib:
    synchronous time relaxation; 21,933 distinct schedules) and `verify_ext_replay.py`
    (72 paired contrasts, both targets, split-repeat diagnostics, per-size tables; max error ≤ 2.9e-16).
 4. **Unit tests** — 15 solver-correctness / branch-isolation tests.
-5. **Repository hygiene** — max file < 50 MB, total < 300 MB, file count, forbidden-pattern scan.
+5. **Historical trigger cohort** — `analyze_trigger_comparison.py` re-audits all 800 paired runs
+   (initialization fingerprints, 30,000-query budgets, VND sub-budgets, event gain accounting) and
+   recomputes every statistic from the saved run JSONs; regenerated `summary.json`, CSVs and
+   `report.md` must match the shipped receipts byte-for-byte.
+6. **Repository hygiene** — max file < 50 MB, total < 300 MB, file count, forbidden-pattern scan.
 
 Because the shipped receipts are **write-once** (each verifier refuses to overwrite an existing
 audit), `verify_all.py` executes everything in a fresh temporary sandbox copy and compares each
@@ -184,7 +189,7 @@ regenerated report field-by-field against the shipped frozen receipt. Nothing in
 modified. Expected final line:
 
 ```
-TOTAL: 24 PASS / 0 FAIL        # 25 with --figures; 28 with --historical; 29 with both
+TOTAL: 25 PASS / 0 FAIL        # 26 with --figures; 29 with --historical; 30 with both
 ```
 
 Useful variants:

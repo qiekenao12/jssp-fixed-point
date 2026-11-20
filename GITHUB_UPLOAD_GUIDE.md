@@ -19,14 +19,14 @@ Prepared 2026-11-20. Two deliverables were staged from the private source worksp
 | Gate | Requirement | Measured | Status |
 |---|---|---|---|
 | Max single file | < 50 MB (GitHub hard block: 100 MB) | 10.37 MB (`projects/analysis/fp_decision_study/original_final_analysis.json`) | PASS |
-| Core repo size | < 300 MB | ~127 MB | PASS |
-| Core file count | no tens of thousands of tiny files | ~2,058 files | PASS |
+| Core repo size | < 300 MB | ~173 MB | PASS |
+| Core file count | no tens of thousands of tiny files | ~2,269 files | PASS |
 | Virtualenvs / caches | none shipped (`venv_ext/`, `venv/`, `__pycache__/`, `.pytest_cache/`, `.ipynb_checkpoints/`, `.DS_Store`) | none | PASS |
 | Manuscript drafts | no Word/PDF drafts, no unrelated-project files | none (only the hash-referenced study Markdown source, see `RELEASE_NOTES.md` §4–5) | PASS |
 | Secrets / personal paths | no `.env`, API keys, `/Users/`, `/home/`, `C:\Users`, usernames | none outside the documented hash-lock allowlist (`RELEASE_NOTES.md` §4) | PASS |
 | Lock integrity | all SHA256 locks re-verified in the staged tree | 32 primary + 10 new / 12 reused ext code + 84 benchmark hashes; `design_hash`/`instances_hash`/`lock_hash` recomputed | PASS |
-| Clean-room verification | `python scripts/verify_all.py --figures` from inside `github_release/` | 25 PASS / 0 FAIL (Python 3.13.13, numpy 2.4.6) | PASS |
-| Historical replay | `python scripts/verify_all.py --historical` after extracting `release_assets/` | 29 PASS / 0 FAIL with `--figures --historical` (all four historical cohort audits included; 168.5 s total) | PASS |
+| Clean-room verification | `python scripts/verify_all.py --figures` from inside `github_release/` | 26 PASS / 0 FAIL (Python 3.13.13, numpy 2.4.6; incl. 800-run trigger replay) | PASS |
+| Historical replay | `python scripts/verify_all.py --historical` after extracting `release_assets/` | 30 PASS / 0 FAIL with `--figures --historical` (all four historical cohort audits included) | PASS |
 | Raw-data split | historical raw > 200 MB / > 2,000 files ⇒ Release assets | 563 MB / 2,007 files → 5 tarballs (~127 MB compressed) + `SHA256SUMS.txt` | DONE |
 
 Re-run any time:
@@ -46,7 +46,7 @@ git init -b main
 git add -A
 # sanity: confirm nothing ignored slipped in and no large file is staged
 git status --short | head
-git ls-files | wc -l                      # expect ~2,058
+git ls-files | wc -l                      # expect ~2,269
 git ls-files -z | xargs -0 -I{} sh -c 'test $(stat -c%s "{}") -lt 52428800 || echo "TOO BIG: {}"'
 
 git commit -m "Reproducibility package: FP decision sufficiency, two-solver JSSP evidence + prospective 50-instance extension
@@ -108,14 +108,14 @@ git clone git@github.com:<YOUR_ACCOUNT>/<REPO_NAME>.git fp_check
 cd fp_check
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-python scripts/verify_all.py --figures          # expect 25 PASS / 0 FAIL
+python scripts/verify_all.py --figures          # expect 26 PASS / 0 FAIL
 
 # historical replay (optional):
 # download the five tarballs + SHA256SUMS.txt from the Release into ./release_assets/
 sha256sum -c release_assets/SHA256SUMS.txt
 mkdir -p raw_extracted
 for f in release_assets/historical_*.tar.gz; do tar -xzf "$f" -C raw_extracted/; done
-python scripts/verify_all.py --historical       # expect 28 PASS / 0 FAIL
+python scripts/verify_all.py --historical       # expect 29 PASS / 0 FAIL
 ```
 
 Historical-audit notes (also in `RELEASE_NOTES.md` §2): the fp_v2 cohorts lock

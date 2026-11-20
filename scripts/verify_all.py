@@ -309,6 +309,32 @@ def check_tests(sb: Path, env: dict):
     RESULTS[-1]['wall_seconds'] = time.perf_counter() - t0
 
 
+# ---------------------------------------------------------------- step 5: historical trigger cohort
+def check_trigger(sb: Path, env: dict):
+    """Re-audit and re-summarize the 800-run closed-loop trigger cohort (Table 8 data).
+
+    analyze_trigger_comparison.py re-checks every paired group (initialization fingerprints,
+    30,000-query budgets, VND sub-budgets, event gain accounting) and recomputes all statistics
+    from the saved run JSONs with fixed bootstrap/sign-flip seeds. It writes into the sandbox
+    copy only; regenerated outputs are compared against the shipped frozen receipts.
+    """
+    name = 'historical trigger cohort: 800-run re-audit + summary replay (30k queries/run)'
+    t0 = time.perf_counter()
+    rel = 'results/trigger_controlled_20runs'
+    try:
+        run_py(sb, env, 'analyze_trigger_comparison.py', rel, timeout=1800)
+        compare_report(name, sb / rel / 'summary.json', ROOT / rel / 'summary.json')
+        for csv_name in ('summary.csv', 'per_instance.csv', 'events.csv', 'report.md'):
+            fresh = (sb / rel / csv_name).read_bytes()
+            frozen = (ROOT / rel / csv_name).read_bytes()
+            if fresh != frozen:
+                RESULTS[-1]['status'] = 'FAIL'
+                RESULTS[-1]['detail'] += f'; {csv_name} byte mismatch'
+    except Exception as e:
+        record(name, False, str(e))
+    RESULTS[-1]['wall_seconds'] = time.perf_counter() - t0
+
+
 # ---------------------------------------------------------------- optional: figures
 def check_figures(sb: Path, env: dict):
     name = 'figure regeneration (all 8 paper figures, sandbox only)'
@@ -518,6 +544,7 @@ def main():
             check_primary(sb, env, tmp)
             check_ext(sb, env, tmp, args.workers)
             check_tests(sb, env)
+            check_trigger(sb, env)
             if args.figures:
                 check_figures(sb, env)
             if args.historical:

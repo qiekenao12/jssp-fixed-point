@@ -1,0 +1,2714 @@
+{
+  "metadata": {
+    "protocol": {
+      "seed": 20260916,
+      "population": 80,
+      "queries": 30000,
+      "vnd_queries": 8000,
+      "call_queries": 500,
+      "vnd_iterations": 100,
+      "ls_interval": 10,
+      "ls_queries": 150,
+      "ls_iterations": 20,
+      "check_interval": 5,
+      "warmup": 85,
+      "cooldown": 10,
+      "fixed_period": 20,
+      "stagnant_generations": 15,
+      "drift_threshold": 0.012,
+      "fp_threshold": 0.012
+    },
+    "instances": [
+      "ft06",
+      "la04",
+      "ft10",
+      "orb01",
+      "la21",
+      "la26",
+      "la40",
+      "yn1",
+      "ta31",
+      "ta51"
+    ],
+    "runs": 20,
+    "source_hashes": {
+      "run_trigger_comparison.py": "a17138a3155dc2604d1693f7045812dd6b60c07fe7a358df56284af50df2e280",
+      "src/tools/executor.py": "f9371f7c52a50e665dd0567117e27a8464c420fbd39257d3c2a884a668d4b484",
+      "src/tools/fixed_point_detector.py": "5aecc694057e3bbf0cb415a91bd6f21f31ba2a6cd9f427de385543be7c6c1629",
+      "src/tools/jssp_core.py": "2fecf66b2ee089f0e56e25cc6029266cc4bb9228a32794fb9de9beae45c889b9",
+      "src/tools/meta_scheduler.py": "b39cb48b62e62f465f37622f058d537cf1be30c8ffda345db253374c97b9178a",
+      "jobshop1.txt": "39722bc084ac7ca3a72d07e7f3be6f83a4e29972b5e5eea48399f1ba2c14728e"
+    },
+    "bks": {
+      "ft06": 55,
+      "la04": 590,
+      "ft10": 930,
+      "orb01": 1059,
+      "la21": 1046,
+      "la26": 1218,
+      "la40": 1222,
+      "yn1": 884,
+      "ta31": 1764,
+      "ta51": 2760
+    },
+    "bks_metadata": {
+      "source": "OR-Library jobshop1 + Taillard (1993) benchmark best-known solutions",
+      "version": "2026-08-17"
+    },
+    "budget_unit": "objective queries including cache hits; actual decodes also reported",
+    "controlled_components": "Fixed GA parameters; scheduled LS; best-individual capped VND; terminal refinement disabled for all.",
+    "fp_rule": "Reliable affine operator residual <= threshold; no legacy stage/stagnation gates.",
+    "drift_rule": "Same normalized state and weighted L2 norm, one observation lag.",
+    "probes": "All eligible states on independent GA+LS trajectories; never committed; RNG/cache/budget isolated.",
+    "query_cap_behavior": "All search operators retain the best evaluated candidate on cap; unused VND allocation goes to GA+LS.",
+    "runtime_note": "All arms compute FP diagnostics; timings include observation overhead, not native trigger-only runtime.",
+    "threshold_note": "Frozen heuristic thresholds, no tuning on reported outcomes; no universal irreplaceability claim.",
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:19:41) [GCC 14.3.0]",
+    "numpy": "2.4.6"
+  },
+  "summary": {
+    "fixed": {
+      "runs": 200,
+      "avg_gap": 11.488253400582549,
+      "std_gap_across_runs_and_instances": 6.280129006725262,
+      "vnd_calls_total": 2360,
+      "vnd_calls_mean": 11.8,
+      "vnd_effective_total": 342,
+      "vnd_effectiveness": 0.14491525423728813,
+      "mean_gain_bks_pp_per_call": 0.12970161120679397,
+      "avg_vnd_queries": 4598.685,
+      "avg_elapsed": 3.0569803119932475,
+      "avg_actual_decodes": 17366.7,
+      "capped_call_rate": 0.19279661016949154
+    },
+    "stagnation": {
+      "runs": 200,
+      "avg_gap": 11.2527767914989,
+      "std_gap_across_runs_and_instances": 6.316999750556972,
+      "vnd_calls_total": 3600,
+      "vnd_calls_mean": 18.0,
+      "vnd_effective_total": 411,
+      "vnd_effectiveness": 0.11416666666666667,
+      "mean_gain_bks_pp_per_call": 0.0974797767992098,
+      "avg_vnd_queries": 6946.875,
+      "avg_elapsed": 2.9835380481400353,
+      "avg_actual_decodes": 17196.62,
+      "capped_call_rate": 0.19305555555555556
+    },
+    "state_drift": {
+      "runs": 200,
+      "avg_gap": 11.663660089688074,
+      "std_gap_across_runs_and_instances": 6.277677928779061,
+      "vnd_calls_total": 1175,
+      "vnd_calls_mean": 5.875,
+      "vnd_effective_total": 191,
+      "vnd_effectiveness": 0.1625531914893617,
+      "mean_gain_bks_pp_per_call": 0.19263302022739714,
+      "avg_vnd_queries": 2294.655,
+      "avg_elapsed": 3.122504828356032,
+      "avg_actual_decodes": 17472.58,
+      "capped_call_rate": 0.2229787234042553
+    },
+    "fp_residual": {
+      "runs": 200,
+      "avg_gap": 11.433669126527743,
+      "std_gap_across_runs_and_instances": 6.330119908059212,
+      "vnd_calls_total": 1532,
+      "vnd_calls_mean": 7.66,
+      "vnd_effective_total": 257,
+      "vnd_effectiveness": 0.16775456919060053,
+      "mean_gain_bks_pp_per_call": 0.18839684030208845,
+      "avg_vnd_queries": 2994.27,
+      "avg_elapsed": 3.1118066552098025,
+      "avg_actual_decodes": 17484.155,
+      "capped_call_rate": 0.21279373368146215
+    }
+  },
+  "by_instance": {
+    "ft06": {
+      "fixed": {
+        "runs": 20,
+        "avg_gap": 0.8181818181818181,
+        "std_gap_across_runs_and_instances": 2.0835109392179345,
+        "vnd_calls_total": 240,
+        "vnd_calls_mean": 12.0,
+        "vnd_effective_total": 10,
+        "vnd_effectiveness": 0.041666666666666664,
+        "mean_gain_bks_pp_per_call": 0.1212121212121212,
+        "avg_vnd_queries": 4083.15,
+        "avg_elapsed": 0.6275045254966244,
+        "avg_actual_decodes": 11207.15,
+        "capped_call_rate": 0.0
+      },
+      "stagnation": {
+        "runs": 20,
+        "avg_gap": 0.8181818181818181,
+        "std_gap_across_runs_and_instances": 2.0835109392179345,
+        "vnd_calls_total": 397,
+        "vnd_calls_mean": 19.85,
+        "vnd_effective_total": 10,
+        "vnd_effectiveness": 0.02518891687657431,
+        "mean_gain_bks_pp_per_call": 0.07785665216395694,
+        "avg_vnd_queries": 6775.2,
+        "avg_elapsed": 0.6023606984512299,
+        "avg_actual_decodes": 11250.15,
+        "capped_call_rate": 0.0
+      },
+      "state_drift": {
+        "runs": 20,
+        "avg_gap": 0.8181818181818181,
+        "std_gap_across_runs_and_instances": 2.0835109392179345,
+        "vnd_calls_total": 118,
+        "vnd_calls_mean": 5.9,
+        "vnd_effective_total": 8,
+        "vnd_effectiveness": 0.06779661016949153,
+        "mean_gain_bks_pp_per_call": 0.2773497688751926,
+        "avg_vnd_queries": 2012.4,
+        "avg_elapsed": 0.650249256749521,
+        "avg_actual_decodes": 11068.45,
+        "capped_call_rate": 0.00847457627118644
+      },
+      "fp_residual": {
+        "runs": 20,
+        "avg_gap": 0.6363636363636364,
+        "std_gap_across_runs_and_instances": 1.9807687841029187,
+        "vnd_calls_total": 180,
+        "vnd_calls_mean": 9.0,
+        "vnd_effective_total": 11,
+        "vnd_effectiveness": 0.06111111111111111,
+        "mean_gain_bks_pp_per_call": 0.202020202020202,
+        "avg_vnd_queries": 3035.4,
+        "avg_elapsed": 0.6460971307504224,
+        "avg_actual_decodes": 11167.6,
+        "capped_call_rate": 0.022222222222222223
+      }
+    },
+    "la04": {
+      "fixed": {
+        "runs": 20,
+        "avg_gap": 3.8983050847457625,
+        "std_gap_across_runs_and_instances": 2.64639984990754,
+        "vnd_calls_total": 240,
+        "vnd_calls_mean": 12.0,
+        "vnd_effective_total": 47,
+        "vnd_effectiveness": 0.19583333333333333,
+        "mean_gain_bks_pp_per_call": 0.4258474576271186,
+        "avg_vnd_queries": 4437.65,
+        "avg_elapsed": 0.8487302946989075,
+        "avg_actual_decodes": 16136.45,
+        "capped_call_rate": 0.008333333333333333
+      },
+      "stagnation": {
+        "runs": 20,
+        "avg_gap": 3.466101694915254,
+        "std_gap_across_runs_and_instances": 2.705431151651195,
+        "vnd_calls_total": 370,
+        "vnd_calls_mean": 18.5,
+        "vnd_effective_total": 44,
+        "vnd_effectiveness": 0.11891891891891893,
+        "mean_gain_bks_pp_per_call": 0.29042601923957856,
+        "avg_vnd_queries": 6901.9,
+        "avg_elapsed": 0.8128729973512236,
+        "avg_actual_decodes": 15706.7,
+        "capped_call_rate": 0.02702702702702703
+      },
+      "state_drift": {
+        "runs": 20,
+        "avg_gap": 4.262711864406779,
+        "std_gap_across_runs_and_instances": 3.9822536070806196,
+        "vnd_calls_total": 144,
+        "vnd_calls_mean": 7.2,
+        "vnd_effective_total": 26,
+        "vnd_effectiveness": 0.18055555555555555,
+        "mean_gain_bks_pp_per_call": 0.5555555555555556,
+        "avg_vnd_queries": 2610.85,
+        "avg_elapsed": 0.8749592036969261,
+        "avg_actual_decodes": 16126.1,
+        "capped_call_rate": 0.027777777777777776
+      },
+      "fp_residual": {
+        "runs": 20,
+        "avg_gap": 3.6271186440677967,
+        "std_gap_across_runs_and_instances": 2.762900668340461,
+        "vnd_calls_total": 167,
+        "vnd_calls_mean": 8.35,
+        "vnd_effective_total": 35,
+        "vnd_effectiveness": 0.20958083832335328,
+        "mean_gain_bks_pp_per_call": 0.60083223383741,
+        "avg_vnd_queries": 3049.15,
+        "avg_elapsed": 0.8664442593464627,
+        "avg_actual_decodes": 16156.4,
+        "capped_call_rate": 0.029940119760479042
+      }
+    },
+    "ft10": {
+      "fixed": {
+        "runs": 20,
+        "avg_gap": 10.774193548387096,
+        "std_gap_across_runs_and_instances": 2.6346915524335244,
+        "vnd_calls_total": 240,
+        "vnd_calls_mean": 12.0,
+        "vnd_effective_total": 38,
+        "vnd_effectiveness": 0.15833333333333333,
+        "mean_gain_bks_pp_per_call": 0.18413978494623653,
+        "avg_vnd_queries": 4522.0,
+        "avg_elapsed": 1.37616434309748,
+        "avg_actual_decodes": 15793.3,
+        "capped_call_rate": 0.029166666666666667
+      },
+      "stagnation": {
+        "runs": 20,
+        "avg_gap": 10.118279569892472,
+        "std_gap_across_runs_and_instances": 2.4705086992455487,
+        "vnd_calls_total": 359,
+        "vnd_calls_mean": 17.95,
+        "vnd_effective_total": 57,
+        "vnd_effectiveness": 0.15877437325905291,
+        "mean_gain_bks_pp_per_call": 0.16952706143109594,
+        "avg_vnd_queries": 6713.7,
+        "avg_elapsed": 1.3322410912980558,
+        "avg_actual_decodes": 15810.6,
+        "capped_call_rate": 0.025069637883008356
+      },
+      "state_drift": {
+        "runs": 20,
+        "avg_gap": 10.413978494623654,
+        "std_gap_across_runs_and_instances": 2.5572593948669877,
+        "vnd_calls_total": 159,
+        "vnd_calls_mean": 7.95,
+        "vnd_effective_total": 28,
+        "vnd_effectiveness": 0.1761006289308176,
+        "mean_gain_bks_pp_per_call": 0.22046392101169948,
+        "avg_vnd_queries": 2989.95,
+        "avg_elapsed": 1.391514695105434,
+        "avg_actual_decodes": 15980.7,
+        "capped_call_rate": 0.03773584905660377
+      },
+      "fp_residual": {
+        "runs": 20,
+        "avg_gap": 11.0,
+        "std_gap_across_runs_and_instances": 2.8440595435160145,
+        "vnd_calls_total": 215,
+        "vnd_calls_mean": 10.75,
+        "vnd_effective_total": 33,
+        "vnd_effectiveness": 0.15348837209302327,
+        "mean_gain_bks_pp_per_call": 0.17554388597149287,
+        "avg_vnd_queries": 4008.95,
+        "avg_elapsed": 1.3806422056964949,
+        "avg_actual_decodes": 15896.7,
+        "capped_call_rate": 0.018604651162790697
+      }
+    },
+    "orb01": {
+      "fixed": {
+        "runs": 20,
+        "avg_gap": 14.896128423040603,
+        "std_gap_across_runs_and_instances": 2.4821177952444002,
+        "vnd_calls_total": 240,
+        "vnd_calls_mean": 12.0,
+        "vnd_effective_total": 40,
+        "vnd_effectiveness": 0.16666666666666666,
+        "mean_gain_bks_pp_per_call": 0.1396757947749449,
+        "avg_vnd_queries": 4545.65,
+        "avg_elapsed": 1.4238169158474192,
+        "avg_actual_decodes": 15780.5,
+        "capped_call_rate": 0.008333333333333333
+      },
+      "stagnation": {
+        "runs": 20,
+        "avg_gap": 14.296506137865913,
+        "std_gap_across_runs_and_instances": 2.639455928110237,
+        "vnd_calls_total": 362,
+        "vnd_calls_mean": 18.1,
+        "vnd_effective_total": 46,
+        "vnd_effectiveness": 0.1270718232044199,
+        "mean_gain_bks_pp_per_call": 0.11712289817872588,
+        "avg_vnd_queries": 6794.6,
+        "avg_elapsed": 1.382750606648915,
+        "avg_actual_decodes": 15694.7,
+        "capped_call_rate": 0.027624309392265192
+      },
+      "state_drift": {
+        "runs": 20,
+        "avg_gap": 14.825306893295561,
+        "std_gap_across_runs_and_instances": 2.578585365300887,
+        "vnd_calls_total": 190,
+        "vnd_calls_mean": 9.5,
+        "vnd_effective_total": 33,
+        "vnd_effectiveness": 0.1736842105263158,
+        "mean_gain_bks_pp_per_call": 0.19233636499179962,
+        "avg_vnd_queries": 3566.4,
+        "avg_elapsed": 1.4458450418547728,
+        "avg_actual_decodes": 15887.55,
+        "capped_call_rate": 0.015789473684210527
+      },
+      "fp_residual": {
+        "runs": 20,
+        "avg_gap": 14.093484419263456,
+        "std_gap_across_runs_and_instances": 2.7104190196671754,
+        "vnd_calls_total": 244,
+        "vnd_calls_mean": 12.2,
+        "vnd_effective_total": 45,
+        "vnd_effectiveness": 0.18442622950819673,
+        "mean_gain_bks_pp_per_call": 0.18730940107432004,
+        "avg_vnd_queries": 4662.15,
+        "avg_elapsed": 1.4318862459011144,
+        "avg_actual_decodes": 15961.25,
+        "capped_call_rate": 0.020491803278688523
+      }
+    },
+    "la21": {
+      "fixed": {
+        "runs": 20,
+        "avg_gap": 11.391013384321223,
+        "std_gap_across_runs_and_instances": 1.5586939598655907,
+        "vnd_calls_total": 240,
+        "vnd_calls_mean": 12.0,
+        "vnd_effective_total": 50,
+        "vnd_effectiveness": 0.20833333333333334,
+        "mean_gain_bks_pp_per_call": 0.11790949649458254,
+        "avg_vnd_queries": 4425.9,
+        "avg_elapsed": 2.026151721694623,
+        "avg_actual_decodes": 18385.8,
+        "capped_call_rate": 0.0125
+      },
+      "stagnation": {
+        "runs": 20,
+        "avg_gap": 11.496175908221797,
+        "std_gap_across_runs_and_instances": 1.4719011769239836,
+        "vnd_calls_total": 372,
+        "vnd_calls_mean": 18.6,
+        "vnd_effective_total": 48,
+        "vnd_effectiveness": 0.12903225806451613,
+        "mean_gain_bks_pp_per_call": 0.078126606221345,
+        "avg_vnd_queries": 6751.4,
+        "avg_elapsed": 1.9661612493015128,
+        "avg_actual_decodes": 18140.35,
+        "capped_call_rate": 0.016129032258064516
+      },
+      "state_drift": {
+        "runs": 20,
+        "avg_gap": 11.921606118546844,
+        "std_gap_across_runs_and_instances": 1.525889795501488,
+        "vnd_calls_total": 93,
+        "vnd_calls_mean": 4.65,
+        "vnd_effective_total": 20,
+        "vnd_effectiveness": 0.21505376344086022,
+        "mean_gain_bks_pp_per_call": 0.15111330413865415,
+        "avg_vnd_queries": 1688.45,
+        "avg_elapsed": 2.0928246755502187,
+        "avg_actual_decodes": 18484.7,
+        "capped_call_rate": 0.010752688172043012
+      },
+      "fp_residual": {
+        "runs": 20,
+        "avg_gap": 11.434034416826005,
+        "std_gap_across_runs_and_instances": 1.604956043108947,
+        "vnd_calls_total": 152,
+        "vnd_calls_mean": 7.6,
+        "vnd_effective_total": 37,
+        "vnd_effectiveness": 0.24342105263157895,
+        "mean_gain_bks_pp_per_call": 0.15220891617188284,
+        "avg_vnd_queries": 2764.95,
+        "avg_elapsed": 2.0719761569533146,
+        "avg_actual_decodes": 18484.9,
+        "capped_call_rate": 0.013157894736842105
+      }
+    },
+    "la26": {
+      "fixed": {
+        "runs": 20,
+        "avg_gap": 9.314449917898195,
+        "std_gap_across_runs_and_instances": 1.669350854170165,
+        "vnd_calls_total": 240,
+        "vnd_calls_mean": 12.0,
+        "vnd_effective_total": 52,
+        "vnd_effectiveness": 0.21666666666666667,
+        "mean_gain_bks_pp_per_call": 0.1265736179529283,
+        "avg_vnd_queries": 4473.95,
+        "avg_elapsed": 2.6554466980494906,
+        "avg_actual_decodes": 19014.35,
+        "capped_call_rate": 0.0
+      },
+      "stagnation": {
+        "runs": 20,
+        "avg_gap": 8.928571428571427,
+        "std_gap_across_runs_and_instances": 1.5609290025418796,
+        "vnd_calls_total": 359,
+        "vnd_calls_mean": 17.95,
+        "vnd_effective_total": 68,
+        "vnd_effectiveness": 0.1894150417827298,
+        "mean_gain_bks_pp_per_call": 0.09628094826442728,
+        "avg_vnd_queries": 6553.05,
+        "avg_elapsed": 2.581698157552455,
+        "avg_actual_decodes": 18821.1,
+        "capped_call_rate": 0.022284122562674095
+      },
+      "state_drift": {
+        "runs": 20,
+        "avg_gap": 9.938423645320198,
+        "std_gap_across_runs_and_instances": 1.4731378104399895,
+        "vnd_calls_total": 98,
+        "vnd_calls_mean": 4.9,
+        "vnd_effective_total": 31,
+        "vnd_effectiveness": 0.3163265306122449,
+        "mean_gain_bks_pp_per_call": 0.14074595355383532,
+        "avg_vnd_queries": 1791.4,
+        "avg_elapsed": 2.7222225767502097,
+        "avg_actual_decodes": 19277.1,
+        "capped_call_rate": 0.030612244897959183
+      },
+      "fp_residual": {
+        "runs": 20,
+        "avg_gap": 9.433497536945813,
+        "std_gap_across_runs_and_instances": 1.662200107731062,
+        "vnd_calls_total": 144,
+        "vnd_calls_mean": 7.2,
+        "vnd_effective_total": 49,
+        "vnd_effectiveness": 0.3402777777777778,
+        "mean_gain_bks_pp_per_call": 0.18415891260718845,
+        "avg_vnd_queries": 2610.75,
+        "avg_elapsed": 2.6914649933969486,
+        "avg_actual_decodes": 19263.35,
+        "capped_call_rate": 0.027777777777777776
+      }
+    },
+    "la40": {
+      "fixed": {
+        "runs": 20,
+        "avg_gap": 10.642389525368248,
+        "std_gap_across_runs_and_instances": 1.8078440018177906,
+        "vnd_calls_total": 240,
+        "vnd_calls_mean": 12.0,
+        "vnd_effective_total": 31,
+        "vnd_effectiveness": 0.12916666666666668,
+        "mean_gain_bks_pp_per_call": 0.05660120021822149,
+        "avg_vnd_queries": 4242.65,
+        "avg_elapsed": 2.8660255448994576,
+        "avg_actual_decodes": 18173.3,
+        "capped_call_rate": 0.0
+      },
+      "stagnation": {
+        "runs": 20,
+        "avg_gap": 10.515548281505728,
+        "std_gap_across_runs_and_instances": 1.612470898552258,
+        "vnd_calls_total": 377,
+        "vnd_calls_mean": 18.85,
+        "vnd_effective_total": 39,
+        "vnd_effectiveness": 0.10344827586206896,
+        "mean_gain_bks_pp_per_call": 0.04189331747320347,
+        "avg_vnd_queries": 6596.4,
+        "avg_elapsed": 2.7556571167471704,
+        "avg_actual_decodes": 17901.6,
+        "capped_call_rate": 0.021220159151193633
+      },
+      "state_drift": {
+        "runs": 20,
+        "avg_gap": 10.941080196399344,
+        "std_gap_across_runs_and_instances": 1.602076665059529,
+        "vnd_calls_total": 74,
+        "vnd_calls_mean": 3.7,
+        "vnd_effective_total": 11,
+        "vnd_effectiveness": 0.14864864864864866,
+        "mean_gain_bks_pp_per_call": 0.045339938956960237,
+        "avg_vnd_queries": 1286.05,
+        "avg_elapsed": 2.9434686834021706,
+        "avg_actual_decodes": 18416.55,
+        "capped_call_rate": 0.02702702702702703
+      },
+      "fp_residual": {
+        "runs": 20,
+        "avg_gap": 10.409165302782323,
+        "std_gap_across_runs_and_instances": 1.5209320543945142,
+        "vnd_calls_total": 103,
+        "vnd_calls_mean": 5.15,
+        "vnd_effective_total": 23,
+        "vnd_effectiveness": 0.22330097087378642,
+        "mean_gain_bks_pp_per_call": 0.12076335150080246,
+        "avg_vnd_queries": 1863.6,
+        "avg_elapsed": 2.941158210403228,
+        "avg_actual_decodes": 18443.55,
+        "capped_call_rate": 0.0
+      }
+    },
+    "yn1": {
+      "fixed": {
+        "runs": 20,
+        "avg_gap": 11.951357466063348,
+        "std_gap_across_runs_and_instances": 0.9148036133808192,
+        "vnd_calls_total": 240,
+        "vnd_calls_mean": 12.0,
+        "vnd_effective_total": 37,
+        "vnd_effectiveness": 0.15416666666666667,
+        "mean_gain_bks_pp_per_call": 0.06787330316742081,
+        "avg_vnd_queries": 4255.9,
+        "avg_elapsed": 4.836457183198945,
+        "avg_actual_decodes": 19021.5,
+        "capped_call_rate": 0.004166666666666667
+      },
+      "stagnation": {
+        "runs": 20,
+        "avg_gap": 11.725113122171948,
+        "std_gap_across_runs_and_instances": 1.0350101230998847,
+        "vnd_calls_total": 366,
+        "vnd_calls_mean": 18.3,
+        "vnd_effective_total": 51,
+        "vnd_effectiveness": 0.13934426229508196,
+        "mean_gain_bks_pp_per_call": 0.05099770046732439,
+        "avg_vnd_queries": 6444.85,
+        "avg_elapsed": 4.7263113811000945,
+        "avg_actual_decodes": 18863.3,
+        "capped_call_rate": 0.01639344262295082
+      },
+      "state_drift": {
+        "runs": 20,
+        "avg_gap": 12.296380090497738,
+        "std_gap_across_runs_and_instances": 0.8133376927570266,
+        "vnd_calls_total": 59,
+        "vnd_calls_mean": 2.95,
+        "vnd_effective_total": 15,
+        "vnd_effectiveness": 0.2542372881355932,
+        "mean_gain_bks_pp_per_call": 0.09586624741161132,
+        "avg_vnd_queries": 1032.8,
+        "avg_elapsed": 4.987960173402098,
+        "avg_actual_decodes": 19267.6,
+        "capped_call_rate": 0.03389830508474576
+      },
+      "fp_residual": {
+        "runs": 20,
+        "avg_gap": 12.437782805429865,
+        "std_gap_across_runs_and_instances": 0.8332776549260044,
+        "vnd_calls_total": 25,
+        "vnd_calls_mean": 1.25,
+        "vnd_effective_total": 2,
+        "vnd_effectiveness": 0.08,
+        "mean_gain_bks_pp_per_call": 0.03619909502262444,
+        "avg_vnd_queries": 438.65,
+        "avg_elapsed": 4.951829378098774,
+        "avg_actual_decodes": 19261.55,
+        "capped_call_rate": 0.0
+      }
+    },
+    "ta31": {
+      "fixed": {
+        "runs": 20,
+        "avg_gap": 19.384920634920633,
+        "std_gap_across_runs_and_instances": 1.2122948711065682,
+        "vnd_calls_total": 220,
+        "vnd_calls_mean": 11.0,
+        "vnd_effective_total": 23,
+        "vnd_effectiveness": 0.10454545454545454,
+        "mean_gain_bks_pp_per_call": 0.026283240568954855,
+        "avg_vnd_queries": 5500.0,
+        "avg_elapsed": 5.268357313601882,
+        "avg_actual_decodes": 19992.0,
+        "capped_call_rate": 1.0
+      },
+      "stagnation": {
+        "runs": 20,
+        "avg_gap": 19.348072562358276,
+        "std_gap_across_runs_and_instances": 1.2766666728246403,
+        "vnd_calls_total": 319,
+        "vnd_calls_mean": 15.95,
+        "vnd_effective_total": 29,
+        "vnd_effectiveness": 0.09090909090909091,
+        "mean_gain_bks_pp_per_call": 0.02345765892563922,
+        "avg_vnd_queries": 7975.0,
+        "avg_elapsed": 5.129400966399407,
+        "avg_actual_decodes": 19824.65,
+        "capped_call_rate": 1.0
+      },
+      "state_drift": {
+        "runs": 20,
+        "avg_gap": 19.467120181405893,
+        "std_gap_across_runs_and_instances": 1.2819947616450031,
+        "vnd_calls_total": 94,
+        "vnd_calls_mean": 4.7,
+        "vnd_effective_total": 10,
+        "vnd_effectiveness": 0.10638297872340426,
+        "mean_gain_bks_pp_per_call": 0.036787764751290586,
+        "avg_vnd_queries": 2350.0,
+        "avg_elapsed": 5.322110511497885,
+        "avg_actual_decodes": 19963.7,
+        "capped_call_rate": 1.0
+      },
+      "fp_residual": {
+        "runs": 20,
+        "avg_gap": 19.469954648526077,
+        "std_gap_across_runs_and_instances": 1.2420659500654083,
+        "vnd_calls_total": 131,
+        "vnd_calls_mean": 6.55,
+        "vnd_effective_total": 12,
+        "vnd_effectiveness": 0.0916030534351145,
+        "mean_gain_bks_pp_per_call": 0.02466635509165498,
+        "avg_vnd_queries": 3260.85,
+        "avg_elapsed": 5.357461061252979,
+        "avg_actual_decodes": 19936.1,
+        "capped_call_rate": 1.0
+      }
+    },
+    "ta51": {
+      "fixed": {
+        "runs": 20,
+        "avg_gap": 21.811594202898547,
+        "std_gap_across_runs_and_instances": 0.9045376446137783,
+        "vnd_calls_total": 220,
+        "vnd_calls_mean": 11.0,
+        "vnd_effective_total": 14,
+        "vnd_effectiveness": 0.06363636363636363,
+        "mean_gain_bks_pp_per_call": 0.012516469038208168,
+        "avg_vnd_queries": 5500.0,
+        "avg_elapsed": 8.641148579347647,
+        "avg_actual_decodes": 20162.65,
+        "capped_call_rate": 1.0
+      },
+      "stagnation": {
+        "runs": 20,
+        "avg_gap": 21.815217391304344,
+        "std_gap_across_runs_and_instances": 0.891760036811513,
+        "vnd_calls_total": 319,
+        "vnd_calls_mean": 15.95,
+        "vnd_effective_total": 19,
+        "vnd_effectiveness": 0.05956112852664577,
+        "mean_gain_bks_pp_per_call": 0.011698696106492209,
+        "avg_vnd_queries": 7962.65,
+        "avg_elapsed": 8.545926216550289,
+        "avg_actual_decodes": 19953.05,
+        "capped_call_rate": 1.0
+      },
+      "state_drift": {
+        "runs": 20,
+        "avg_gap": 21.7518115942029,
+        "std_gap_across_runs_and_instances": 0.9815589093507816,
+        "vnd_calls_total": 146,
+        "vnd_calls_mean": 7.3,
+        "vnd_effective_total": 9,
+        "vnd_effectiveness": 0.06164383561643835,
+        "mean_gain_bks_pp_per_call": 0.01166368870359341,
+        "avg_vnd_queries": 3618.25,
+        "avg_elapsed": 8.793893465551083,
+        "avg_actual_decodes": 20253.35,
+        "capped_call_rate": 1.0
+      },
+      "fp_residual": {
+        "runs": 20,
+        "avg_gap": 21.79528985507246,
+        "std_gap_across_runs_and_instances": 0.9587118531102151,
+        "vnd_calls_total": 171,
+        "vnd_calls_mean": 8.55,
+        "vnd_effective_total": 10,
+        "vnd_effectiveness": 0.05847953216374269,
+        "mean_gain_bks_pp_per_call": 0.013136706500550896,
+        "avg_vnd_queries": 4248.25,
+        "avg_elapsed": 8.779106910298287,
+        "avg_actual_decodes": 20270.15,
+        "capped_call_rate": 1.0
+      }
+    }
+  },
+  "analysis_source_sha256": "26d876165162b3498dcb347bb42b37267101bf8d0568ab2e7e6a740faa56811b",
+  "paired_comparisons": {
+    "fixed": {
+      "baseline_minus_fp_gap_pp": 0.054584274054804725,
+      "hierarchical_bootstrap_95ci": [
+        -0.19899515644703267,
+        0.35019969363874637
+      ],
+      "instance_sign_flip_two_sided_p": 0.65234375,
+      "fp_win_tie_loss_instances": [
+        5,
+        0,
+        5
+      ],
+      "holm_adjusted_p": 0.65234375
+    },
+    "stagnation": {
+      "baseline_minus_fp_gap_pp": -0.18089233502884533,
+      "hierarchical_bootstrap_95ci": [
+        -0.4879483707830067,
+        0.11175303872363726
+      ],
+      "instance_sign_flip_two_sided_p": 0.205078125,
+      "fp_win_tie_loss_instances": [
+        5,
+        0,
+        5
+      ],
+      "holm_adjusted_p": 0.41015625
+    },
+    "state_drift": {
+      "baseline_minus_fp_gap_pp": 0.22999096316032996,
+      "hierarchical_bootstrap_95ci": [
+        -0.0728141144487959,
+        0.5505782902635917
+      ],
+      "instance_sign_flip_two_sided_p": 0.1328125,
+      "fp_win_tie_loss_instances": [
+        6,
+        0,
+        4
+      ],
+      "holm_adjusted_p": 0.3984375
+    }
+  },
+  "probe_analysis": {
+    "states": 11200,
+    "fitted_states": 11000,
+    "reliable_states": 9807,
+    "correlations": {
+      "fp_residual": {
+        "pooled_descriptive_rho": -0.02544678764709727,
+        "per_instance_mean_rho": {
+          "ft06": 0.058897643615617286,
+          "la04": 0.04583709208249012,
+          "ft10": -0.03168139654420595,
+          "orb01": -0.04237402028371484,
+          "la21": -0.03463287312577196,
+          "la26": 0.010274597318506815,
+          "la40": 0.04998019527626754,
+          "yn1": -0.0751423073425906,
+          "ta31": -0.004732258924377828,
+          "ta51": 0.001446165218244221
+        },
+        "macro_mean_rho": -0.002212716270953521,
+        "instance_bootstrap_95ci": [
+          -0.027564981155100858,
+          0.023855195553492622
+        ],
+        "valid_runs": 157,
+        "undefined_runs": 43
+      },
+      "state_drift": {
+        "pooled_descriptive_rho": -0.04254223700731684,
+        "per_instance_mean_rho": {
+          "ft06": 0.009798264656702804,
+          "la04": -0.02563981710410062,
+          "ft10": 0.0163392697804048,
+          "orb01": 0.016247030959664593,
+          "la21": -0.008943566179754548,
+          "la26": 0.0026159107339306003,
+          "la40": 0.08443025716639063,
+          "yn1": -0.0476592817487341,
+          "ta31": 0.029291623893913328,
+          "ta51": 0.01949470051024469
+        },
+        "macro_mean_rho": 0.009597439266866218,
+        "instance_bootstrap_95ci": [
+          -0.010260797758455653,
+          0.030966591708647476
+        ],
+        "valid_runs": 157,
+        "undefined_runs": 43
+      },
+      "fitness_change": {
+        "pooled_descriptive_rho": 0.06094861016285903,
+        "per_instance_mean_rho": {
+          "ft06": -0.001219101138475324,
+          "la04": 0.0049676412033857476,
+          "ft10": 0.034743273911823955,
+          "orb01": 0.06502536668146815,
+          "la21": -0.030830472635567326,
+          "la26": -0.014246398113743867,
+          "la40": -0.12025182779237822,
+          "yn1": -0.05253551840437116,
+          "ta31": 0.042156879762077604,
+          "ta51": -0.020885644123491632
+        },
+        "macro_mean_rho": -0.009307580064927207,
+        "instance_bootstrap_95ci": [
+          -0.04160082990826323,
+          0.019774244637910728
+        ],
+        "valid_runs": 109,
+        "undefined_runs": 91
+      },
+      "stagnant_generations": {
+        "pooled_descriptive_rho": -0.1883474742286838,
+        "per_instance_mean_rho": {
+          "ft06": -0.13196101525024598,
+          "la04": 0.01447226214586092,
+          "ft10": -0.05923142087237779,
+          "orb01": 0.07394219011704369,
+          "la21": -0.021844154025421118,
+          "la26": -0.0288767907447293,
+          "la40": -0.03074982093746144,
+          "yn1": -0.022006584183301144,
+          "ta31": -0.011133990291977192,
+          "ta51": 0.020863785528270763
+        },
+        "macro_mean_rho": -0.01965255385143386,
+        "instance_bootstrap_95ci": [
+          -0.05281195599262524,
+          0.01053264411532959
+        ],
+        "valid_runs": 157,
+        "undefined_runs": 43
+      }
+    },
+    "per_run_correlations": [
+      {
+        "instance": "ft06",
+        "run": 0,
+        "states": 55,
+        "fp_residual": 0.11960757768346442,
+        "state_drift": -0.16842699714610293,
+        "fitness_change": -0.0949157995752499,
+        "stagnant_generations": -0.15383112458824796
+      },
+      {
+        "instance": "ft06",
+        "run": 1,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft06",
+        "run": 2,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft06",
+        "run": 3,
+        "states": 55,
+        "fp_residual": -0.020465739893331218,
+        "state_drift": -0.13903355905795664,
+        "fitness_change": -0.026430519709187503,
+        "stagnant_generations": -0.17106689106490985
+      },
+      {
+        "instance": "ft06",
+        "run": 4,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft06",
+        "run": 5,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft06",
+        "run": 6,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft06",
+        "run": 7,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft06",
+        "run": 8,
+        "states": 55,
+        "fp_residual": 0.1432816821076568,
+        "state_drift": 0.05878222855698739,
+        "fitness_change": null,
+        "stagnant_generations": -0.014695557139246848
+      },
+      {
+        "instance": "ft06",
+        "run": 9,
+        "states": 55,
+        "fp_residual": -0.03540903443011212,
+        "state_drift": 0.0021887452601030842,
+        "fitness_change": null,
+        "stagnant_generations": -0.11809496647845086
+      },
+      {
+        "instance": "ft06",
+        "run": 10,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft06",
+        "run": 11,
+        "states": 55,
+        "fp_residual": 0.07232031034951951,
+        "state_drift": 0.12358647696600075,
+        "fitness_change": null,
+        "stagnant_generations": 0.2622565195914916
+      },
+      {
+        "instance": "ft06",
+        "run": 12,
+        "states": 55,
+        "fp_residual": 0.13661764304214613,
+        "state_drift": 0.09932018834659091,
+        "fitness_change": 0.11768901586901143,
+        "stagnant_generations": -0.6969301795288728
+      },
+      {
+        "instance": "ft06",
+        "run": 13,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft06",
+        "run": 14,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft06",
+        "run": 15,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft06",
+        "run": 16,
+        "states": 55,
+        "fp_residual": -0.0036689335500225025,
+        "state_drift": 0.09217076967129702,
+        "fitness_change": null,
+        "stagnant_generations": -0.03136490754348505
+      },
+      {
+        "instance": "ft06",
+        "run": 17,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft06",
+        "run": 18,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft06",
+        "run": 19,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "la04",
+        "run": 0,
+        "states": 55,
+        "fp_residual": -0.13270759489636483,
+        "state_drift": -0.008940406280184157,
+        "fitness_change": null,
+        "stagnant_generations": -0.10643578649761137
+      },
+      {
+        "instance": "la04",
+        "run": 1,
+        "states": 55,
+        "fp_residual": 0.23747632715751554,
+        "state_drift": 0.25271065757894107,
+        "fitness_change": 0.21913862993647373,
+        "stagnant_generations": -0.34173292864027327
+      },
+      {
+        "instance": "la04",
+        "run": 2,
+        "states": 55,
+        "fp_residual": -0.0459772979107758,
+        "state_drift": -0.09358371267665784,
+        "fitness_change": -0.12278215780496357,
+        "stagnant_generations": 0.06535511862172544
+      },
+      {
+        "instance": "la04",
+        "run": 3,
+        "states": 55,
+        "fp_residual": 0.017437334085308138,
+        "state_drift": -0.24688576653545485,
+        "fitness_change": 0.08934115743668912,
+        "stagnant_generations": 0.043188379900676234
+      },
+      {
+        "instance": "la04",
+        "run": 4,
+        "states": 55,
+        "fp_residual": -0.008220625935237327,
+        "state_drift": 0.03272812578911386,
+        "fitness_change": 0.01006073266827212,
+        "stagnant_generations": 0.1770977202147739
+      },
+      {
+        "instance": "la04",
+        "run": 5,
+        "states": 55,
+        "fp_residual": 0.250970710549429,
+        "state_drift": -0.1206318854269844,
+        "fitness_change": 0.15396537850604458,
+        "stagnant_generations": -0.12247260809743953
+      },
+      {
+        "instance": "la04",
+        "run": 6,
+        "states": 55,
+        "fp_residual": -0.06336672659558985,
+        "state_drift": -0.12474634329793821,
+        "fitness_change": -0.04372141466997824,
+        "stagnant_generations": 0.3346977960400116
+      },
+      {
+        "instance": "la04",
+        "run": 7,
+        "states": 55,
+        "fp_residual": 0.46378362341812496,
+        "state_drift": 0.00800071915746348,
+        "fitness_change": -0.08499533713207638,
+        "stagnant_generations": 0.47581176200864045
+      },
+      {
+        "instance": "la04",
+        "run": 8,
+        "states": 55,
+        "fp_residual": 0.17869812051822773,
+        "state_drift": -0.0005904935828772498,
+        "fitness_change": 0.09614388494999705,
+        "stagnant_generations": 0.20608352763757143
+      },
+      {
+        "instance": "la04",
+        "run": 9,
+        "states": 55,
+        "fp_residual": 0.44209325038779723,
+        "state_drift": 0.07584673777258184,
+        "fitness_change": -0.03125548565976559,
+        "stagnant_generations": 0.011424911513007244
+      },
+      {
+        "instance": "la04",
+        "run": 10,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "la04",
+        "run": 11,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "la04",
+        "run": 12,
+        "states": 55,
+        "fp_residual": -0.05374252816080706,
+        "state_drift": -0.09792710279535514,
+        "fitness_change": 0.167963509027602,
+        "stagnant_generations": -0.5526942000669921
+      },
+      {
+        "instance": "la04",
+        "run": 13,
+        "states": 55,
+        "fp_residual": -0.1995134996443359,
+        "state_drift": -0.11128167735844115,
+        "fitness_change": null,
+        "stagnant_generations": -0.03325224994072265
+      },
+      {
+        "instance": "la04",
+        "run": 14,
+        "states": 55,
+        "fp_residual": -0.07329712440054538,
+        "state_drift": -0.21701986355661226,
+        "fitness_change": -0.026206257446741828,
+        "stagnant_generations": 0.1901982734088157
+      },
+      {
+        "instance": "la04",
+        "run": 15,
+        "states": 55,
+        "fp_residual": 0.024441947025653787,
+        "state_drift": 0.15658236827678954,
+        "fitness_change": null,
+        "stagnant_generations": 0.04558588020976508
+      },
+      {
+        "instance": "la04",
+        "run": 16,
+        "states": 55,
+        "fp_residual": -0.0335523377553462,
+        "state_drift": 0.04457875677906625,
+        "fitness_change": -0.06507495599010449,
+        "stagnant_generations": 0.15599996575561348
+      },
+      {
+        "instance": "la04",
+        "run": 17,
+        "states": 55,
+        "fp_residual": -0.02077922736317718,
+        "state_drift": -0.03681000240387329,
+        "fitness_change": -0.17151090768366015,
+        "stagnant_generations": -0.24889487693516799
+      },
+      {
+        "instance": "la04",
+        "run": 18,
+        "states": 55,
+        "fp_residual": -0.13022131158307193,
+        "state_drift": -0.0579974107368537,
+        "fitness_change": 0.12722829949171308,
+        "stagnant_generations": -0.428217332909403
+      },
+      {
+        "instance": "la04",
+        "run": 19,
+        "states": 55,
+        "fp_residual": -0.028455381411982776,
+        "state_drift": 0.08445059142346498,
+        "fitness_change": -0.24378045757871522,
+        "stagnant_generations": 0.38875736640250586
+      },
+      {
+        "instance": "ft10",
+        "run": 0,
+        "states": 55,
+        "fp_residual": -0.016174289634745008,
+        "state_drift": 0.00893842321920119,
+        "fitness_change": -0.001117173798612883,
+        "stagnant_generations": 0.07281130528353257
+      },
+      {
+        "instance": "ft10",
+        "run": 1,
+        "states": 55,
+        "fp_residual": -0.04651437011974714,
+        "state_drift": -0.1286454579311864,
+        "fitness_change": -0.00409752821813545,
+        "stagnant_generations": -0.4225406161452705
+      },
+      {
+        "instance": "ft10",
+        "run": 2,
+        "states": 55,
+        "fp_residual": 0.32413805451584293,
+        "state_drift": 0.39152683429263996,
+        "fitness_change": 0.011046418363400173,
+        "stagnant_generations": 0.06533525662667979
+      },
+      {
+        "instance": "ft10",
+        "run": 3,
+        "states": 55,
+        "fp_residual": -0.22803199297909688,
+        "state_drift": -0.24280794552063314,
+        "fitness_change": 0.08603963598810206,
+        "stagnant_generations": -0.1245551523017583
+      },
+      {
+        "instance": "ft10",
+        "run": 4,
+        "states": 55,
+        "fp_residual": 0.04568070960325596,
+        "state_drift": -0.06198600538232183,
+        "fitness_change": null,
+        "stagnant_generations": 0.06000176303883762
+      },
+      {
+        "instance": "ft10",
+        "run": 5,
+        "states": 55,
+        "fp_residual": -0.13192650280094334,
+        "state_drift": -0.16768456507723975,
+        "fitness_change": 0.1788351590870499,
+        "stagnant_generations": 0.20086082179300785
+      },
+      {
+        "instance": "ft10",
+        "run": 6,
+        "states": 55,
+        "fp_residual": -0.07342230982143524,
+        "state_drift": 0.11013346473215285,
+        "fitness_change": null,
+        "stagnant_generations": -0.02447410327381174
+      },
+      {
+        "instance": "ft10",
+        "run": 7,
+        "states": 55,
+        "fp_residual": 0.10543789300979817,
+        "state_drift": -0.09025715282360909,
+        "fitness_change": 0.13118480856772563,
+        "stagnant_generations": -0.07571854750871625
+      },
+      {
+        "instance": "ft10",
+        "run": 8,
+        "states": 55,
+        "fp_residual": 0.06118525818452936,
+        "state_drift": -0.10401493891369992,
+        "fitness_change": -0.026435052857271466,
+        "stagnant_generations": -0.2111043724818376
+      },
+      {
+        "instance": "ft10",
+        "run": 9,
+        "states": 55,
+        "fp_residual": -0.13715853329963723,
+        "state_drift": 0.10286889997472795,
+        "fitness_change": null,
+        "stagnant_generations": -0.18859298328700122
+      },
+      {
+        "instance": "ft10",
+        "run": 10,
+        "states": 55,
+        "fp_residual": 0.19569196928363283,
+        "state_drift": 0.1674148785016333,
+        "fitness_change": 0.0018086279160110642,
+        "stagnant_generations": 0.06923330807024587
+      },
+      {
+        "instance": "ft10",
+        "run": 11,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft10",
+        "run": 12,
+        "states": 55,
+        "fp_residual": -0.054917599699149666,
+        "state_drift": 0.2733532919531477,
+        "fitness_change": 0.07542696578950261,
+        "stagnant_generations": -0.250136871293433
+      },
+      {
+        "instance": "ft10",
+        "run": 13,
+        "states": 55,
+        "fp_residual": -0.045831244117119724,
+        "state_drift": -0.012172483347001618,
+        "fitness_change": null,
+        "stagnant_generations": 0.07077561340017986
+      },
+      {
+        "instance": "ft10",
+        "run": 14,
+        "states": 55,
+        "fp_residual": -0.23118818484502873,
+        "state_drift": -0.16390207134535617,
+        "fitness_change": -0.054784879039992095,
+        "stagnant_generations": 0.3503984475893084
+      },
+      {
+        "instance": "ft10",
+        "run": 15,
+        "states": 55,
+        "fp_residual": -0.1649201756749002,
+        "state_drift": 0.056612198235010236,
+        "fitness_change": 0.05770325799255605,
+        "stagnant_generations": -0.05270011606282177
+      },
+      {
+        "instance": "ft10",
+        "run": 16,
+        "states": 55,
+        "fp_residual": 0.04169405010184986,
+        "state_drift": -0.07961983328487363,
+        "fitness_change": 0.02306069120683885,
+        "stagnant_generations": -0.11327753074246716
+      },
+      {
+        "instance": "ft10",
+        "run": 17,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ft10",
+        "run": 18,
+        "states": 55,
+        "fp_residual": -0.13488631264884068,
+        "state_drift": 0.002447287196531733,
+        "fitness_change": -0.1211545632554253,
+        "stagnant_generations": -0.15331874263824033
+      },
+      {
+        "instance": "ft10",
+        "run": 19,
+        "states": 55,
+        "fp_residual": -0.07912155685397221,
+        "state_drift": 0.23190203156816294,
+        "fitness_change": 0.12888946702378612,
+        "stagnant_generations": -0.33916305576923417
+      },
+      {
+        "instance": "orb01",
+        "run": 0,
+        "states": 55,
+        "fp_residual": 0.22347705386740285,
+        "state_drift": 0.09925412231242627,
+        "fitness_change": -0.13955755961881852,
+        "stagnant_generations": 0.10999173104390414
+      },
+      {
+        "instance": "orb01",
+        "run": 1,
+        "states": 55,
+        "fp_residual": -0.21421944869527076,
+        "state_drift": -0.04936201997285897,
+        "fitness_change": -0.03163352150976296,
+        "stagnant_generations": 0.13378383007463376
+      },
+      {
+        "instance": "orb01",
+        "run": 2,
+        "states": 55,
+        "fp_residual": 0.031874558492296534,
+        "state_drift": 0.10448411231409839,
+        "fitness_change": 0.2524080843550007,
+        "stagnant_generations": -0.030173000387542444
+      },
+      {
+        "instance": "orb01",
+        "run": 3,
+        "states": 55,
+        "fp_residual": -0.07104829682688944,
+        "state_drift": -0.023416036180053664,
+        "fitness_change": -0.03627470422502099,
+        "stagnant_generations": 0.30842317062964475
+      },
+      {
+        "instance": "orb01",
+        "run": 4,
+        "states": 55,
+        "fp_residual": -0.09984362528102318,
+        "state_drift": -0.009043806637773837,
+        "fitness_change": 0.01350821925836294,
+        "stagnant_generations": -0.34322756022360806
+      },
+      {
+        "instance": "orb01",
+        "run": 5,
+        "states": 55,
+        "fp_residual": -0.040746607571709094,
+        "state_drift": -0.16400698539299233,
+        "fitness_change": -0.043429846182503666,
+        "stagnant_generations": -0.003255063482354591
+      },
+      {
+        "instance": "orb01",
+        "run": 6,
+        "states": 55,
+        "fp_residual": 0.026588460857843717,
+        "state_drift": 0.03704720857290462,
+        "fitness_change": null,
+        "stagnant_generations": 0.08697029766612867
+      },
+      {
+        "instance": "orb01",
+        "run": 7,
+        "states": 55,
+        "fp_residual": -0.10801339755855831,
+        "state_drift": 0.1372508370056141,
+        "fitness_change": 0.3601990242457973,
+        "stagnant_generations": 0.13398694334667519
+      },
+      {
+        "instance": "orb01",
+        "run": 8,
+        "states": 55,
+        "fp_residual": 0.21151819895101936,
+        "state_drift": 0.012173401999402367,
+        "fitness_change": null,
+        "stagnant_generations": 0.06556551603186889
+      },
+      {
+        "instance": "orb01",
+        "run": 9,
+        "states": 55,
+        "fp_residual": -0.08224396186997114,
+        "state_drift": -0.0315166984746161,
+        "fitness_change": 0.3139868601932342,
+        "stagnant_generations": -0.2485060650722752
+      },
+      {
+        "instance": "orb01",
+        "run": 10,
+        "states": 55,
+        "fp_residual": -0.03734917274124228,
+        "state_drift": 0.29412473533728295,
+        "fitness_change": 0.2200288306816237,
+        "stagnant_generations": -0.19518838263353944
+      },
+      {
+        "instance": "orb01",
+        "run": 11,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "orb01",
+        "run": 12,
+        "states": 55,
+        "fp_residual": 0.009145768862556101,
+        "state_drift": 0.10892797363648449,
+        "fitness_change": 0.1358600405474798,
+        "stagnant_generations": 0.011091914535011703
+      },
+      {
+        "instance": "orb01",
+        "run": 13,
+        "states": 55,
+        "fp_residual": -0.21236965630429117,
+        "state_drift": 0.030594981061103813,
+        "fitness_change": -0.1259188161850716,
+        "stagnant_generations": 0.5401840353956316
+      },
+      {
+        "instance": "orb01",
+        "run": 14,
+        "states": 55,
+        "fp_residual": 0.06676566073223436,
+        "state_drift": 0.025207047012926177,
+        "fitness_change": 0.19381734715990792,
+        "stagnant_generations": -0.15920444638826564
+      },
+      {
+        "instance": "orb01",
+        "run": 15,
+        "states": 55,
+        "fp_residual": -0.44906709726334904,
+        "state_drift": -0.3600591124449804,
+        "fitness_change": -0.15506388970313734,
+        "stagnant_generations": 0.7449181926833176
+      },
+      {
+        "instance": "orb01",
+        "run": 16,
+        "states": 55,
+        "fp_residual": 0.15536166023372305,
+        "state_drift": 0.15456082693354922,
+        "fitness_change": -0.0475749354765375,
+        "stagnant_generations": -0.08568916311859982
+      },
+      {
+        "instance": "orb01",
+        "run": 17,
+        "states": 55,
+        "fp_residual": -0.13018844270792382,
+        "state_drift": -0.09002106076821895,
+        "fitness_change": null,
+        "stagnant_generations": 0.1873452818891115
+      },
+      {
+        "instance": "orb01",
+        "run": 18,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "orb01",
+        "run": 19,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "la21",
+        "run": 0,
+        "states": 55,
+        "fp_residual": 0.10144549058894908,
+        "state_drift": 0.20627070931491762,
+        "fitness_change": null,
+        "stagnant_generations": -0.07371026127404338
+      },
+      {
+        "instance": "la21",
+        "run": 1,
+        "states": 55,
+        "fp_residual": -0.08149294264637054,
+        "state_drift": -0.3376745136569058,
+        "fitness_change": -0.05352560620218613,
+        "stagnant_generations": 0.3482487477472041
+      },
+      {
+        "instance": "la21",
+        "run": 2,
+        "states": 55,
+        "fp_residual": 0.023024183693580384,
+        "state_drift": 0.054870033953381546,
+        "fitness_change": -0.23201497685907568,
+        "stagnant_generations": 0.2759299351312674
+      },
+      {
+        "instance": "la21",
+        "run": 3,
+        "states": 55,
+        "fp_residual": -0.17147229201281522,
+        "state_drift": -0.10497046216638992,
+        "fitness_change": 0.15800810966658282,
+        "stagnant_generations": 0.026181189945183127
+      },
+      {
+        "instance": "la21",
+        "run": 4,
+        "states": 55,
+        "fp_residual": -0.22042545387184587,
+        "state_drift": -0.3031125908840564,
+        "fitness_change": 0.038111940531242144,
+        "stagnant_generations": 0.04644476265202029
+      },
+      {
+        "instance": "la21",
+        "run": 5,
+        "states": 55,
+        "fp_residual": -0.0888313197320003,
+        "state_drift": 0.08449102723695143,
+        "fitness_change": -0.07581537602409076,
+        "stagnant_generations": -0.21059134846848912
+      },
+      {
+        "instance": "la21",
+        "run": 6,
+        "states": 55,
+        "fp_residual": -0.02693270361916024,
+        "state_drift": -0.21247391745855193,
+        "fitness_change": 0.10573471571891718,
+        "stagnant_generations": -0.5029543605048875
+      },
+      {
+        "instance": "la21",
+        "run": 7,
+        "states": 55,
+        "fp_residual": -0.10284820342340063,
+        "state_drift": 0.14299381738309896,
+        "fitness_change": 0.15392265863330679,
+        "stagnant_generations": -0.1648151117786714
+      },
+      {
+        "instance": "la21",
+        "run": 8,
+        "states": 55,
+        "fp_residual": -0.12480044614320768,
+        "state_drift": 0.07987866306962253,
+        "fitness_change": -0.10821144332284889,
+        "stagnant_generations": 0.19029655132076365
+      },
+      {
+        "instance": "la21",
+        "run": 9,
+        "states": 55,
+        "fp_residual": -0.1952392458456115,
+        "state_drift": 0.03237957936027383,
+        "fitness_change": null,
+        "stagnant_generations": -0.08976517050372942
+      },
+      {
+        "instance": "la21",
+        "run": 10,
+        "states": 55,
+        "fp_residual": -0.03428963332490931,
+        "state_drift": 0.0,
+        "fitness_change": null,
+        "stagnant_generations": 0.051434449987363975
+      },
+      {
+        "instance": "la21",
+        "run": 11,
+        "states": 55,
+        "fp_residual": 0.14637561478903757,
+        "state_drift": 0.26977614036104214,
+        "fitness_change": -0.1697624302373011,
+        "stagnant_generations": 0.061863959717960985
+      },
+      {
+        "instance": "la21",
+        "run": 12,
+        "states": 55,
+        "fp_residual": -0.06562383987535553,
+        "state_drift": -0.03581504481332963,
+        "fitness_change": null,
+        "stagnant_generations": -0.07007291376521015
+      },
+      {
+        "instance": "la21",
+        "run": 13,
+        "states": 55,
+        "fp_residual": 0.022132399691532377,
+        "state_drift": 0.16588908970672037,
+        "fitness_change": -0.2777777777777778,
+        "stagnant_generations": 0.04649882094817248
+      },
+      {
+        "instance": "la21",
+        "run": 14,
+        "states": 55,
+        "fp_residual": 0.022269094175199882,
+        "state_drift": -0.09910350952109746,
+        "fitness_change": 0.05413358173181863,
+        "stagnant_generations": -0.07799108195910259
+      },
+      {
+        "instance": "la21",
+        "run": 15,
+        "states": 55,
+        "fp_residual": 0.06489474184861357,
+        "state_drift": 0.06657305413780186,
+        "fitness_change": -0.018383473936993543,
+        "stagnant_generations": -0.13216469196624162
+      },
+      {
+        "instance": "la21",
+        "run": 16,
+        "states": 55,
+        "fp_residual": 0.05427683165332377,
+        "state_drift": -0.2761961176029002,
+        "fitness_change": null,
+        "stagnant_generations": -0.10218945902317868
+      },
+      {
+        "instance": "la21",
+        "run": 17,
+        "states": 55,
+        "fp_residual": -0.01835557745535881,
+        "state_drift": -0.1162519905506058,
+        "fitness_change": -0.026435052857271466,
+        "stagnant_generations": 0.042842819972320346
+      },
+      {
+        "instance": "la21",
+        "run": 18,
+        "states": 55,
+        "fp_residual": 0.045691985113564926,
+        "state_drift": 0.006579231416579076,
+        "fitness_change": -0.09663393602999268,
+        "stagnant_generations": -0.12901735672659576
+      },
+      {
+        "instance": "la21",
+        "run": 19,
+        "states": 55,
+        "fp_residual": -0.042456146119204986,
+        "state_drift": 0.1970254771183569,
+        "fitness_change": 0.0861919774321606,
+        "stagnant_generations": 0.02664743803947098
+      },
+      {
+        "instance": "la26",
+        "run": 0,
+        "states": 55,
+        "fp_residual": 0.09429649164350061,
+        "state_drift": 0.07715167498104596,
+        "fitness_change": null,
+        "stagnant_generations": 0.06857926664981862
+      },
+      {
+        "instance": "la26",
+        "run": 1,
+        "states": 55,
+        "fp_residual": -0.046438338534602164,
+        "state_drift": -0.09666446977186356,
+        "fitness_change": -0.1800164837185438,
+        "stagnant_generations": 0.41757379960402624
+      },
+      {
+        "instance": "la26",
+        "run": 2,
+        "states": 55,
+        "fp_residual": 0.05927668322639933,
+        "state_drift": -0.21585358044562566,
+        "fitness_change": -0.12364263858570741,
+        "stagnant_generations": -0.2839571573743289
+      },
+      {
+        "instance": "la26",
+        "run": 3,
+        "states": 55,
+        "fp_residual": 0.0508307743773028,
+        "state_drift": -0.004845641027388256,
+        "fitness_change": -0.07484463418830002,
+        "stagnant_generations": -0.18580457505794837
+      },
+      {
+        "instance": "la26",
+        "run": 4,
+        "states": 48,
+        "fp_residual": 0.19026731114412382,
+        "state_drift": -0.03848185912503436,
+        "fitness_change": 0.32567798510194834,
+        "stagnant_generations": -0.5794240512049879
+      },
+      {
+        "instance": "la26",
+        "run": 5,
+        "states": 55,
+        "fp_residual": -0.006162014197687851,
+        "state_drift": -0.05769886021471352,
+        "fitness_change": -0.12316680031086495,
+        "stagnant_generations": 0.07015614143717117
+      },
+      {
+        "instance": "la26",
+        "run": 6,
+        "states": 55,
+        "fp_residual": 0.11009302578977104,
+        "state_drift": 0.18799293330242808,
+        "fitness_change": -0.0932921857763681,
+        "stagnant_generations": 0.0144905882889775
+      },
+      {
+        "instance": "la26",
+        "run": 7,
+        "states": 52,
+        "fp_residual": 0.014330687291427665,
+        "state_drift": 0.13999114526645612,
+        "fitness_change": -0.28865251932416147,
+        "stagnant_generations": 0.5006186760472064
+      },
+      {
+        "instance": "la26",
+        "run": 8,
+        "states": 55,
+        "fp_residual": -0.05318307385856162,
+        "state_drift": 0.035170052341735994,
+        "fitness_change": -0.018013652439045232,
+        "stagnant_generations": 0.2589757024549558
+      },
+      {
+        "instance": "la26",
+        "run": 9,
+        "states": 55,
+        "fp_residual": -0.08648709954330559,
+        "state_drift": -0.1472472672971619,
+        "fitness_change": 0.301844108429785,
+        "stagnant_generations": -0.33667722132267874
+      },
+      {
+        "instance": "la26",
+        "run": 10,
+        "states": 55,
+        "fp_residual": -0.12881694080710412,
+        "state_drift": -0.0678532020296127,
+        "fitness_change": null,
+        "stagnant_generations": -0.17868543934716777
+      },
+      {
+        "instance": "la26",
+        "run": 11,
+        "states": 55,
+        "fp_residual": -0.11306113237707639,
+        "state_drift": 0.11654743387278864,
+        "fitness_change": -0.018492891834867842,
+        "stagnant_generations": 0.061219768143330466
+      },
+      {
+        "instance": "la26",
+        "run": 12,
+        "states": 55,
+        "fp_residual": 0.10617224528719967,
+        "state_drift": 0.3336765197456448,
+        "fitness_change": 0.18182491051065958,
+        "stagnant_generations": 0.08787719812528771
+      },
+      {
+        "instance": "la26",
+        "run": 13,
+        "states": 55,
+        "fp_residual": 0.20224033650108017,
+        "state_drift": -0.08194605681864461,
+        "fitness_change": -0.058819248968697266,
+        "stagnant_generations": 0.41883123494850627
+      },
+      {
+        "instance": "la26",
+        "run": 14,
+        "states": 53,
+        "fp_residual": 0.0463814209040694,
+        "state_drift": -0.08160899309373333,
+        "fitness_change": null,
+        "stagnant_generations": 0.07701268791417726
+      },
+      {
+        "instance": "la26",
+        "run": 15,
+        "states": 55,
+        "fp_residual": 0.1412929586572568,
+        "state_drift": 0.2254481648848249,
+        "fitness_change": -0.06031698182372004,
+        "stagnant_generations": -0.2692339115673105
+      },
+      {
+        "instance": "la26",
+        "run": 16,
+        "states": 55,
+        "fp_residual": -0.3319039448572539,
+        "state_drift": -0.26552315588580305,
+        "fitness_change": -0.08921329449602013,
+        "stagnant_generations": 0.26604088692303196
+      },
+      {
+        "instance": "la26",
+        "run": 17,
+        "states": 55,
+        "fp_residual": 0.1582274920126205,
+        "state_drift": -0.13215570827658965,
+        "fitness_change": 0.008027167884876046,
+        "stagnant_generations": -0.242054123040417
+      },
+      {
+        "instance": "la26",
+        "run": 18,
+        "states": 55,
+        "fp_residual": -0.1688831066278136,
+        "state_drift": 0.21291417937932516,
+        "fitness_change": 0.12488966645602369,
+        "stagnant_generations": -0.5598819029084896
+      },
+      {
+        "instance": "la26",
+        "run": 19,
+        "states": 55,
+        "fp_residual": -0.032981829661210244,
+        "state_drift": -0.08669509510946694,
+        "fitness_change": -0.05598127485064209,
+        "stagnant_generations": -0.1831933836077466
+      },
+      {
+        "instance": "la40",
+        "run": 0,
+        "states": 24,
+        "fp_residual": 0.18819737232642314,
+        "state_drift": 0.2591123242175391,
+        "fitness_change": -0.3412336071106545,
+        "stagnant_generations": 0.3382833184046575
+      },
+      {
+        "instance": "la40",
+        "run": 1,
+        "states": 55,
+        "fp_residual": 0.12715925537783457,
+        "state_drift": -0.016659191645319094,
+        "fitness_change": -0.0894913543563829,
+        "stagnant_generations": -0.1538372823048287
+      },
+      {
+        "instance": "la40",
+        "run": 2,
+        "states": 20,
+        "fp_residual": -0.21882153700534204,
+        "state_drift": 0.17903580300437075,
+        "fitness_change": null,
+        "stagnant_generations": 0.05967860100145692
+      },
+      {
+        "instance": "la40",
+        "run": 3,
+        "states": 23,
+        "fp_residual": -0.0946955107108119,
+        "state_drift": 0.2978504145031933,
+        "fitness_change": null,
+        "stagnant_generations": 0.028078320036345392
+      },
+      {
+        "instance": "la40",
+        "run": 4,
+        "states": 18,
+        "fp_residual": 0.3692946859624121,
+        "state_drift": -0.03867613265146884,
+        "fitness_change": null,
+        "stagnant_generations": -0.2245273092414534
+      },
+      {
+        "instance": "la40",
+        "run": 5,
+        "states": 50,
+        "fp_residual": 0.05442394026450534,
+        "state_drift": 0.09270792196895569,
+        "fitness_change": null,
+        "stagnant_generations": 0.05913680816404138
+      },
+      {
+        "instance": "la40",
+        "run": 6,
+        "states": 47,
+        "fp_residual": 0.10237809353394635,
+        "state_drift": -0.048990744145078625,
+        "fitness_change": 0.1664452103683409,
+        "stagnant_generations": 0.01999918299377783
+      },
+      {
+        "instance": "la40",
+        "run": 7,
+        "states": 53,
+        "fp_residual": -0.04392966042201207,
+        "state_drift": -0.07705499895644821,
+        "fitness_change": null,
+        "stagnant_generations": -0.22119177666542839
+      },
+      {
+        "instance": "la40",
+        "run": 8,
+        "states": 55,
+        "fp_residual": 0.003927588751169549,
+        "state_drift": 0.13190519974433465,
+        "fitness_change": -0.08913556100750197,
+        "stagnant_generations": 0.021301665761659677
+      },
+      {
+        "instance": "la40",
+        "run": 9,
+        "states": 49,
+        "fp_residual": -0.24665469506633528,
+        "state_drift": -0.06529328209700673,
+        "fitness_change": -0.35708502492530647,
+        "stagnant_generations": 0.10980061047661885
+      },
+      {
+        "instance": "la40",
+        "run": 10,
+        "states": 18,
+        "fp_residual": -0.3973597071195132,
+        "state_drift": -0.2571151046067438,
+        "fitness_change": null,
+        "stagnant_generations": -0.2571151046067438
+      },
+      {
+        "instance": "la40",
+        "run": 11,
+        "states": 55,
+        "fp_residual": -0.017842130432953095,
+        "state_drift": -0.06185271883423739,
+        "fitness_change": -0.06731453910283572,
+        "stagnant_generations": 0.19857130175930657
+      },
+      {
+        "instance": "la40",
+        "run": 12,
+        "states": 52,
+        "fp_residual": 0.12340406204395268,
+        "state_drift": -0.11579696232891451,
+        "fitness_change": -0.06394791841230694,
+        "stagnant_generations": 0.2676574147007916
+      },
+      {
+        "instance": "la40",
+        "run": 13,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "la40",
+        "run": 14,
+        "states": 7,
+        "fp_residual": 0.6923450994227357,
+        "state_drift": 0.8420413371357598,
+        "fitness_change": null,
+        "stagnant_generations": -0.3525248694596015
+      },
+      {
+        "instance": "la40",
+        "run": 15,
+        "states": 54,
+        "fp_residual": 0.0793945798324391,
+        "state_drift": 0.0758165801197107,
+        "fitness_change": null,
+        "stagnant_generations": -0.39697289916219547
+      },
+      {
+        "instance": "la40",
+        "run": 16,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "la40",
+        "run": 17,
+        "states": 49,
+        "fp_residual": 0.07846168766182965,
+        "state_drift": 0.15385366923360333,
+        "fitness_change": null,
+        "stagnant_generations": 0.011664883142212545
+      },
+      {
+        "instance": "la40",
+        "run": 18,
+        "states": 43,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "la40",
+        "run": 19,
+        "states": 24,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "yn1",
+        "run": 0,
+        "states": 2,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "yn1",
+        "run": 1,
+        "states": 31,
+        "fp_residual": -0.2009243233592138,
+        "state_drift": -0.053348872064342974,
+        "fitness_change": null,
+        "stagnant_generations": 0.0
+      },
+      {
+        "instance": "yn1",
+        "run": 2,
+        "states": 28,
+        "fp_residual": 0.17588169323391725,
+        "state_drift": -0.1223524822496816,
+        "fitness_change": null,
+        "stagnant_generations": 0.20037961077337965
+      },
+      {
+        "instance": "yn1",
+        "run": 3,
+        "states": 36,
+        "fp_residual": -0.06392986237239835,
+        "state_drift": -0.14453708014629196,
+        "fitness_change": -0.0753029322957523,
+        "stagnant_generations": -0.14433854020103606
+      },
+      {
+        "instance": "yn1",
+        "run": 4,
+        "states": 8,
+        "fp_residual": -0.41239304942116134,
+        "state_drift": -0.08247860988423227,
+        "fitness_change": null,
+        "stagnant_generations": 0.16495721976846453
+      },
+      {
+        "instance": "yn1",
+        "run": 5,
+        "states": 8,
+        "fp_residual": 0.061378577017529544,
+        "state_drift": -0.5646829085612719,
+        "fitness_change": null,
+        "stagnant_generations": -0.6628886317893191
+      },
+      {
+        "instance": "yn1",
+        "run": 6,
+        "states": 0,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "yn1",
+        "run": 7,
+        "states": 6,
+        "fp_residual": -0.6210590034081188,
+        "state_drift": -0.41403933560541256,
+        "fitness_change": null,
+        "stagnant_generations": 0.41403933560541256
+      },
+      {
+        "instance": "yn1",
+        "run": 8,
+        "states": 11,
+        "fp_residual": 0.30000000000000004,
+        "state_drift": 0.30000000000000004,
+        "fitness_change": null,
+        "stagnant_generations": 0.4000000000000001
+      },
+      {
+        "instance": "yn1",
+        "run": 9,
+        "states": 0,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "yn1",
+        "run": 10,
+        "states": 0,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "yn1",
+        "run": 11,
+        "states": 49,
+        "fp_residual": -0.0020833333333333333,
+        "state_drift": 0.13452380952380952,
+        "fitness_change": -0.02976810451299001,
+        "stagnant_generations": 0.09077844119508963
+      },
+      {
+        "instance": "yn1",
+        "run": 12,
+        "states": 0,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "yn1",
+        "run": 13,
+        "states": 8,
+        "fp_residual": -0.21821789023599242,
+        "state_drift": 0.10910894511799621,
+        "fitness_change": null,
+        "stagnant_generations": -0.43643578047198484
+      },
+      {
+        "instance": "yn1",
+        "run": 14,
+        "states": 22,
+        "fp_residual": 0.1547818111102747,
+        "state_drift": -0.05159393703675823,
+        "fitness_change": null,
+        "stagnant_generations": -0.08598989506126371
+      },
+      {
+        "instance": "yn1",
+        "run": 15,
+        "states": 0,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "yn1",
+        "run": 16,
+        "states": 9,
+        "fp_residual": 0.0,
+        "state_drift": 0.3651483716701107,
+        "fitness_change": null,
+        "stagnant_generations": -0.18257418583505536
+      },
+      {
+        "instance": "yn1",
+        "run": 17,
+        "states": 0,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "yn1",
+        "run": 18,
+        "states": 0,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "yn1",
+        "run": 19,
+        "states": 2,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ta31",
+        "run": 0,
+        "states": 55,
+        "fp_residual": -0.21141825000393122,
+        "state_drift": -0.15823809471546804,
+        "fitness_change": null,
+        "stagnant_generations": 0.1188051904539545
+      },
+      {
+        "instance": "ta31",
+        "run": 1,
+        "states": 55,
+        "fp_residual": -0.061746547802912374,
+        "state_drift": 0.2028815142095692,
+        "fitness_change": null,
+        "stagnant_generations": -0.035283741601664205
+      },
+      {
+        "instance": "ta31",
+        "run": 2,
+        "states": 55,
+        "fp_residual": 0.13646945729670126,
+        "state_drift": -0.0170044127596632,
+        "fitness_change": 0.26347931570087685,
+        "stagnant_generations": -0.29880121151024425
+      },
+      {
+        "instance": "ta31",
+        "run": 3,
+        "states": 55,
+        "fp_residual": 0.13931955314383823,
+        "state_drift": 0.08049574181643986,
+        "fitness_change": -0.06019292654288459,
+        "stagnant_generations": 0.0
+      },
+      {
+        "instance": "ta31",
+        "run": 4,
+        "states": 55,
+        "fp_residual": -0.19716539161822855,
+        "state_drift": 0.16287575829331924,
+        "fitness_change": -0.018518518518518514,
+        "stagnant_generations": 0.14575986510869843
+      },
+      {
+        "instance": "ta31",
+        "run": 5,
+        "states": 48,
+        "fp_residual": 0.22142092518829526,
+        "state_drift": 0.1526135758706794,
+        "fitness_change": -0.1930207727676219,
+        "stagnant_generations": -0.06877013169213232
+      },
+      {
+        "instance": "ta31",
+        "run": 6,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ta31",
+        "run": 7,
+        "states": 55,
+        "fp_residual": -0.09713191843416766,
+        "state_drift": 0.024253545693864894,
+        "fitness_change": -0.05595438016984381,
+        "stagnant_generations": -0.06410706616655065
+      },
+      {
+        "instance": "ta31",
+        "run": 8,
+        "states": 55,
+        "fp_residual": -0.0056887963243456565,
+        "state_drift": 0.0646161393821903,
+        "fitness_change": -0.06376474095999046,
+        "stagnant_generations": -0.26296479994521715
+      },
+      {
+        "instance": "ta31",
+        "run": 9,
+        "states": 55,
+        "fp_residual": 0.23758054571823628,
+        "state_drift": 0.13792129058549296,
+        "fitness_change": -0.037722908093278454,
+        "stagnant_generations": 0.06466363414568281
+      },
+      {
+        "instance": "ta31",
+        "run": 10,
+        "states": 55,
+        "fp_residual": -0.04240414404953093,
+        "state_drift": -0.09537973982489842,
+        "fitness_change": 0.09785464938985775,
+        "stagnant_generations": 0.10792005133435442
+      },
+      {
+        "instance": "ta31",
+        "run": 11,
+        "states": 55,
+        "fp_residual": 0.09587754232636689,
+        "state_drift": 0.045825461065502504,
+        "fitness_change": null,
+        "stagnant_generations": -0.08764675563013587
+      },
+      {
+        "instance": "ta31",
+        "run": 12,
+        "states": 55,
+        "fp_residual": -0.10477569010607611,
+        "state_drift": -0.14503980880926035,
+        "fitness_change": -0.04662932882561316,
+        "stagnant_generations": 0.15246217831387351
+      },
+      {
+        "instance": "ta31",
+        "run": 13,
+        "states": 55,
+        "fp_residual": 0.08631425333545169,
+        "state_drift": 0.08606479017552263,
+        "fitness_change": null,
+        "stagnant_generations": 0.14150797746975427
+      },
+      {
+        "instance": "ta31",
+        "run": 14,
+        "states": 55,
+        "fp_residual": -0.19753888070954478,
+        "state_drift": -0.11790045808114723,
+        "fitness_change": null,
+        "stagnant_generations": -0.01846365664289664
+      },
+      {
+        "instance": "ta31",
+        "run": 15,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ta31",
+        "run": 16,
+        "states": 55,
+        "fp_residual": -0.09316004238036686,
+        "state_drift": -0.023010370673709823,
+        "fitness_change": -0.03719980841848551,
+        "stagnant_generations": -0.046964131034970526
+      },
+      {
+        "instance": "ta31",
+        "run": 17,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ta31",
+        "run": 18,
+        "states": 55,
+        "fp_residual": -0.1454826885739849,
+        "state_drift": -0.1110472038593072,
+        "fitness_change": -0.04297692436726098,
+        "stagnant_generations": 0.08195261807105951
+      },
+      {
+        "instance": "ta31",
+        "run": 19,
+        "states": 55,
+        "fp_residual": 0.15908167127977635,
+        "state_drift": 0.20802987782739985,
+        "fitness_change": 0.700528900717694,
+        "stagnant_generations": -0.11934785563717813
+      },
+      {
+        "instance": "ta51",
+        "run": 0,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ta51",
+        "run": 1,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ta51",
+        "run": 2,
+        "states": 55,
+        "fp_residual": 0.006118525818452935,
+        "state_drift": 0.01223705163690587,
+        "fitness_change": -0.03772937802010646,
+        "stagnant_generations": -0.048957037978736864
+      },
+      {
+        "instance": "ta51",
+        "run": 3,
+        "states": 55,
+        "fp_residual": 0.2777265248311924,
+        "state_drift": 0.1295671284117389,
+        "fitness_change": null,
+        "stagnant_generations": -0.014324004146021386
+      },
+      {
+        "instance": "ta51",
+        "run": 4,
+        "states": 55,
+        "fp_residual": -0.1446522191296896,
+        "state_drift": -0.0550799433496806,
+        "fitness_change": -0.16915826428864583,
+        "stagnant_generations": 0.4821973226008122
+      },
+      {
+        "instance": "ta51",
+        "run": 5,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ta51",
+        "run": 6,
+        "states": 55,
+        "fp_residual": 0.07093743848550418,
+        "state_drift": 0.10678668040787924,
+        "fitness_change": null,
+        "stagnant_generations": 0.042498375061050225
+      },
+      {
+        "instance": "ta51",
+        "run": 7,
+        "states": 55,
+        "fp_residual": -0.11144130830595528,
+        "state_drift": -0.12858612496840993,
+        "fitness_change": -0.038080263273726045,
+        "stagnant_generations": 0.11150770170374605
+      },
+      {
+        "instance": "ta51",
+        "run": 8,
+        "states": 55,
+        "fp_residual": -0.18328579974273834,
+        "state_drift": -0.21994295969128602,
+        "fitness_change": 0.13857990321384966,
+        "stagnant_generations": -0.14204649480062223
+      },
+      {
+        "instance": "ta51",
+        "run": 9,
+        "states": 55,
+        "fp_residual": 0.20802987782739985,
+        "state_drift": 0.15908167127977635,
+        "fitness_change": -0.03772937802010646,
+        "stagnant_generations": -0.009180438587335511
+      },
+      {
+        "instance": "ta51",
+        "run": 10,
+        "states": 55,
+        "fp_residual": 0.04282968072917055,
+        "state_drift": 0.18967430037204103,
+        "fitness_change": -0.026435052857271466,
+        "stagnant_generations": -0.15908167127977635
+      },
+      {
+        "instance": "ta51",
+        "run": 11,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ta51",
+        "run": 12,
+        "states": 55,
+        "fp_residual": 0.18013069068015103,
+        "state_drift": 0.2044702574287854,
+        "fitness_change": 0.00022735762937441304,
+        "stagnant_generations": -0.13733731474560495
+      },
+      {
+        "instance": "ta51",
+        "run": 13,
+        "states": 55,
+        "fp_residual": -0.14573094163086459,
+        "state_drift": 0.03428963332490931,
+        "fitness_change": null,
+        "stagnant_generations": 0.04286204165613664
+      },
+      {
+        "instance": "ta51",
+        "run": 14,
+        "states": 55,
+        "fp_residual": -0.21431020828068323,
+        "state_drift": -0.22288261661191056,
+        "fitness_change": -0.026430519709187503,
+        "stagnant_generations": 0.13720804008100024
+      },
+      {
+        "instance": "ta51",
+        "run": 15,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ta51",
+        "run": 16,
+        "states": 55,
+        "fp_residual": 0.17591133841679402,
+        "state_drift": -0.05990546965497034,
+        "fitness_change": 0.054288496472400104,
+        "stagnant_generations": -0.38297178920742114
+      },
+      {
+        "instance": "ta51",
+        "run": 17,
+        "states": 55,
+        "fp_residual": -0.1434634518615591,
+        "state_drift": 0.10372149804740233,
+        "fitness_change": -0.06638934238149674,
+        "stagnant_generations": 0.34885448151029297
+      },
+      {
+        "instance": "ta51",
+        "run": 18,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      },
+      {
+        "instance": "ta51",
+        "run": 19,
+        "states": 55,
+        "fp_residual": null,
+        "state_drift": null,
+        "fitness_change": null,
+        "stagnant_generations": null
+      }
+    ],
+    "recommendation_precision": {
+      "fixed": {
+        "selected_states": 2311,
+        "available_states": 9807,
+        "precision": 0.39463435742102987,
+        "recall": 0.23905635648754914,
+        "avg_gain_bks_pp": 0.47480779861216765
+      },
+      "stagnation": {
+        "selected_states": 8985,
+        "available_states": 9807,
+        "precision": 0.37662771285475793,
+        "recall": 0.8870249017038008,
+        "avg_gain_bks_pp": 0.45500795464001403
+      },
+      "state_drift": {
+        "selected_states": 1482,
+        "available_states": 9807,
+        "precision": 0.39473684210526316,
+        "recall": 0.15334207077326342,
+        "avg_gain_bks_pp": 0.5370642594496051
+      },
+      "fp_residual": {
+        "selected_states": 2300,
+        "available_states": 9807,
+        "precision": 0.4043478260869565,
+        "recall": 0.2437745740498034,
+        "avg_gain_bks_pp": 0.519699606192275
+      }
+    },
+    "residual_quantile_bins": [
+      {
+        "lower": 0.00023576701893325474,
+        "upper": 0.012475276726336018,
+        "states": 2452,
+        "effectiveness": 0.40538336052202284,
+        "mean_gain_bks_pp": 0.5286729257298776
+      },
+      {
+        "lower": 0.012475276726336018,
+        "upper": 0.02059924306262473,
+        "states": 2451,
+        "effectiveness": 0.3802529579763362,
+        "mean_gain_bks_pp": 0.47400751045264466
+      },
+      {
+        "lower": 0.02059924306262473,
+        "upper": 0.032902539188059354,
+        "states": 2452,
+        "effectiveness": 0.37887438825448616,
+        "mean_gain_bks_pp": 0.48215797982563735
+      },
+      {
+        "lower": 0.032902539188059354,
+        "upper": 0.21435701025900591,
+        "states": 2452,
+        "effectiveness": 0.3915171288743883,
+        "mean_gain_bks_pp": 0.41718044968461765
+      }
+    ],
+    "effective_states": 3815,
+    "scope": "Detached probes on neutral GA+LS states, not solely FP-selected states. Precision is conditional on common fitted/reliable states, without deployment cooldown."
+  },
+  "audit": "Passed all paired initialization, query budget, event and gain consistency checks."
+}

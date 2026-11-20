@@ -1,0 +1,67 @@
+{
+  "protocol": {
+    "seed": 20260916,
+    "population": 80,
+    "queries": 30000,
+    "vnd_queries": 8000,
+    "call_queries": 500,
+    "vnd_iterations": 100,
+    "ls_interval": 10,
+    "ls_queries": 150,
+    "ls_iterations": 20,
+    "check_interval": 5,
+    "warmup": 85,
+    "cooldown": 10,
+    "fixed_period": 20,
+    "stagnant_generations": 15,
+    "drift_threshold": 0.012,
+    "fp_threshold": 0.012
+  },
+  "instances": [
+    "ft06",
+    "la04",
+    "ft10",
+    "orb01",
+    "la21",
+    "la26",
+    "la40",
+    "yn1",
+    "ta31",
+    "ta51"
+  ],
+  "runs": 20,
+  "source_hashes": {
+    "run_trigger_comparison.py": "a17138a3155dc2604d1693f7045812dd6b60c07fe7a358df56284af50df2e280",
+    "src/tools/executor.py": "f9371f7c52a50e665dd0567117e27a8464c420fbd39257d3c2a884a668d4b484",
+    "src/tools/fixed_point_detector.py": "5aecc694057e3bbf0cb415a91bd6f21f31ba2a6cd9f427de385543be7c6c1629",
+    "src/tools/jssp_core.py": "2fecf66b2ee089f0e56e25cc6029266cc4bb9228a32794fb9de9beae45c889b9",
+    "src/tools/meta_scheduler.py": "b39cb48b62e62f465f37622f058d537cf1be30c8ffda345db253374c97b9178a",
+    "jobshop1.txt": "39722bc084ac7ca3a72d07e7f3be6f83a4e29972b5e5eea48399f1ba2c14728e"
+  },
+  "bks": {
+    "ft06": 55,
+    "la04": 590,
+    "ft10": 930,
+    "orb01": 1059,
+    "la21": 1046,
+    "la26": 1218,
+    "la40": 1222,
+    "yn1": 884,
+    "ta31": 1764,
+    "ta51": 2760
+  },
+  "bks_metadata": {
+    "source": "OR-Library jobshop1 + Taillard (1993) benchmark best-known solutions",
+    "version": "2026-08-17"
+  },
+  "budget_unit": "objective queries including cache hits; actual decodes also reported",
+  "controlled_components": "Fixed GA parameters; scheduled LS; best-individual capped VND; terminal refinement disabled for all.",
+  "fp_rule": "Reliable affine operator residual <= threshold; no legacy stage/stagnation gates.",
+  "drift_rule": "Same normalized state and weighted L2 norm, one observation lag.",
+  "probes": "All eligible states on independent GA+LS trajectories; never committed; RNG/cache/budget isolated.",
+  "query_cap_behavior": "All search operators retain the best evaluated candidate on cap; unused VND allocation goes to GA+LS.",
+  "runtime_note": "All arms compute FP diagnostics; timings include observation overhead, not native trigger-only runtime.",
+  "threshold_note": "Frozen heuristic thresholds, no tuning on reported outcomes; no universal irreplaceability claim.",
+  "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:19:41) [GCC 14.3.0]",
+  "numpy": "2.4.6"
+}
