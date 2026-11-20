@@ -1,0 +1,84 @@
+{
+  "fixed_cng": {
+    "CB_BEST_DESCENT": 0.00058175,
+    "CB_FIRST_DESCENT": 0.00113822,
+    "CB_TABU": 0.00067202
+  },
+  "arm_cng_means": {
+    "A": {
+      "mean": 0.00067375,
+      "se": 2.859e-05
+    },
+    "B": {
+      "mean": 0.00067432,
+      "se": 2.882e-05
+    },
+    "C": {
+      "mean": 0.00066683,
+      "se": 2.859e-05
+    },
+    "D": {
+      "mean": 0.00065715,
+      "se": 2.861e-05
+    },
+    "E": {
+      "mean": 0.00066097,
+      "se": 2.873e-05
+    },
+    "D_random": {
+      "mean": 0.00067411,
+      "se": 2.881e-05
+    }
+  },
+  "per_action_cng_stats": {
+    "CB_BEST_DESCENT": {
+      "mean": 0.0005817465795257956,
+      "median": 0.0002713267375814374,
+      "n_states": 800
+    },
+    "CB_FIRST_DESCENT": {
+      "mean": 0.0011382229193503137,
+      "median": 0.0005430310069635425,
+      "n_states": 800
+    },
+    "CB_TABU": {
+      "mean": 0.0006720163364994002,
+      "median": 0.00042399491820213945,
+      "n_states": 800
+    }
+  },
+  "raw_gain_fixed": {
+    "CB_BEST_DESCENT": 0.02592735,
+    "CB_FIRST_DESCENT": 0.02283364,
+    "CB_TABU": 0.03891465
+  },
+  "action_collapse_ratio": {
+    "raw": {
+      "CB_BEST_DESCENT": 0.666262,
+      "CB_FIRST_DESCENT": 0.586762,
+      "CB_TABU": 1.0
+    },
+    "cng": {
+      "CB_BEST_DESCENT": 1.0,
+      "CB_FIRST_DESCENT": 1.956561,
+      "CB_TABU": 1.15517
+    }
+  },
+  "dominance_shift": {
+    "raw_best_counts": {
+      "CB_TABU": 494,
+      "CB_BEST_DESCENT": 277,
+      "CB_FIRST_DESCENT": 29
+    },
+    "cng_best_counts": {
+      "CB_FIRST_DESCENT": 436,
+      "CB_TABU": 232,
+      "CB_BEST_DESCENT": 132
+    },
+    "agreement_count": {
+      "CB_TABU": 232,
+      "CB_BEST_DESCENT": 122,
+      "CB_FIRST_DESCENT": 29
+    }
+  }
+}

@@ -1,0 +1,1470 @@
+{
+  "inventory_counts": {
+    "orlib_jobshop1": 83,
+    "frozen_benchmark_46": 46,
+    "historical_genetic_48": 48
+  },
+  "parser_cross_check_frozen46_vs_orlib_mismatches": [],
+  "skipped_nonpositive_duration_instances": [
+    {
+      "name": "orb07",
+      "source": "/data/Myfile/paper/jobshop1.txt",
+      "reason": "durations must be positive integers",
+      "jobs": 10,
+      "machines": 10
+    }
+  ],
+  "candidate_overlap": {
+    "lawrence_la21_la40": {
+      "la21": {
+        "size": "15x10",
+        "fingerprint": "f0a42810fa91abe0a4a2ecaf72860ddf3b343ce3fcec69607e06e29ce7716e48",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "la21"
+        ]
+      },
+      "la22": {
+        "size": "15x10",
+        "fingerprint": "a3f491b80f2ffb2aedd3c79ce71bd6de66434c5077d2792376679e209846cbbe",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "la23": {
+        "size": "15x10",
+        "fingerprint": "1c5deb04f60d901da5ae91cf6a6c4b5006e40290f38b987c014f6c63c2b4f115",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "la24": {
+        "size": "15x10",
+        "fingerprint": "57816a57ce1ff803f4d2cd08b7feff68a144618b4254a3193bb9d408fa643f7b",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "la24"
+        ]
+      },
+      "la25": {
+        "size": "15x10",
+        "fingerprint": "4b3be4448247e09f8853269b7515aa767990f49fb7c0b22e9703332c6a72dfa6",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "la26": {
+        "size": "20x10",
+        "fingerprint": "f4cd6568041552ba92e3c24a854db6736fa2c0347076ee2eb15ef2dcbbfc307f",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "la27": {
+        "size": "20x10",
+        "fingerprint": "5ee9e0ba51082a70533e44d2061245223504287b0831c51c0aafdc33d09f4d5b",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "la28": {
+        "size": "20x10",
+        "fingerprint": "6e3f0e493d1006386116671b50e4bf3d1e28ad3d0067f39be9537f6732023fea",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "la29": {
+        "size": "20x10",
+        "fingerprint": "79f41ee1fd8a5d2883e02e0b212352830c8d55b7b85aafb1596a02c56926a197",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "la29"
+        ]
+      },
+      "la30": {
+        "size": "20x10",
+        "fingerprint": "80bb0ebff19bc409f6f6b30135b18e914798d548731cb244d5cecf99221ba489",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "la31": {
+        "size": "30x10",
+        "fingerprint": "6f30d3c5f82037f718016e44c6ad29148d528d249dacd854b872596c4b6ab5a9",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "la32": {
+        "size": "30x10",
+        "fingerprint": "ec6e56d25d229026d1900db034f2ee5200a2419f8f4dec6cb74d7116a2add09d",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "la33": {
+        "size": "30x10",
+        "fingerprint": "1bd6e82a50dbf5ebaf502a919a39ef514397b8d6c71abdbc3ad4036238490d23",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "la33"
+        ]
+      },
+      "la34": {
+        "size": "30x10",
+        "fingerprint": "0ebdd400f9376568d06f2b03e33a3784947b385b12dc091fbda9bc5eb490b020",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "la34"
+        ]
+      },
+      "la35": {
+        "size": "30x10",
+        "fingerprint": "cdfe17babe679ee0033d195f31b1d5a87f0372010d5e786cd01512b778681cee",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "la35"
+        ]
+      },
+      "la36": {
+        "size": "15x15",
+        "fingerprint": "5164912c6bb8bc05b506f7116c261a7a1f0f587f6bfa4e3589b8c41727f08331",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "la37": {
+        "size": "15x15",
+        "fingerprint": "4c1e859f5ccdd5ef973978e22860ed520fb80af73883bc0f9722c431fa6d5ac8",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "la37"
+        ]
+      },
+      "la38": {
+        "size": "15x15",
+        "fingerprint": "a3afce39ab0b53a34cca254263ab4725414676d1e33973108cea093f0aa524a1",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "la38"
+        ]
+      },
+      "la39": {
+        "size": "15x15",
+        "fingerprint": "dbca54b8c0125e82a7d0c2bda6e1e56cd62fe7575ff12ce6af4500e63d2c3b5a",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "la39"
+        ]
+      },
+      "la40": {
+        "size": "15x15",
+        "fingerprint": "49bd30ecefeecf1e7517ef1db6e561ab31db0c1b63007a7cfeb43869babedcca",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "la40"
+        ]
+      }
+    },
+    "taillard_local": {
+      "ta01": {
+        "size": "15x15",
+        "fingerprint": "fa31a659f77a526e3125c300a410d2f0062b6a5234e30c76d3b9886fe9c9f08d",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": false,
+        "genetic48_names_same_fingerprint": []
+      },
+      "ta02": {
+        "size": "15x15",
+        "fingerprint": "33200c04ce2eeb585c47da4af6c413cf34d4d91f13b741403cd4d90d9c6fb70e",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": false,
+        "genetic48_names_same_fingerprint": []
+      },
+      "ta11": {
+        "size": "20x15",
+        "fingerprint": "1f6b573fa612afbcb1a8999e0b634ef66436df71691935133468799f2ffd2a09",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": false,
+        "genetic48_names_same_fingerprint": []
+      },
+      "ta12": {
+        "size": "20x15",
+        "fingerprint": "3ae8d5af54ecebd601ea02f6b1b3a03c792cc3ebc964328758e7cf8c268d01b2",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": false,
+        "genetic48_names_same_fingerprint": []
+      },
+      "ta21": {
+        "size": "20x20",
+        "fingerprint": "63b05279e43d7be5a267b0c9b839299d4f1e1e5340c3d74437f16460447bebbc",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": false,
+        "genetic48_names_same_fingerprint": []
+      },
+      "ta31": {
+        "size": "30x15",
+        "fingerprint": "a90283896cd35229908dfb688b4f61bf10415cd9dec9d781ac54a3a63293ed29",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "ta31"
+        ]
+      },
+      "ta41": {
+        "size": "30x20",
+        "fingerprint": "8270c81b7fba143f3bb3bba19f8bd8f437c23e58b7dbf0a8f228b961fe4fcb50",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": false,
+        "genetic48_names_same_fingerprint": []
+      },
+      "ta42": {
+        "size": "30x20",
+        "fingerprint": "0001d02c87147d3248ab396eb5c92da103d8438684841b478bbe9479751bbdf4",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": false,
+        "genetic48_names_same_fingerprint": []
+      },
+      "ta51": {
+        "size": "50x15",
+        "fingerprint": "acf9f04ef649573f1b125abfa29fad3bf1e161907af83ee21dd616dc2366a0cd",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "ta51"
+        ]
+      },
+      "ta61": {
+        "size": "50x20",
+        "fingerprint": "1c4d1b5c38a83f02f490cd4bb39d1ae20d4b3dec7dc6a472ffe42daa72597ad1",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": false,
+        "genetic48_names_same_fingerprint": []
+      },
+      "ta70": {
+        "size": "50x20",
+        "fingerprint": "64c5e810e1e2e6de3d276e9782c6868948c6a0c894dad4b8943a02b9b54508d2",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": false,
+        "genetic48_names_same_fingerprint": [
+          "ta70"
+        ]
+      }
+    },
+    "other_local_medium": {
+      "abz5": {
+        "size": "10x10",
+        "fingerprint": "52d65b97a68af233cdd6ba7c2bbc65429e007d864014e291ba43ce3d8cdbe211",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "abz5"
+        ]
+      },
+      "abz6": {
+        "size": "10x10",
+        "fingerprint": "aa8a3ac9cf59b1a129208deebaa2cbdace03fd2be5cd5942c5f19b37c082508e",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "abz6"
+        ]
+      },
+      "abz7": {
+        "size": "20x15",
+        "fingerprint": "0fe003884f3d2ee1b6c2f7a8c4c786596aeb192479f0857048ec79a8c43dc5a3",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "abz7"
+        ]
+      },
+      "abz8": {
+        "size": "20x15",
+        "fingerprint": "27694d4ef1c95d7b6488038605592bf872b3fce5d37218e7ba031a843e390a26",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "abz9": {
+        "size": "20x15",
+        "fingerprint": "22051593437a62b9c2241bc4cd414c4f4c6cdf482636b7111f658c43c8649368",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "abz9"
+        ]
+      },
+      "ft20": {
+        "size": "20x5",
+        "fingerprint": "7bc3e520ffd15071ffc2c864ccdd51c2cc95447c7539beae562611a057732201",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "swv01": {
+        "size": "20x10",
+        "fingerprint": "dcba364092b5c3c41b90bdacda008457edcc88d1fd737a6661ddae44d4c2a87b",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv01"
+        ]
+      },
+      "swv02": {
+        "size": "20x10",
+        "fingerprint": "254a493264900eb3803486a0cee507a90ef4c9ecc8e26bf3f07a7bf8858e68d5",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "swv03": {
+        "size": "20x10",
+        "fingerprint": "554aa52c7565fef4d49e0e132e77ce5c0213ce96c7096233015595449b531d04",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv03"
+        ]
+      },
+      "swv04": {
+        "size": "20x10",
+        "fingerprint": "e11561b9e2af292e59684f28e26d3c47c8e5863633b44689fdc0a86bd3275b7e",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv04"
+        ]
+      },
+      "swv05": {
+        "size": "20x10",
+        "fingerprint": "f581fa70ecc1ff213e1b8076d0a3ce35eadc01139500644d007df7ee2ef85b93",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv05"
+        ]
+      },
+      "swv06": {
+        "size": "20x15",
+        "fingerprint": "176473acd08d1d01c9577fe8c29784783f462c9a45d359390cb9617e2a89ca75",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "swv07": {
+        "size": "20x15",
+        "fingerprint": "3ec2dc4b058b1d722a69a2c3c8fc2fe2948b1d23f929d7abc9efbb5bdfe9da31",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "swv08": {
+        "size": "20x15",
+        "fingerprint": "206b1c4872d6bb56ae64e9f2ff6e88c7b0df82922cc45a19cbdd2ff91e70e214",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv08"
+        ]
+      },
+      "swv09": {
+        "size": "20x15",
+        "fingerprint": "b1a70a2ee8611218c30694fd401d8bffa7ad00915106be77242eb75cd6a239f8",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv09"
+        ]
+      },
+      "swv10": {
+        "size": "20x15",
+        "fingerprint": "82491c909cdcd6e1147a35c28f58b7cbfd70ac660ee779712e317f2eaf61a2ca",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv10"
+        ]
+      },
+      "swv11": {
+        "size": "50x10",
+        "fingerprint": "f1c6262fdec23ab639ae9cfd5808d50712ce54f41da359402541b3b0d4eb05bf",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv11"
+        ]
+      },
+      "swv12": {
+        "size": "50x10",
+        "fingerprint": "421782037c03ba0bfb85019cd62b12f851e26c42a153cb02dc9a71b3244a5235",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv12"
+        ]
+      },
+      "swv13": {
+        "size": "50x10",
+        "fingerprint": "27c77ac7b064ac3467c0896fdadd4a110729c81aeb5156378d30a6f7ad33c8fb",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv13"
+        ]
+      },
+      "swv14": {
+        "size": "50x10",
+        "fingerprint": "113af96caf3a1a245c4e2a8d7c62ae49f86ee552d79f1a8b99df7462c1472488",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv14"
+        ]
+      },
+      "swv15": {
+        "size": "50x10",
+        "fingerprint": "292af27ee6840a8fc48e89f64bb02c549b94f6662cf6d590fc7c525977641185",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv15"
+        ]
+      },
+      "swv16": {
+        "size": "50x10",
+        "fingerprint": "3e5ae7aff14798058433335454acdbcd769f3e481ea1981b10093fa4647c3830",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "swv17": {
+        "size": "50x10",
+        "fingerprint": "84f5e2cc765ecd56500f894e7ee2ef8db323f085319b6ab640db75b2f5280485",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv17"
+        ]
+      },
+      "swv18": {
+        "size": "50x10",
+        "fingerprint": "96d16077d233415202a6c646b2dc7a8f3091fc3472577d966cb520edcc65f3cd",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv18"
+        ]
+      },
+      "swv19": {
+        "size": "50x10",
+        "fingerprint": "2306467ce28826500f46c70854caa4f4f805165da270095573c3c497ab33a9e3",
+        "in_historical_genetic_48": true,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": [
+          "swv19"
+        ]
+      },
+      "swv20": {
+        "size": "50x10",
+        "fingerprint": "d339ac34568ae5e1331e6328a6a3c68274db60b5f73398fa975924e9f765dd2d",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "yn1": {
+        "size": "20x20",
+        "fingerprint": "28ab7cf025fb6767ce5a9cb0bf39d8a37b51d819b7e1821db4fa3d3bbec5e890",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": true,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "yn2": {
+        "size": "20x20",
+        "fingerprint": "f107936ddb88af51ea045041f02005999761a25b8abb55a0642c42f910c123a1",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "yn3": {
+        "size": "20x20",
+        "fingerprint": "ba52ae809c03003320ae6f6ea5f9820d310e346d3c65695be845f430dba17e5e",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      },
+      "yn4": {
+        "size": "20x20",
+        "fingerprint": "262d026f0ebd4568a746012b187aa1dd0bc708b29e5600ddf013d537f215e838",
+        "in_historical_genetic_48": false,
+        "in_frozen_benchmark_46": false,
+        "in_orlib_jobshop1": true,
+        "genetic48_names_same_fingerprint": []
+      }
+    }
+  },
+  "inventory": {
+    "orlib_jobshop1": {
+      "abz5": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "52d65b97a68af233cdd6ba7c2bbc65429e007d864014e291ba43ce3d8cdbe211"
+      },
+      "abz6": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "aa8a3ac9cf59b1a129208deebaa2cbdace03fd2be5cd5942c5f19b37c082508e"
+      },
+      "abz7": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "0fe003884f3d2ee1b6c2f7a8c4c786596aeb192479f0857048ec79a8c43dc5a3"
+      },
+      "abz8": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "27694d4ef1c95d7b6488038605592bf872b3fce5d37218e7ba031a843e390a26"
+      },
+      "abz9": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "22051593437a62b9c2241bc4cd414c4f4c6cdf482636b7111f658c43c8649368"
+      },
+      "ft06": {
+        "jobs": 6,
+        "machines": 6,
+        "fingerprint": "dcf1d97a309b69d2dafa02e3e1425d76ca4e4ae5c72c0fd7eddfb1cfd585c8de"
+      },
+      "ft10": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "d240ab6bc0b7913a11e7496c78395f2ee2cbc305b5d74e49571d7db5456caeff"
+      },
+      "ft20": {
+        "jobs": 20,
+        "machines": 5,
+        "fingerprint": "7bc3e520ffd15071ffc2c864ccdd51c2cc95447c7539beae562611a057732201"
+      },
+      "la01": {
+        "jobs": 10,
+        "machines": 5,
+        "fingerprint": "0b63c326e8a1a17fbfee4868119882643b1667dae169b61a47abda4d32cfb90d"
+      },
+      "la02": {
+        "jobs": 10,
+        "machines": 5,
+        "fingerprint": "0d8ca814fe5fd194eb1e831e76a6af356ae0b9fbee98a18a0a1ff913b4aba9e6"
+      },
+      "la03": {
+        "jobs": 10,
+        "machines": 5,
+        "fingerprint": "d3922715245048dc8156598cfcb59a8e4a9b2e8c2dea3a6c9a0b0648ea049a31"
+      },
+      "la04": {
+        "jobs": 10,
+        "machines": 5,
+        "fingerprint": "4ad10f104cf8dd209137676f3b85f527a3b854d9ed9a3d31c713a1d09a7f2d7c"
+      },
+      "la05": {
+        "jobs": 10,
+        "machines": 5,
+        "fingerprint": "3fe86bc0db09f9f20b40993b238cc53b5d3b60df80458d494c65c1fa31f996f9"
+      },
+      "la06": {
+        "jobs": 15,
+        "machines": 5,
+        "fingerprint": "35cd84097a48baacc44c6f148a92d56fd5fac59c4cec00aa01b67943c3df31b7"
+      },
+      "la07": {
+        "jobs": 15,
+        "machines": 5,
+        "fingerprint": "08d8e3df23d1f2047fa0a4fe96b8854a347901197fb7698ad7ad580dbe7c88f4"
+      },
+      "la08": {
+        "jobs": 15,
+        "machines": 5,
+        "fingerprint": "41d051b311a274fc8e95c1943c1680f224284180626844c43444d7d08393f3cf"
+      },
+      "la09": {
+        "jobs": 15,
+        "machines": 5,
+        "fingerprint": "fb46f102c1aa75e4c121c20997e80b77e448e2d8e36c2095004bdad81a5588bd"
+      },
+      "la10": {
+        "jobs": 15,
+        "machines": 5,
+        "fingerprint": "0e200de9438ab58bcc6abc2e6eaeeb80348b75893ec3c449c815ee7ae75bab1e"
+      },
+      "la11": {
+        "jobs": 20,
+        "machines": 5,
+        "fingerprint": "7760ea12027d5ed6f94e68d7b7628157ac24662b581f162a300f5f387afcc665"
+      },
+      "la12": {
+        "jobs": 20,
+        "machines": 5,
+        "fingerprint": "7f71b854035f64698ad097f08c1ff36195a9e31a47c2911f2f4da6ebc89844ba"
+      },
+      "la13": {
+        "jobs": 20,
+        "machines": 5,
+        "fingerprint": "c36b6e2088eaf1ba591b35155775af96ac248375e2cf8cd71301bbf70aeb7784"
+      },
+      "la14": {
+        "jobs": 20,
+        "machines": 5,
+        "fingerprint": "a6d8faef0a0c7f227660badba9b73de630cf97ff66ead22f72a1b7fa6704f3de"
+      },
+      "la15": {
+        "jobs": 20,
+        "machines": 5,
+        "fingerprint": "51e9312ac3b15455a005e4acf76c88660a9394140dd918b0c9d199a61f4c7f7e"
+      },
+      "la16": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "66d7a3ae6eb399654c91a8495ca38259444c438acfa0b1f0c678c79c67b3e0d2"
+      },
+      "la17": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "1dcd5cd0537ef0396f06271f3af589639ffba2bd4860ac981e07ce902fca867f"
+      },
+      "la18": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "3e8ecc81f8cbf16cc04fb53b249ed316ed397bf2c5ef5e211ab298b5c6cde5e9"
+      },
+      "la19": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "4e910c590e43880c9e14e0818b2e7c5d35a43c69bfdae03fbf4a0f385cda0442"
+      },
+      "la20": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "ccd5383d3f2f6596ca596f2053e50676aa70a8d9c5317f5f914ff2b70993c855"
+      },
+      "la21": {
+        "jobs": 15,
+        "machines": 10,
+        "fingerprint": "f0a42810fa91abe0a4a2ecaf72860ddf3b343ce3fcec69607e06e29ce7716e48"
+      },
+      "la22": {
+        "jobs": 15,
+        "machines": 10,
+        "fingerprint": "a3f491b80f2ffb2aedd3c79ce71bd6de66434c5077d2792376679e209846cbbe"
+      },
+      "la23": {
+        "jobs": 15,
+        "machines": 10,
+        "fingerprint": "1c5deb04f60d901da5ae91cf6a6c4b5006e40290f38b987c014f6c63c2b4f115"
+      },
+      "la24": {
+        "jobs": 15,
+        "machines": 10,
+        "fingerprint": "57816a57ce1ff803f4d2cd08b7feff68a144618b4254a3193bb9d408fa643f7b"
+      },
+      "la25": {
+        "jobs": 15,
+        "machines": 10,
+        "fingerprint": "4b3be4448247e09f8853269b7515aa767990f49fb7c0b22e9703332c6a72dfa6"
+      },
+      "la26": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "f4cd6568041552ba92e3c24a854db6736fa2c0347076ee2eb15ef2dcbbfc307f"
+      },
+      "la27": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "5ee9e0ba51082a70533e44d2061245223504287b0831c51c0aafdc33d09f4d5b"
+      },
+      "la28": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "6e3f0e493d1006386116671b50e4bf3d1e28ad3d0067f39be9537f6732023fea"
+      },
+      "la29": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "79f41ee1fd8a5d2883e02e0b212352830c8d55b7b85aafb1596a02c56926a197"
+      },
+      "la30": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "80bb0ebff19bc409f6f6b30135b18e914798d548731cb244d5cecf99221ba489"
+      },
+      "la31": {
+        "jobs": 30,
+        "machines": 10,
+        "fingerprint": "6f30d3c5f82037f718016e44c6ad29148d528d249dacd854b872596c4b6ab5a9"
+      },
+      "la32": {
+        "jobs": 30,
+        "machines": 10,
+        "fingerprint": "ec6e56d25d229026d1900db034f2ee5200a2419f8f4dec6cb74d7116a2add09d"
+      },
+      "la33": {
+        "jobs": 30,
+        "machines": 10,
+        "fingerprint": "1bd6e82a50dbf5ebaf502a919a39ef514397b8d6c71abdbc3ad4036238490d23"
+      },
+      "la34": {
+        "jobs": 30,
+        "machines": 10,
+        "fingerprint": "0ebdd400f9376568d06f2b03e33a3784947b385b12dc091fbda9bc5eb490b020"
+      },
+      "la35": {
+        "jobs": 30,
+        "machines": 10,
+        "fingerprint": "cdfe17babe679ee0033d195f31b1d5a87f0372010d5e786cd01512b778681cee"
+      },
+      "la36": {
+        "jobs": 15,
+        "machines": 15,
+        "fingerprint": "5164912c6bb8bc05b506f7116c261a7a1f0f587f6bfa4e3589b8c41727f08331"
+      },
+      "la37": {
+        "jobs": 15,
+        "machines": 15,
+        "fingerprint": "4c1e859f5ccdd5ef973978e22860ed520fb80af73883bc0f9722c431fa6d5ac8"
+      },
+      "la38": {
+        "jobs": 15,
+        "machines": 15,
+        "fingerprint": "a3afce39ab0b53a34cca254263ab4725414676d1e33973108cea093f0aa524a1"
+      },
+      "la39": {
+        "jobs": 15,
+        "machines": 15,
+        "fingerprint": "dbca54b8c0125e82a7d0c2bda6e1e56cd62fe7575ff12ce6af4500e63d2c3b5a"
+      },
+      "la40": {
+        "jobs": 15,
+        "machines": 15,
+        "fingerprint": "49bd30ecefeecf1e7517ef1db6e561ab31db0c1b63007a7cfeb43869babedcca"
+      },
+      "orb01": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "cd59056c49f99af80a59e8b7f4c0183d38d416e4906c3cb5374c3e640612d1b3"
+      },
+      "orb02": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "027dfc849d792de2502ef8e48c54e6482b7aa631f10e8e3168a9650abf69d13d"
+      },
+      "orb03": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "757e70d0ff54d84c1852eba238f379ecc41885a980976778679c1f1b16aa94c2"
+      },
+      "orb04": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "44301ab07f701d945527ea3ca5b097309e18e4b050e17fc3bfb02f971c89fa18"
+      },
+      "orb05": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "f2de4ff2e17914906533a489c9de1eeed953de9275b97ffcb02d00af8089ffb4"
+      },
+      "orb06": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "4b88551147a8ff8440e3af2c74a4633a28a51035852c28236a54799765823954"
+      },
+      "orb08": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "28883220f97e686600c41b7000803435d8ac5737cdf1a771c75016648385a493"
+      },
+      "orb09": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "2326004ca7615d2b57bd734fd6b10d3d1ceaf44835dd06d844fd89484551c696"
+      },
+      "orb10": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "2abc4a63537266c68fe2a82420716d37a22c6f9705ef29f463574c33d0b3bbe3"
+      },
+      "swv01": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "dcba364092b5c3c41b90bdacda008457edcc88d1fd737a6661ddae44d4c2a87b"
+      },
+      "swv02": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "254a493264900eb3803486a0cee507a90ef4c9ecc8e26bf3f07a7bf8858e68d5"
+      },
+      "swv03": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "554aa52c7565fef4d49e0e132e77ce5c0213ce96c7096233015595449b531d04"
+      },
+      "swv04": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "e11561b9e2af292e59684f28e26d3c47c8e5863633b44689fdc0a86bd3275b7e"
+      },
+      "swv05": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "f581fa70ecc1ff213e1b8076d0a3ce35eadc01139500644d007df7ee2ef85b93"
+      },
+      "swv06": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "176473acd08d1d01c9577fe8c29784783f462c9a45d359390cb9617e2a89ca75"
+      },
+      "swv07": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "3ec2dc4b058b1d722a69a2c3c8fc2fe2948b1d23f929d7abc9efbb5bdfe9da31"
+      },
+      "swv08": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "206b1c4872d6bb56ae64e9f2ff6e88c7b0df82922cc45a19cbdd2ff91e70e214"
+      },
+      "swv09": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "b1a70a2ee8611218c30694fd401d8bffa7ad00915106be77242eb75cd6a239f8"
+      },
+      "swv10": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "82491c909cdcd6e1147a35c28f58b7cbfd70ac660ee779712e317f2eaf61a2ca"
+      },
+      "swv11": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "f1c6262fdec23ab639ae9cfd5808d50712ce54f41da359402541b3b0d4eb05bf"
+      },
+      "swv12": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "421782037c03ba0bfb85019cd62b12f851e26c42a153cb02dc9a71b3244a5235"
+      },
+      "swv13": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "27c77ac7b064ac3467c0896fdadd4a110729c81aeb5156378d30a6f7ad33c8fb"
+      },
+      "swv14": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "113af96caf3a1a245c4e2a8d7c62ae49f86ee552d79f1a8b99df7462c1472488"
+      },
+      "swv15": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "292af27ee6840a8fc48e89f64bb02c549b94f6662cf6d590fc7c525977641185"
+      },
+      "swv16": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "3e5ae7aff14798058433335454acdbcd769f3e481ea1981b10093fa4647c3830"
+      },
+      "swv17": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "84f5e2cc765ecd56500f894e7ee2ef8db323f085319b6ab640db75b2f5280485"
+      },
+      "swv18": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "96d16077d233415202a6c646b2dc7a8f3091fc3472577d966cb520edcc65f3cd"
+      },
+      "swv19": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "2306467ce28826500f46c70854caa4f4f805165da270095573c3c497ab33a9e3"
+      },
+      "swv20": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "d339ac34568ae5e1331e6328a6a3c68274db60b5f73398fa975924e9f765dd2d"
+      },
+      "ta31": {
+        "jobs": 30,
+        "machines": 15,
+        "fingerprint": "a90283896cd35229908dfb688b4f61bf10415cd9dec9d781ac54a3a63293ed29"
+      },
+      "ta51": {
+        "jobs": 50,
+        "machines": 15,
+        "fingerprint": "acf9f04ef649573f1b125abfa29fad3bf1e161907af83ee21dd616dc2366a0cd"
+      },
+      "yn1": {
+        "jobs": 20,
+        "machines": 20,
+        "fingerprint": "28ab7cf025fb6767ce5a9cb0bf39d8a37b51d819b7e1821db4fa3d3bbec5e890"
+      },
+      "yn2": {
+        "jobs": 20,
+        "machines": 20,
+        "fingerprint": "f107936ddb88af51ea045041f02005999761a25b8abb55a0642c42f910c123a1"
+      },
+      "yn3": {
+        "jobs": 20,
+        "machines": 20,
+        "fingerprint": "ba52ae809c03003320ae6f6ea5f9820d310e346d3c65695be845f430dba17e5e"
+      },
+      "yn4": {
+        "jobs": 20,
+        "machines": 20,
+        "fingerprint": "262d026f0ebd4568a746012b187aa1dd0bc708b29e5600ddf013d537f215e838"
+      }
+    },
+    "frozen_benchmark_46": {
+      "abz5": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "52d65b97a68af233cdd6ba7c2bbc65429e007d864014e291ba43ce3d8cdbe211"
+      },
+      "abz6": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "aa8a3ac9cf59b1a129208deebaa2cbdace03fd2be5cd5942c5f19b37c082508e"
+      },
+      "abz7": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "0fe003884f3d2ee1b6c2f7a8c4c786596aeb192479f0857048ec79a8c43dc5a3"
+      },
+      "abz8": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "27694d4ef1c95d7b6488038605592bf872b3fce5d37218e7ba031a843e390a26"
+      },
+      "ft06": {
+        "jobs": 6,
+        "machines": 6,
+        "fingerprint": "dcf1d97a309b69d2dafa02e3e1425d76ca4e4ae5c72c0fd7eddfb1cfd585c8de"
+      },
+      "ft10": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "d240ab6bc0b7913a11e7496c78395f2ee2cbc305b5d74e49571d7db5456caeff"
+      },
+      "la01": {
+        "jobs": 10,
+        "machines": 5,
+        "fingerprint": "0b63c326e8a1a17fbfee4868119882643b1667dae169b61a47abda4d32cfb90d"
+      },
+      "la02": {
+        "jobs": 10,
+        "machines": 5,
+        "fingerprint": "0d8ca814fe5fd194eb1e831e76a6af356ae0b9fbee98a18a0a1ff913b4aba9e6"
+      },
+      "la04": {
+        "jobs": 10,
+        "machines": 5,
+        "fingerprint": "4ad10f104cf8dd209137676f3b85f527a3b854d9ed9a3d31c713a1d09a7f2d7c"
+      },
+      "la07": {
+        "jobs": 15,
+        "machines": 5,
+        "fingerprint": "08d8e3df23d1f2047fa0a4fe96b8854a347901197fb7698ad7ad580dbe7c88f4"
+      },
+      "la08": {
+        "jobs": 15,
+        "machines": 5,
+        "fingerprint": "41d051b311a274fc8e95c1943c1680f224284180626844c43444d7d08393f3cf"
+      },
+      "la11": {
+        "jobs": 20,
+        "machines": 5,
+        "fingerprint": "7760ea12027d5ed6f94e68d7b7628157ac24662b581f162a300f5f387afcc665"
+      },
+      "la12": {
+        "jobs": 20,
+        "machines": 5,
+        "fingerprint": "7f71b854035f64698ad097f08c1ff36195a9e31a47c2911f2f4da6ebc89844ba"
+      },
+      "la16": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "66d7a3ae6eb399654c91a8495ca38259444c438acfa0b1f0c678c79c67b3e0d2"
+      },
+      "la17": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "1dcd5cd0537ef0396f06271f3af589639ffba2bd4860ac981e07ce902fca867f"
+      },
+      "la21": {
+        "jobs": 15,
+        "machines": 10,
+        "fingerprint": "f0a42810fa91abe0a4a2ecaf72860ddf3b343ce3fcec69607e06e29ce7716e48"
+      },
+      "la22": {
+        "jobs": 15,
+        "machines": 10,
+        "fingerprint": "a3f491b80f2ffb2aedd3c79ce71bd6de66434c5077d2792376679e209846cbbe"
+      },
+      "la23": {
+        "jobs": 15,
+        "machines": 10,
+        "fingerprint": "1c5deb04f60d901da5ae91cf6a6c4b5006e40290f38b987c014f6c63c2b4f115"
+      },
+      "la26": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "f4cd6568041552ba92e3c24a854db6736fa2c0347076ee2eb15ef2dcbbfc307f"
+      },
+      "la27": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "5ee9e0ba51082a70533e44d2061245223504287b0831c51c0aafdc33d09f4d5b"
+      },
+      "la28": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "6e3f0e493d1006386116671b50e4bf3d1e28ad3d0067f39be9537f6732023fea"
+      },
+      "la40": {
+        "jobs": 15,
+        "machines": 15,
+        "fingerprint": "49bd30ecefeecf1e7517ef1db6e561ab31db0c1b63007a7cfeb43869babedcca"
+      },
+      "orb01": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "cd59056c49f99af80a59e8b7f4c0183d38d416e4906c3cb5374c3e640612d1b3"
+      },
+      "orb02": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "027dfc849d792de2502ef8e48c54e6482b7aa631f10e8e3168a9650abf69d13d"
+      },
+      "orb03": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "757e70d0ff54d84c1852eba238f379ecc41885a980976778679c1f1b16aa94c2"
+      },
+      "orb04": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "44301ab07f701d945527ea3ca5b097309e18e4b050e17fc3bfb02f971c89fa18"
+      },
+      "orb05": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "f2de4ff2e17914906533a489c9de1eeed953de9275b97ffcb02d00af8089ffb4"
+      },
+      "orb06": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "4b88551147a8ff8440e3af2c74a4633a28a51035852c28236a54799765823954"
+      },
+      "swv01": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "dcba364092b5c3c41b90bdacda008457edcc88d1fd737a6661ddae44d4c2a87b"
+      },
+      "swv02": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "254a493264900eb3803486a0cee507a90ef4c9ecc8e26bf3f07a7bf8858e68d5"
+      },
+      "swv06": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "176473acd08d1d01c9577fe8c29784783f462c9a45d359390cb9617e2a89ca75"
+      },
+      "swv07": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "3ec2dc4b058b1d722a69a2c3c8fc2fe2948b1d23f929d7abc9efbb5bdfe9da31"
+      },
+      "swv11": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "f1c6262fdec23ab639ae9cfd5808d50712ce54f41da359402541b3b0d4eb05bf"
+      },
+      "swv16": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "3e5ae7aff14798058433335454acdbcd769f3e481ea1981b10093fa4647c3830"
+      },
+      "ta01": {
+        "jobs": 15,
+        "machines": 15,
+        "fingerprint": "fa31a659f77a526e3125c300a410d2f0062b6a5234e30c76d3b9886fe9c9f08d"
+      },
+      "ta02": {
+        "jobs": 15,
+        "machines": 15,
+        "fingerprint": "33200c04ce2eeb585c47da4af6c413cf34d4d91f13b741403cd4d90d9c6fb70e"
+      },
+      "ta11": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "1f6b573fa612afbcb1a8999e0b634ef66436df71691935133468799f2ffd2a09"
+      },
+      "ta12": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "3ae8d5af54ecebd601ea02f6b1b3a03c792cc3ebc964328758e7cf8c268d01b2"
+      },
+      "ta21": {
+        "jobs": 20,
+        "machines": 20,
+        "fingerprint": "63b05279e43d7be5a267b0c9b839299d4f1e1e5340c3d74437f16460447bebbc"
+      },
+      "ta31": {
+        "jobs": 30,
+        "machines": 15,
+        "fingerprint": "a90283896cd35229908dfb688b4f61bf10415cd9dec9d781ac54a3a63293ed29"
+      },
+      "ta41": {
+        "jobs": 30,
+        "machines": 20,
+        "fingerprint": "8270c81b7fba143f3bb3bba19f8bd8f437c23e58b7dbf0a8f228b961fe4fcb50"
+      },
+      "ta42": {
+        "jobs": 30,
+        "machines": 20,
+        "fingerprint": "0001d02c87147d3248ab396eb5c92da103d8438684841b478bbe9479751bbdf4"
+      },
+      "ta51": {
+        "jobs": 50,
+        "machines": 15,
+        "fingerprint": "acf9f04ef649573f1b125abfa29fad3bf1e161907af83ee21dd616dc2366a0cd"
+      },
+      "ta61": {
+        "jobs": 50,
+        "machines": 20,
+        "fingerprint": "1c4d1b5c38a83f02f490cd4bb39d1ae20d4b3dec7dc6a472ffe42daa72597ad1"
+      },
+      "ta70": {
+        "jobs": 50,
+        "machines": 20,
+        "fingerprint": "64c5e810e1e2e6de3d276e9782c6868948c6a0c894dad4b8943a02b9b54508d2"
+      },
+      "yn1": {
+        "jobs": 20,
+        "machines": 20,
+        "fingerprint": "28ab7cf025fb6767ce5a9cb0bf39d8a37b51d819b7e1821db4fa3d3bbec5e890"
+      }
+    },
+    "historical_genetic_48": {
+      "abz5": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "52d65b97a68af233cdd6ba7c2bbc65429e007d864014e291ba43ce3d8cdbe211"
+      },
+      "abz6": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "aa8a3ac9cf59b1a129208deebaa2cbdace03fd2be5cd5942c5f19b37c082508e"
+      },
+      "abz7": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "0fe003884f3d2ee1b6c2f7a8c4c786596aeb192479f0857048ec79a8c43dc5a3"
+      },
+      "abz9": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "22051593437a62b9c2241bc4cd414c4f4c6cdf482636b7111f658c43c8649368"
+      },
+      "ft06": {
+        "jobs": 6,
+        "machines": 6,
+        "fingerprint": "dcf1d97a309b69d2dafa02e3e1425d76ca4e4ae5c72c0fd7eddfb1cfd585c8de"
+      },
+      "ft10": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "d240ab6bc0b7913a11e7496c78395f2ee2cbc305b5d74e49571d7db5456caeff"
+      },
+      "la03": {
+        "jobs": 10,
+        "machines": 5,
+        "fingerprint": "d3922715245048dc8156598cfcb59a8e4a9b2e8c2dea3a6c9a0b0648ea049a31"
+      },
+      "la04": {
+        "jobs": 10,
+        "machines": 5,
+        "fingerprint": "4ad10f104cf8dd209137676f3b85f527a3b854d9ed9a3d31c713a1d09a7f2d7c"
+      },
+      "la05": {
+        "jobs": 10,
+        "machines": 5,
+        "fingerprint": "3fe86bc0db09f9f20b40993b238cc53b5d3b60df80458d494c65c1fa31f996f9"
+      },
+      "la08": {
+        "jobs": 15,
+        "machines": 5,
+        "fingerprint": "41d051b311a274fc8e95c1943c1680f224284180626844c43444d7d08393f3cf"
+      },
+      "la09": {
+        "jobs": 15,
+        "machines": 5,
+        "fingerprint": "fb46f102c1aa75e4c121c20997e80b77e448e2d8e36c2095004bdad81a5588bd"
+      },
+      "la10": {
+        "jobs": 15,
+        "machines": 5,
+        "fingerprint": "0e200de9438ab58bcc6abc2e6eaeeb80348b75893ec3c449c815ee7ae75bab1e"
+      },
+      "la14": {
+        "jobs": 20,
+        "machines": 5,
+        "fingerprint": "a6d8faef0a0c7f227660badba9b73de630cf97ff66ead22f72a1b7fa6704f3de"
+      },
+      "la18": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "3e8ecc81f8cbf16cc04fb53b249ed316ed397bf2c5ef5e211ab298b5c6cde5e9"
+      },
+      "la19": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "4e910c590e43880c9e14e0818b2e7c5d35a43c69bfdae03fbf4a0f385cda0442"
+      },
+      "la20": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "ccd5383d3f2f6596ca596f2053e50676aa70a8d9c5317f5f914ff2b70993c855"
+      },
+      "la21": {
+        "jobs": 15,
+        "machines": 10,
+        "fingerprint": "f0a42810fa91abe0a4a2ecaf72860ddf3b343ce3fcec69607e06e29ce7716e48"
+      },
+      "la24": {
+        "jobs": 15,
+        "machines": 10,
+        "fingerprint": "57816a57ce1ff803f4d2cd08b7feff68a144618b4254a3193bb9d408fa643f7b"
+      },
+      "la29": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "79f41ee1fd8a5d2883e02e0b212352830c8d55b7b85aafb1596a02c56926a197"
+      },
+      "la33": {
+        "jobs": 30,
+        "machines": 10,
+        "fingerprint": "1bd6e82a50dbf5ebaf502a919a39ef514397b8d6c71abdbc3ad4036238490d23"
+      },
+      "la34": {
+        "jobs": 30,
+        "machines": 10,
+        "fingerprint": "0ebdd400f9376568d06f2b03e33a3784947b385b12dc091fbda9bc5eb490b020"
+      },
+      "la35": {
+        "jobs": 30,
+        "machines": 10,
+        "fingerprint": "cdfe17babe679ee0033d195f31b1d5a87f0372010d5e786cd01512b778681cee"
+      },
+      "la37": {
+        "jobs": 15,
+        "machines": 15,
+        "fingerprint": "4c1e859f5ccdd5ef973978e22860ed520fb80af73883bc0f9722c431fa6d5ac8"
+      },
+      "la38": {
+        "jobs": 15,
+        "machines": 15,
+        "fingerprint": "a3afce39ab0b53a34cca254263ab4725414676d1e33973108cea093f0aa524a1"
+      },
+      "la39": {
+        "jobs": 15,
+        "machines": 15,
+        "fingerprint": "dbca54b8c0125e82a7d0c2bda6e1e56cd62fe7575ff12ce6af4500e63d2c3b5a"
+      },
+      "la40": {
+        "jobs": 15,
+        "machines": 15,
+        "fingerprint": "49bd30ecefeecf1e7517ef1db6e561ab31db0c1b63007a7cfeb43869babedcca"
+      },
+      "orb01": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "cd59056c49f99af80a59e8b7f4c0183d38d416e4906c3cb5374c3e640612d1b3"
+      },
+      "orb02": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "027dfc849d792de2502ef8e48c54e6482b7aa631f10e8e3168a9650abf69d13d"
+      },
+      "orb08": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "28883220f97e686600c41b7000803435d8ac5737cdf1a771c75016648385a493"
+      },
+      "orb09": {
+        "jobs": 10,
+        "machines": 10,
+        "fingerprint": "2326004ca7615d2b57bd734fd6b10d3d1ceaf44835dd06d844fd89484551c696"
+      },
+      "swv01": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "dcba364092b5c3c41b90bdacda008457edcc88d1fd737a6661ddae44d4c2a87b"
+      },
+      "swv03": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "554aa52c7565fef4d49e0e132e77ce5c0213ce96c7096233015595449b531d04"
+      },
+      "swv04": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "e11561b9e2af292e59684f28e26d3c47c8e5863633b44689fdc0a86bd3275b7e"
+      },
+      "swv05": {
+        "jobs": 20,
+        "machines": 10,
+        "fingerprint": "f581fa70ecc1ff213e1b8076d0a3ce35eadc01139500644d007df7ee2ef85b93"
+      },
+      "swv08": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "206b1c4872d6bb56ae64e9f2ff6e88c7b0df82922cc45a19cbdd2ff91e70e214"
+      },
+      "swv09": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "b1a70a2ee8611218c30694fd401d8bffa7ad00915106be77242eb75cd6a239f8"
+      },
+      "swv10": {
+        "jobs": 20,
+        "machines": 15,
+        "fingerprint": "82491c909cdcd6e1147a35c28f58b7cbfd70ac660ee779712e317f2eaf61a2ca"
+      },
+      "swv11": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "f1c6262fdec23ab639ae9cfd5808d50712ce54f41da359402541b3b0d4eb05bf"
+      },
+      "swv12": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "421782037c03ba0bfb85019cd62b12f851e26c42a153cb02dc9a71b3244a5235"
+      },
+      "swv13": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "27c77ac7b064ac3467c0896fdadd4a110729c81aeb5156378d30a6f7ad33c8fb"
+      },
+      "swv14": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "113af96caf3a1a245c4e2a8d7c62ae49f86ee552d79f1a8b99df7462c1472488"
+      },
+      "swv15": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "292af27ee6840a8fc48e89f64bb02c549b94f6662cf6d590fc7c525977641185"
+      },
+      "swv17": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "84f5e2cc765ecd56500f894e7ee2ef8db323f085319b6ab640db75b2f5280485"
+      },
+      "swv18": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "96d16077d233415202a6c646b2dc7a8f3091fc3472577d966cb520edcc65f3cd"
+      },
+      "swv19": {
+        "jobs": 50,
+        "machines": 10,
+        "fingerprint": "2306467ce28826500f46c70854caa4f4f805165da270095573c3c497ab33a9e3"
+      },
+      "ta31": {
+        "jobs": 30,
+        "machines": 15,
+        "fingerprint": "a90283896cd35229908dfb688b4f61bf10415cd9dec9d781ac54a3a63293ed29"
+      },
+      "ta51": {
+        "jobs": 50,
+        "machines": 15,
+        "fingerprint": "acf9f04ef649573f1b125abfa29fad3bf1e161907af83ee21dd616dc2366a0cd"
+      },
+      "ta70": {
+        "jobs": 50,
+        "machines": 20,
+        "fingerprint": "64c5e810e1e2e6de3d276e9782c6868948c6a0c894dad4b8943a02b9b54508d2"
+      }
+    }
+  }
+}

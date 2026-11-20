@@ -1,0 +1,25 @@
+{
+  "status": "PASS_RAW_REWARD_AND_EXPORTED_SCORE_SCALAR_RECONSTRUCTION",
+  "contrasts": [
+    {
+      "contrast": "tabu_gain_D_minus_B",
+      "mean": -0.0008112081843467845,
+      "independent_exact_p": 0.015625
+    },
+    {
+      "contrast": "tabu_gain_D_minus_E",
+      "mean": -1.6381492678505145e-05,
+      "independent_exact_p": 0.85009765625
+    }
+  ],
+  "original_mean_difference": 0.0,
+  "original_changed_actions": 1,
+  "tabu_changed_actions": {
+    "B": 58,
+    "E": 42,
+    "D_random": 59
+  },
+  "independent_split_repeat_optimism": 0.0015169188403633459,
+  "frozen_file_hashes_verified": 32,
+  "scope": "Independent grouping/reward/max/sign-rank/Holm and archived source integrity; scoring coefficients and features separately covered by numerical/causality tests. Not an independent full refit or online evaluation."
+}

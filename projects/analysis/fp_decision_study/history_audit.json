@@ -1,0 +1,1273 @@
+{
+  "created_utc": "2026-10-26T00:36:09.552987+00:00",
+  "scope": "historical read-only evidence; no refit or new search",
+  "counts": [
+    {
+      "cohort": "development",
+      "raw_trajectory_json": 320,
+      "instances": 16,
+      "trajectories": 320,
+      "states": 2880,
+      "branches": 17280,
+      "atomic_branches": 17280,
+      "fair480_branches": 0,
+      "instance_names": [
+        "abz5",
+        "abz6",
+        "abz7",
+        "ft06",
+        "ft10",
+        "la04",
+        "la08",
+        "la21",
+        "la40",
+        "orb01",
+        "orb02",
+        "swv01",
+        "swv11",
+        "ta31",
+        "ta51",
+        "ta70"
+      ],
+      "directory": "results/fp_v2_development",
+      "role": "all now historically exposed; offline intervention, not FP online trajectories"
+    },
+    {
+      "cohort": "exposed_validation",
+      "raw_trajectory_json": 240,
+      "instances": 12,
+      "trajectories": 240,
+      "states": 2160,
+      "branches": 12960,
+      "atomic_branches": 12960,
+      "fair480_branches": 0,
+      "instance_names": [
+        "la03",
+        "la05",
+        "la10",
+        "la18",
+        "la20",
+        "la33",
+        "la35",
+        "orb08",
+        "swv03",
+        "swv08",
+        "swv12",
+        "swv19"
+      ],
+      "directory": "results/fp_v2_validation",
+      "role": "all now historically exposed; offline intervention, not FP online trajectories"
+    },
+    {
+      "cohort": "exposed_confirmation",
+      "raw_trajectory_json": 400,
+      "instances": 20,
+      "trajectories": 400,
+      "states": 3600,
+      "branches": 72000,
+      "atomic_branches": 54000,
+      "fair480_branches": 18000,
+      "instance_names": [
+        "abz9",
+        "la09",
+        "la14",
+        "la19",
+        "la24",
+        "la29",
+        "la34",
+        "la37",
+        "la38",
+        "la39",
+        "orb09",
+        "swv04",
+        "swv05",
+        "swv09",
+        "swv10",
+        "swv13",
+        "swv14",
+        "swv15",
+        "swv17",
+        "swv18"
+      ],
+      "directory": "results/fp_empirical_confirmation",
+      "role": "all now historically exposed; offline intervention, not FP online trajectories"
+    },
+    {
+      "cohort": "development_new_repeats",
+      "raw_trajectory_json": 80,
+      "instances": 16,
+      "trajectories": 80,
+      "states": 240,
+      "branches": 7200,
+      "atomic_branches": 3600,
+      "fair480_branches": 3600,
+      "instance_names": [
+        "abz5",
+        "abz6",
+        "abz7",
+        "ft06",
+        "ft10",
+        "la04",
+        "la08",
+        "la21",
+        "la40",
+        "orb01",
+        "orb02",
+        "swv01",
+        "swv11",
+        "ta31",
+        "ta51",
+        "ta70"
+      ],
+      "directory": "results/fp_empirical_repeatability_development",
+      "role": "all now historically exposed; offline intervention, not FP online trajectories"
+    }
+  ],
+  "unique_instances": 48,
+  "unique_neutral_trajectories": 960,
+  "unique_saved_states": 8640,
+  "diagnostic_branches": 109440,
+  "missing_paths": [
+    "scripts/run_fp_action_diagnostics.py"
+  ],
+  "prediction_replay_status": "PASS_ALL_FROZEN_FINAL_AP_BRIER_GAIN_AND_DYNAMICS_MEANS",
+  "selected_gain_effects": [
+    {
+      "effect": 8.15719194323471e-06,
+      "instance_bootstrap_95ci": [
+        -3.694010232014618e-07,
+        1.8658940850085188e-05
+      ],
+      "instance_values": {
+        "abz9": 0.0,
+        "la09": 0.0,
+        "la14": 0.0,
+        "la19": 0.0,
+        "la24": 0.0,
+        "la29": 0.0,
+        "la34": -6.131959774343892e-07,
+        "la37": 5.263457048604741e-05,
+        "la38": -8.927846765684605e-06,
+        "la39": 3.154816866728225e-05,
+        "orb09": 0.0,
+        "swv04": -4.575498995261163e-06,
+        "swv05": -9.072763563781527e-06,
+        "swv09": 0.0,
+        "swv10": 0.0,
+        "swv13": -9.720449746768661e-06,
+        "swv14": 3.8323109773733966e-05,
+        "swv15": 7.354774498656095e-05,
+        "swv17": 0.0,
+        "swv18": 0.0
+      },
+      "instance_win_tie_loss": [
+        4,
+        11,
+        5
+      ],
+      "n_instances": 20,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection",
+      "cohort": "exposed_confirmation",
+      "window": "atomic",
+      "evaluation": "frozen_confirmation",
+      "contrast": "E_minus_C",
+      "changed_choices": 55,
+      "states": 3600,
+      "changed_gain_positive": 33,
+      "changed_gain_negative": 15,
+      "changed_gain_tie": 7,
+      "archived_hierarchical_95ci": [
+        -2.529998555225525e-06,
+        2.2861264196847688e-05
+      ],
+      "archived_holm_p": 1.0
+    },
+    {
+      "effect": 6.21111718421104e-05,
+      "instance_bootstrap_95ci": [
+        -3.2177356156660506e-06,
+        0.00016907089953064523
+      ],
+      "instance_values": {
+        "abz9": 0.0,
+        "la09": 0.0,
+        "la14": 0.0,
+        "la19": 0.0,
+        "la24": 0.0,
+        "la29": 0.0,
+        "la34": -2.5754231052244304e-05,
+        "la37": -4.371584699453558e-06,
+        "la38": -8.27854881908936e-05,
+        "la39": 0.0,
+        "orb09": 0.0,
+        "swv04": 9.819675058025353e-05,
+        "swv05": 0.0,
+        "swv09": 0.0,
+        "swv10": 0.0,
+        "swv13": 0.00019957663264749274,
+        "swv14": 9.454817107801334e-05,
+        "swv15": 0.0009628131864790398,
+        "swv17": 0.0,
+        "swv18": 0.0
+      },
+      "instance_win_tie_loss": [
+        4,
+        13,
+        3
+      ],
+      "n_instances": 20,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection",
+      "cohort": "exposed_confirmation",
+      "window": "fair480",
+      "evaluation": "frozen_confirmation",
+      "contrast": "E_minus_C",
+      "changed_choices": 23,
+      "states": 1200,
+      "changed_gain_positive": 19,
+      "changed_gain_negative": 3,
+      "changed_gain_tie": 1,
+      "archived_hierarchical_95ci": [
+        -5.82738842094158e-06,
+        0.000182015810576456
+      ],
+      "archived_holm_p": 1.0
+    },
+    {
+      "effect": -1.6851781751061985e-05,
+      "instance_bootstrap_95ci": [
+        -8.153213823048524e-05,
+        2.4289562249679934e-05
+      ],
+      "instance_values": {
+        "abz5": 0.0,
+        "abz6": 0.0,
+        "abz7": 2.183896020681816e-05,
+        "ft06": 0.0,
+        "ft10": 0.0,
+        "la04": 0.00012147716229348883,
+        "la08": 0.0,
+        "la21": 0.0,
+        "la40": 1.8243126960635416e-05,
+        "orb01": 0.0,
+        "orb02": 0.0,
+        "swv01": -0.0004505908449227604,
+        "swv11": 0.0,
+        "ta31": -1.588057805304113e-05,
+        "ta51": 2.8105945141852426e-05,
+        "ta70": 7.17772035601493e-06
+      },
+      "instance_win_tie_loss": [
+        5,
+        9,
+        2
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection",
+      "cohort": "development",
+      "window": "atomic",
+      "evaluation": "converged_development",
+      "contrast": "E_minus_C",
+      "changed_choices": 39,
+      "states": 2880,
+      "changed_gain_positive": 16,
+      "changed_gain_negative": 13,
+      "changed_gain_tie": 10
+    },
+    {
+      "effect": -3.162315473437042e-05,
+      "instance_bootstrap_95ci": [
+        -7.779720363046895e-05,
+        -1.1370548694834992e-07
+      ],
+      "instance_values": {
+        "abz5": 0.0,
+        "abz6": 0.0,
+        "abz7": -2.1848629391147047e-05,
+        "ft06": 0.0,
+        "ft10": -0.00010055304172951231,
+        "la04": 0.0,
+        "la08": 0.0,
+        "la21": 0.0,
+        "la40": 1.8243126960635416e-05,
+        "orb01": -4.502070952638213e-05,
+        "orb02": 3.920250896057348e-05,
+        "swv01": -0.00033047568481787943,
+        "swv11": 0.0,
+        "ta31": -1.9852614913543196e-05,
+        "ta51": -5.2055773457034926e-05,
+        "ta70": 6.3903421643633234e-06
+      },
+      "instance_win_tie_loss": [
+        3,
+        7,
+        6
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection",
+      "cohort": "development",
+      "window": "atomic",
+      "evaluation": "original_structured_development",
+      "contrast": "E_minus_C",
+      "changed_choices": 54,
+      "states": 2880,
+      "changed_gain_positive": 13,
+      "changed_gain_negative": 22,
+      "changed_gain_tie": 19
+    }
+  ],
+  "repeat_effects": [
+    {
+      "window": "atomic",
+      "contrast": "FP_minus_NoFP",
+      "effect": -1.4917497505867328e-05,
+      "instance_bootstrap_95ci": [
+        -3.820798989980094e-05,
+        0.0
+      ],
+      "instance_values": {
+        "abz5": 0.0,
+        "abz6": 0.0,
+        "abz7": -0.00010471204188481674,
+        "ft06": 0.0,
+        "ft10": 0.0,
+        "la04": 0.0,
+        "la08": 0.0,
+        "la21": 0.0,
+        "la40": 0.0,
+        "orb01": 0.0,
+        "orb02": 0.0,
+        "swv01": -0.00013396791820906052,
+        "swv11": 0.0,
+        "ta31": 0.0,
+        "ta51": 0.0,
+        "ta70": 0.0
+      },
+      "instance_win_tie_loss": [
+        0,
+        14,
+        2
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "atomic",
+      "contrast": "LS_minus_VND",
+      "effect": -0.0029443295435399638,
+      "instance_bootstrap_95ci": [
+        -0.004963304132436676,
+        -0.0012489427515992042
+      ],
+      "instance_values": {
+        "abz5": -0.003931780939855115,
+        "abz6": -0.00363035054644321,
+        "abz7": 0.00019308026139491482,
+        "ft06": -0.006706594071385359,
+        "ft10": -0.007735871100412311,
+        "la04": -0.013317893809172357,
+        "la08": -0.0029376848650314097,
+        "la21": 0.0012231558000899117,
+        "la40": 0.00037673813596642984,
+        "orb01": -0.005303993327914922,
+        "orb02": -0.0010945794917493533,
+        "swv01": -0.003890886975122966,
+        "swv11": -0.0004666800387571104,
+        "ta31": -0.00020463661908309453,
+        "ta51": 0.0003453831408764846,
+        "ta70": -2.6678250039951005e-05
+      },
+      "instance_win_tie_loss": [
+        4,
+        0,
+        12
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "atomic",
+      "contrast": "pooled_LS_minus_VND",
+      "effect": -0.002851578436740125,
+      "instance_bootstrap_95ci": [
+        -0.004826786018242785,
+        -0.0012143487447315914
+      ],
+      "instance_values": {
+        "abz5": -0.0038362265741574884,
+        "abz6": -0.0028676956002438615,
+        "abz7": 0.0001372777516314587,
+        "ft06": -0.0071007979719413476,
+        "ft10": -0.006992929834737355,
+        "la04": -0.013298884305019834,
+        "la08": -0.002586935140167352,
+        "la21": 0.0009942758693706154,
+        "la40": 0.0004257354037028667,
+        "orb01": -0.0049826090832081685,
+        "orb02": -0.001631240343980419,
+        "swv01": -0.0035985790929246196,
+        "swv11": -0.0003482107834516483,
+        "ta31": -0.00017283168645878584,
+        "ta51": 0.00029716869377941835,
+        "ta70": -6.277229003548214e-05
+      },
+      "instance_win_tie_loss": [
+        4,
+        0,
+        12
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "atomic",
+      "contrast": "old2_oracle_minus_VND",
+      "effect": 0.001008754175484895,
+      "instance_bootstrap_95ci": [
+        0.000615710049351996,
+        0.0014377899821078626
+      ],
+      "instance_values": {
+        "abz5": 0.00022563395276809913,
+        "abz6": 0.0021149823593709155,
+        "abz7": 0.0010029286116855487,
+        "ft06": 0.0,
+        "ft10": 0.0030565948363878493,
+        "la04": 0.0015965166908563134,
+        "la08": 0.0009671970797657945,
+        "la21": 0.0020431543336314638,
+        "la40": 0.0007170257525477763,
+        "orb01": 0.0015996888123156084,
+        "orb02": 0.0008383185288134227,
+        "swv01": 0.0011001208253709198,
+        "swv11": 0.00033855819191111155,
+        "ta31": 0.0001570105197048202,
+        "ta51": 0.00023551972440883848,
+        "ta70": 0.000146816588219838
+      },
+      "instance_win_tie_loss": [
+        15,
+        1,
+        0
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "atomic",
+      "contrast": "old2_choice_independent5_minus_VND",
+      "effect": -0.0003706823675137573,
+      "instance_bootstrap_95ci": [
+        -0.0007610319200045704,
+        -5.7847496403305055e-05
+      ],
+      "instance_values": {
+        "abz5": 5.9765776229190857e-05,
+        "abz6": -0.0025565076163644347,
+        "abz7": -6.871203762715041e-05,
+        "ft06": -0.0002456140350877194,
+        "ft10": -1.3640333328121447e-05,
+        "la04": 3.633854546319709e-06,
+        "la08": -0.0010949469690472908,
+        "la21": 0.00034591713644435067,
+        "la40": -0.00010698692722611904,
+        "orb01": -0.0005801482162134794,
+        "orb02": -0.0004982800165312898,
+        "swv01": -0.0014286252080668138,
+        "swv11": 0.00027011056334180387,
+        "ta31": -0.00015025146077672063,
+        "ta51": 0.0001061931768103807,
+        "ta70": 2.7174432676977496e-05
+      },
+      "instance_win_tie_loss": [
+        6,
+        0,
+        10
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "atomic",
+      "contrast": "old2_choice_VNDtie_independent5_minus_VND",
+      "effect": -0.00017781620099983385,
+      "instance_bootstrap_95ci": [
+        -0.00044802133507710354,
+        5.476850893983015e-05
+      ],
+      "instance_values": {
+        "abz5": 5.9765776229190857e-05,
+        "abz6": -0.0013492877736357072,
+        "abz7": -1.649271647832535e-05,
+        "ft06": 0.0,
+        "ft10": -5.064310853626205e-05,
+        "la04": -0.00013546202225447518,
+        "la08": -0.0005918023149592402,
+        "la21": 0.0005922232917152575,
+        "la40": 9.633323087664781e-05,
+        "orb01": -0.0005801482162134794,
+        "orb02": 0.00018687936834048375,
+        "swv01": -0.0013421387215803275,
+        "swv11": 0.00014066072515410161,
+        "ta31": 0.0,
+        "ta51": 0.0001061931768103807,
+        "ta70": 3.88600885344125e-05
+      },
+      "instance_win_tie_loss": [
+        7,
+        2,
+        7
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "atomic",
+      "contrast": "selection_optimism",
+      "effect": 0.001379436542998652,
+      "instance_bootstrap_95ci": [
+        0.0007965312860974461,
+        0.0020257415395870965
+      ],
+      "instance_values": {
+        "abz5": 0.00016586817653890823,
+        "abz6": 0.00467148997573535,
+        "abz7": 0.001071640649312699,
+        "ft06": 0.0002456140350877194,
+        "ft10": 0.0030702351697159706,
+        "la04": 0.0015928828363099938,
+        "la08": 0.002062144048813085,
+        "la21": 0.0016972371971871129,
+        "la40": 0.0008240126797738953,
+        "orb01": 0.0021798370285290875,
+        "orb02": 0.0013365985453447126,
+        "swv01": 0.002528746033437733,
+        "swv11": 6.844762856930765e-05,
+        "ta31": 0.0003072619804815408,
+        "ta51": 0.00012932654759845776,
+        "ta70": 0.00011964215554286051
+      },
+      "instance_win_tie_loss": [
+        16,
+        0,
+        0
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "atomic",
+      "contrast": "new5_sample_oracle_minus_VND",
+      "effect": 0.0006758810843471711,
+      "instance_bootstrap_95ci": [
+        0.0003893150399657666,
+        0.0010127748305476184
+      ],
+      "instance_values": {
+        "abz5": 5.9765776229190857e-05,
+        "abz6": 0.0009323238763807295,
+        "abz7": 0.0010477273708777793,
+        "ft06": 0.00022222222222222204,
+        "ft10": 0.0009858872871799946,
+        "la04": 0.0001390958768007949,
+        "la08": 0.0002072443755401639,
+        "la21": 0.001907779818047263,
+        "la40": 0.0005597208539384412,
+        "orb01": 0.0012015067689147491,
+        "orb02": 0.0022137685790741173,
+        "swv01": 0.00021621621621621621,
+        "swv11": 0.00041605435785203144,
+        "ta31": 0.00015717395984294106,
+        "ta51": 0.0004002367014602832,
+        "ta70": 0.0001473733089778203
+      },
+      "instance_win_tie_loss": [
+        16,
+        0,
+        0
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "fair480",
+      "contrast": "FP_minus_NoFP",
+      "effect": 6.785609800441703e-06,
+      "instance_bootstrap_95ci": [
+        -5.2356020942408376e-05,
+        7.271285034373349e-05
+      ],
+      "instance_values": {
+        "abz5": 0.0,
+        "abz6": 0.0,
+        "abz7": -0.00027923211169284467,
+        "ft06": 0.0,
+        "ft10": 0.0,
+        "la04": 0.0,
+        "la08": 0.0,
+        "la21": 0.0,
+        "la40": 0.0,
+        "orb01": 0.0,
+        "orb02": 0.0,
+        "swv01": 0.0003878018684999119,
+        "swv11": 0.0,
+        "ta31": 0.0,
+        "ta51": 0.0,
+        "ta70": 0.0
+      },
+      "instance_win_tie_loss": [
+        1,
+        14,
+        1
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "fair480",
+      "contrast": "LS_minus_VND",
+      "effect": 0.003388234286070395,
+      "instance_bootstrap_95ci": [
+        0.001192116301372166,
+        0.005268285767748134
+      ],
+      "instance_values": {
+        "abz5": 0.0014651850641185164,
+        "abz6": 0.008597327308312124,
+        "abz7": 0.004070006201887089,
+        "ft06": -0.008577939100625126,
+        "ft10": 0.007083876518729937,
+        "la04": 9.080778817946133e-05,
+        "la08": 0.003624323110469409,
+        "la21": 0.008296704184202783,
+        "la40": 0.003419264788468937,
+        "orb01": 0.004647877315993564,
+        "orb02": 0.008300171585041973,
+        "swv01": 0.007113297481514386,
+        "swv11": 0.0029845212746389565,
+        "ta31": 0.0008748297562393507,
+        "ta51": 0.0011380070621055105,
+        "ta70": 0.0010834882378494579
+      },
+      "instance_win_tie_loss": [
+        15,
+        0,
+        1
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "fair480",
+      "contrast": "pooled_LS_minus_VND",
+      "effect": 0.003388234286070395,
+      "instance_bootstrap_95ci": [
+        0.001192116301372166,
+        0.005268285767748134
+      ],
+      "instance_values": {
+        "abz5": 0.0014651850641185164,
+        "abz6": 0.008597327308312124,
+        "abz7": 0.004070006201887089,
+        "ft06": -0.008577939100625126,
+        "ft10": 0.007083876518729937,
+        "la04": 9.080778817946133e-05,
+        "la08": 0.003624323110469409,
+        "la21": 0.008296704184202783,
+        "la40": 0.003419264788468937,
+        "orb01": 0.004647877315993564,
+        "orb02": 0.008300171585041973,
+        "swv01": 0.007113297481514386,
+        "swv11": 0.0029845212746389565,
+        "ta31": 0.0008748297562393507,
+        "ta51": 0.0011380070621055105,
+        "ta70": 0.0010834882378494579
+      },
+      "instance_win_tie_loss": [
+        15,
+        0,
+        1
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "fair480",
+      "contrast": "old2_oracle_minus_VND",
+      "effect": 0.001008754175484895,
+      "instance_bootstrap_95ci": [
+        0.000615710049351996,
+        0.0014377899821078626
+      ],
+      "instance_values": {
+        "abz5": 0.00022563395276809913,
+        "abz6": 0.0021149823593709155,
+        "abz7": 0.0010029286116855487,
+        "ft06": 0.0,
+        "ft10": 0.0030565948363878493,
+        "la04": 0.0015965166908563134,
+        "la08": 0.0009671970797657945,
+        "la21": 0.0020431543336314638,
+        "la40": 0.0007170257525477763,
+        "orb01": 0.0015996888123156084,
+        "orb02": 0.0008383185288134227,
+        "swv01": 0.0011001208253709198,
+        "swv11": 0.00033855819191111155,
+        "ta31": 0.0001570105197048202,
+        "ta51": 0.00023551972440883848,
+        "ta70": 0.000146816588219838
+      },
+      "instance_win_tie_loss": [
+        15,
+        1,
+        0
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "fair480",
+      "contrast": "old2_choice_independent5_minus_VND",
+      "effect": 0.0013359950083796873,
+      "instance_bootstrap_95ci": [
+        0.0006757890197483469,
+        0.001964842039228052
+      ],
+      "instance_values": {
+        "abz5": -5.081300813008131e-05,
+        "abz6": 0.003091965297582276,
+        "abz7": 0.0017809402268401564,
+        "ft06": -0.0016491228070175438,
+        "ft10": 0.0032812252735379814,
+        "la04": 0.00019269318958092625,
+        "la08": 0.0021325564602227465,
+        "la21": 0.0027432822912887697,
+        "la40": 0.0016936619223157571,
+        "orb01": 0.00116021476228214,
+        "orb02": 0.0010255279061122508,
+        "swv01": 0.0027797235205955597,
+        "swv11": 0.002256625641984827,
+        "ta31": 0.000126131743305716,
+        "ta51": 0.00043223940596441525,
+        "ta70": 0.00037906830760909936
+      },
+      "instance_win_tie_loss": [
+        14,
+        0,
+        2
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "fair480",
+      "contrast": "old2_choice_VNDtie_independent5_minus_VND",
+      "effect": 0.0013087490494911925,
+      "instance_bootstrap_95ci": [
+        0.0008265508649521543,
+        0.0018106561687786502
+      ],
+      "instance_values": {
+        "abz5": 3.048780487804878e-05,
+        "abz6": 0.003091965297582276,
+        "abz7": 0.0017809402268401564,
+        "ft06": 0.0,
+        "ft10": 0.002170971340286345,
+        "la04": 0.0005224963715529752,
+        "la08": 0.0012594525016581884,
+        "la21": 0.0028444627297373364,
+        "la40": 0.0008005920935937546,
+        "orb01": 0.0011913431669514007,
+        "orb02": 0.001410840534171249,
+        "swv01": 0.0028734172142892535,
+        "swv11": 0.0018715123733764126,
+        "ta31": 0.00027633851468048356,
+        "ta51": 0.00043223940596441525,
+        "ta70": 0.00038292521629678625
+      },
+      "instance_win_tie_loss": [
+        15,
+        1,
+        0
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "fair480",
+      "contrast": "selection_optimism",
+      "effect": -0.00032724083289479227,
+      "instance_bootstrap_95ci": [
+        -0.0007783516973866331,
+        0.00014595761434752354
+      ],
+      "instance_values": {
+        "abz5": 0.00027644696089818043,
+        "abz6": -0.000976982938211361,
+        "abz7": -0.0007780116151546076,
+        "ft06": 0.0016491228070175438,
+        "ft10": -0.00022463043715013133,
+        "la04": 0.0014038235012753873,
+        "la08": -0.001165359380456952,
+        "la21": -0.0007001279576573059,
+        "la40": -0.0009766361697679808,
+        "orb01": 0.0004394740500334683,
+        "orb02": -0.0001872093772988282,
+        "swv01": -0.00167960269522464,
+        "swv11": -0.0019180674500737156,
+        "ta31": 3.0878776399104226e-05,
+        "ta51": -0.0001967196815555768,
+        "ta70": -0.00023225171938926137
+      },
+      "instance_win_tie_loss": [
+        5,
+        0,
+        11
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "window": "fair480",
+      "contrast": "new5_sample_oracle_minus_VND",
+      "effect": 0.004360963601369349,
+      "instance_bootstrap_95ci": [
+        0.0030219113990690855,
+        0.005714611880710963
+      ],
+      "instance_values": {
+        "abz5": 0.0021467225116495576,
+        "abz6": 0.008597327308312124,
+        "abz7": 0.0047680864811192,
+        "ft06": 0.00022222222222222204,
+        "ft10": 0.0073618796658604145,
+        "la04": 0.00419034290059131,
+        "la08": 0.0039168492977324386,
+        "la21": 0.008296704184202783,
+        "la40": 0.003419264788468937,
+        "orb01": 0.005139109602639158,
+        "orb02": 0.008300171585041973,
+        "swv01": 0.007113297481514386,
+        "swv11": 0.003088789766004222,
+        "ta31": 0.0009931545265958821,
+        "ta51": 0.0011380070621055105,
+        "ta70": 0.0010834882378494579
+      },
+      "instance_win_tie_loss": [
+        16,
+        0,
+        0
+      ],
+      "n_instances": 16,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    }
+  ],
+  "matched_window_effects": [
+    {
+      "cohort": "exposed_confirmation_matched_1200",
+      "window": "atomic",
+      "contrast": "LS_minus_VND",
+      "effect": -0.0005842287879189826,
+      "instance_bootstrap_95ci": [
+        -0.0010619650636415879,
+        -0.0002168746383866832
+      ],
+      "instance_values": {
+        "abz9": -0.0013420502169818513,
+        "la09": 2.0511434573095155e-05,
+        "la14": 0.0,
+        "la19": -0.004110505085162592,
+        "la24": -0.000842036696259467,
+        "la29": -0.0001962692192884498,
+        "la34": -0.0002155416221665,
+        "la37": -0.001573868899485461,
+        "la38": -0.0008087486776359011,
+        "la39": -0.0015617284334162064,
+        "orb09": 0.00024380823087429612,
+        "swv04": -0.00041922776170843595,
+        "swv05": -0.00030562002479474616,
+        "swv09": -0.0006062146644821554,
+        "swv10": -0.00041705209063598125,
+        "swv13": 6.509214094684359e-05,
+        "swv14": 0.00027451501445018597,
+        "swv15": -1.4965837317270508e-05,
+        "swv17": 5.338078291814946e-05,
+        "swv18": 7.194586719279746e-05
+      },
+      "instance_win_tie_loss": [
+        6,
+        1,
+        13
+      ],
+      "n_instances": 20,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    },
+    {
+      "cohort": "exposed_confirmation_matched_1200",
+      "window": "fair480",
+      "contrast": "LS_minus_VND",
+      "effect": 0.002453269869554437,
+      "instance_bootstrap_95ci": [
+        0.0018038083888179321,
+        0.0030923915009705913
+      ],
+      "instance_values": {
+        "abz9": 0.002413440403766162,
+        "la09": 3.45096886491222e-05,
+        "la14": 0.0,
+        "la19": 0.002698748535630204,
+        "la24": 0.0028562062218250323,
+        "la29": 0.004133229082622542,
+        "la34": 0.002821282764134517,
+        "la37": 0.0019870480150005285,
+        "la38": 0.0030524362910757732,
+        "la39": 0.0014669688209460931,
+        "orb09": 0.005599267741243557,
+        "swv04": 0.0031123178922338912,
+        "swv05": 0.004325254908663579,
+        "swv09": 0.002549108609460877,
+        "swv10": 0.0019700313995627684,
+        "swv13": 0.0027809210246487154,
+        "swv14": 0.0024359085644181004,
+        "swv15": 0.00424495679129945,
+        "swv17": 0.0001993954797447148,
+        "swv18": 0.00038436515616309776
+      },
+      "instance_win_tie_loss": [
+        19,
+        1,
+        0
+      ],
+      "n_instances": 20,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection"
+    }
+  ],
+  "dynamics_effects": [
+    {
+      "action": "GA",
+      "comparator": "pooled",
+      "effect": 0.00022079518443244678,
+      "instance_bootstrap_95ci": [
+        -0.0004272632002887305,
+        0.0008420886130130862
+      ],
+      "instance_values": {
+        "abz9": 0.0018596000549614567,
+        "la09": 0.0005651062758439948,
+        "la14": -0.0026516115644727575,
+        "la19": 0.0020099152989182367,
+        "la24": 0.0012199638634098598,
+        "la29": 0.001552218126418316,
+        "la34": 0.001310101799156919,
+        "la37": 0.001920814485035606,
+        "la38": 0.0018329670232194051,
+        "la39": 0.0015419173052247206,
+        "orb09": 0.0019064249672317512,
+        "swv04": -0.0011915159399096824,
+        "swv05": -0.0017194070371348868,
+        "swv09": -0.00044837892377238685,
+        "swv10": -0.00015683552610919527,
+        "swv13": -0.0014495356409596092,
+        "swv14": -0.0010544544090566575,
+        "swv15": -0.0013697858008842197,
+        "swv17": -0.00038542019961012555,
+        "swv18": -0.0008761804688618103
+      },
+      "instance_win_tie_loss": [
+        10,
+        0,
+        10
+      ],
+      "n_instances": 20,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection",
+      "archived_hierarchical_95ci": [
+        -0.00043958294747130735,
+        0.0008779969018594702
+      ],
+      "archived_holm_p": 0.34881019592285156
+    },
+    {
+      "action": "GA",
+      "comparator": "identity",
+      "effect": 0.0011748291937699054,
+      "instance_bootstrap_95ci": [
+        0.0002617742334906562,
+        0.0020510472388217136
+      ],
+      "instance_values": {
+        "abz9": 0.003400327338800669,
+        "la09": 0.001460083280916073,
+        "la14": -0.0030472376912091493,
+        "la19": 0.0036420559942182207,
+        "la24": 0.0026224305957385135,
+        "la29": 0.0029329716729566517,
+        "la34": 0.0026705595434748145,
+        "la37": 0.0038805515497491545,
+        "la38": 0.0037448617538336447,
+        "la39": 0.003209133878386272,
+        "orb09": 0.002997464770229677,
+        "swv04": -0.0007584927690345193,
+        "swv05": -0.0014134553173991119,
+        "swv09": 0.0002529555069635362,
+        "swv10": 0.00043725815791920505,
+        "swv13": -0.0010741054783518804,
+        "swv14": -0.0005546145690029339,
+        "swv15": -0.001176370931185384,
+        "swv17": 0.0003816987238184007,
+        "swv18": -0.00011149213542374546
+      },
+      "instance_win_tie_loss": [
+        13,
+        0,
+        7
+      ],
+      "n_instances": 20,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection",
+      "archived_hierarchical_95ci": [
+        0.0002434090072356138,
+        0.002097809739539465
+      ],
+      "archived_holm_p": 0.08810806274414062
+    },
+    {
+      "action": "LS",
+      "comparator": "pooled",
+      "effect": 0.0021374495571399458,
+      "instance_bootstrap_95ci": [
+        0.00190402174160096,
+        0.0024039498384104043
+      ],
+      "instance_values": {
+        "abz9": 0.0023125456189501056,
+        "la09": 0.0016110930561817258,
+        "la14": 0.0020488363560372666,
+        "la19": 0.0022612622544481336,
+        "la24": 0.0028852658380824382,
+        "la29": 0.002000417599888747,
+        "la34": 0.002102767164380009,
+        "la37": 0.0033757316433626955,
+        "la38": 0.0034085809684909285,
+        "la39": 0.002993524109022206,
+        "orb09": 0.0013704418775322168,
+        "swv04": 0.0019439961199530884,
+        "swv05": 0.0019631497056241793,
+        "swv09": 0.0017045474057738597,
+        "swv10": 0.0015015622296752219,
+        "swv13": 0.0019198400471441585,
+        "swv14": 0.0017410845581360215,
+        "swv15": 0.001739262358925659,
+        "swv17": 0.0018061544222001363,
+        "swv18": 0.002058927808990121
+      },
+      "instance_win_tie_loss": [
+        20,
+        0,
+        0
+      ],
+      "n_instances": 20,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection",
+      "archived_hierarchical_95ci": [
+        0.0018953787563777043,
+        0.002407395919969466
+      ],
+      "archived_holm_p": 1.1444091796875e-05
+    },
+    {
+      "action": "LS",
+      "comparator": "identity",
+      "effect": -0.00033565941001748153,
+      "instance_bootstrap_95ci": [
+        -0.0006175212815569015,
+        -9.798601272256327e-05
+      ],
+      "instance_values": {
+        "abz9": -8.422829307286896e-05,
+        "la09": -0.0018564224696037894,
+        "la14": -0.0018708185621396673,
+        "la19": 0.00042488107205817545,
+        "la24": -0.0001092855258872304,
+        "la29": 4.2169730935493225e-05,
+        "la34": -5.255412033046934e-05,
+        "la37": -1.7745149637911644e-05,
+        "la38": 0.00014109802964909393,
+        "la39": -0.00011332482877814834,
+        "orb09": -4.492587572826152e-07,
+        "swv04": -0.0002512743278008102,
+        "swv05": 4.149769024313337e-05,
+        "swv09": -0.0001458170936659081,
+        "swv10": -0.0004589529320852772,
+        "swv13": -0.00023929607161296307,
+        "swv14": -0.00029861942498143505,
+        "swv15": 3.0434823604094274e-05,
+        "swv17": -0.000950253377038967,
+        "swv18": -0.0009442281114468914
+      },
+      "instance_win_tie_loss": [
+        5,
+        0,
+        15
+      ],
+      "n_instances": 20,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection",
+      "archived_hierarchical_95ci": [
+        -0.0006305011433493326,
+        -8.935512156142906e-05
+      ],
+      "archived_holm_p": 0.028306961059570312
+    },
+    {
+      "action": "VND",
+      "comparator": "pooled",
+      "effect": 0.0013658509993754535,
+      "instance_bootstrap_95ci": [
+        0.0009110351394644032,
+        0.0018018658644639173
+      ],
+      "instance_values": {
+        "abz9": 0.0020048507193423824,
+        "la09": -0.0009835314827497154,
+        "la14": -0.00021436404764711277,
+        "la19": 0.0018196432933342932,
+        "la24": 0.0024370796708687117,
+        "la29": 0.0017115489399804,
+        "la34": 0.0017693542746807973,
+        "la37": 0.0029147147918775003,
+        "la38": 0.0031344637546671834,
+        "la39": 0.0026530967677842513,
+        "orb09": -0.00020045526384609758,
+        "swv04": 0.0009905596365629302,
+        "swv05": 0.0013217415906995817,
+        "swv09": 0.0011106805592693068,
+        "swv10": 0.0004945342166249964,
+        "swv13": 0.0011866050381182619,
+        "swv14": 0.0011961537423198193,
+        "swv15": 0.0012741093832451123,
+        "swv17": 0.001303440018824094,
+        "swv18": 0.0013927943835523743
+      },
+      "instance_win_tie_loss": [
+        17,
+        0,
+        3
+      ],
+      "n_instances": 20,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection",
+      "archived_hierarchical_95ci": [
+        0.0008994665477719322,
+        0.0018083325878453767
+      ],
+      "archived_holm_p": 0.0001811981201171875
+    },
+    {
+      "action": "VND",
+      "comparator": "identity",
+      "effect": -0.0009943667002705941,
+      "instance_bootstrap_95ci": [
+        -0.0015866817803135706,
+        -0.0005052642038923265
+      ],
+      "instance_values": {
+        "abz9": -1.9410268682320816e-05,
+        "la09": -0.004452886633429945,
+        "la14": -0.004134018965824047,
+        "la19": 0.00030615212097144566,
+        "la24": -0.0003225316680869549,
+        "la29": -8.37993160124672e-05,
+        "la34": -0.0003640295194878814,
+        "la37": 8.347792846497888e-06,
+        "la38": 0.0001367830981097354,
+        "la39": -4.936977296921066e-05,
+        "orb09": -0.0015540925003178622,
+        "swv04": -0.0009999249181959994,
+        "swv05": -0.0005059139541359085,
+        "swv09": -0.0004776091797301069,
+        "swv10": -0.0012758542056321748,
+        "swv13": -0.001323165670236393,
+        "swv14": -0.0010640488677531445,
+        "swv15": -0.0006041061708330001,
+        "swv17": -0.001474652490556393,
+        "swv18": -0.001633202915455751
+      },
+      "instance_win_tie_loss": [
+        3,
+        0,
+        17
+      ],
+      "n_instances": 20,
+      "bootstrap_repetitions": 20000,
+      "bootstrap_seed": 20261025,
+      "inference_role": "retrospective instance-only sensitivity; no new confirmatory test or model selection",
+      "archived_hierarchical_95ci": [
+        -0.001609664771605508,
+        -0.0004898168376502913
+      ],
+      "archived_holm_p": 0.0005340576171875
+    }
+  ],
+  "historical_final_20_now_exposed": true,
+  "scorer_retrained": false,
+  "online_fp_agent_tested": false,
+  "new_CI_semantics": "20000 paired instance-only bootstrap seed20261025; retrospective sensitivity; historical hierarchical intervals separately retained",
+  "limits": [
+    "No new endpoint decoding; previous independent endpoint audits remain separate sources.",
+    "Historical C/E share the scorer family but differ in width106/148; N/P match E148; endpoint auxiliary supervision not matched by C.",
+    "Observed sample-oracle regret is not true conditional-mean regret or identified representation insufficiency.",
+    "All historical48 now exposed; old20 cannot become a new final confirmation.",
+    "Supplementary repeats reuse80 of960 trajectories; SAFE/BRFP/CP are separate exploratory lines, never added to109440.",
+    "No online FP policy performance, independent solver replication, or universal FP failure follows from this history."
+  ],
+  "script_sha256": "81baa2fae60e3ee7c8503d6d8a32a96896531c0d95d527729c59c06db0e195a9"
+}

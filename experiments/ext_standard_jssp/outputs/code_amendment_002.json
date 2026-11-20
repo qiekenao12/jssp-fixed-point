@@ -1,0 +1,11 @@
+{
+  "amendment_id": "ext_code_amendment_002",
+  "created_utc": "2026-11-20T03:09:21.703435+00:00",
+  "file": "experiments/ext_standard_jssp/code/verify_ext_replay.py",
+  "sha256_before": "12fd272f77e3444ab0b9364f76d8119eedf65163c2523e06cefeddb36b7cdc8a",
+  "sha256_after": "d41410472ea35722d07fdd25b37caf50951ad3d756f1f3485cbbd24db3e0f190",
+  "kind": "ENGINEERING_ONLY_VERIFIER_COLUMN_REFERENCE_FIX",
+  "reason": "Replay looked up optimism_gap_ci95_low/high in the split-repeat table; the table carries CI columns only for same/fresh advantage. Optimism CIs live in ext_analysis.json split_repeat_contrasts.",
+  "change": "Replay now checks all three kinds against producer JSON CIs, and additionally against table CI columns when present. No weakening of any check; no producer/statistical change.",
+  "affected_stage": "verify_ext_replay.py only."
+}

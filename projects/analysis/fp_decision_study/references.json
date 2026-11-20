@@ -1,0 +1,600 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-26",
+  "scope": "Primary-source literature and official Journal of Heuristics requirements; no experiments, tuning or submission.",
+  "records": [
+    {
+      "key": "Tu2014",
+      "author": [
+        "Jonathan H. Tu",
+        "Clarence W. Rowley",
+        "Dirk M. Luchtenburg",
+        "Steven L. Brunton",
+        "J. Nathan Kutz"
+      ],
+      "title": "On dynamic mode decomposition: Theory and applications",
+      "year": 2014,
+      "container": "Journal of Computational Dynamics",
+      "volume": "1",
+      "issue": "2",
+      "pages": "391–421",
+      "doi": "10.3934/jcd.2014.1.391",
+      "url": "https://www.aimsciences.org/article/doi/10.3934/jcd.2014.1.391",
+      "primary_sources": [
+        "https://www.aimsciences.org/article/doi/10.3934/jcd.2014.1.391"
+      ],
+      "verified_scope": "Approximate linear operators estimated from snapshots; DMD consistency conditions.",
+      "what_not_proven": "No proof that the four JSSP observables are Markov or globally convergent.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY_EXISTING_AUDIT",
+        "record": "projects/analysis/fp_agent_submission_reference_audit.json",
+        "checked_on": "2026-10-19",
+        "corrections": []
+      }
+    },
+    {
+      "key": "Proctor2016",
+      "author": [
+        "Joshua L. Proctor",
+        "Steven L. Brunton",
+        "J. Nathan Kutz"
+      ],
+      "title": "Dynamic Mode Decomposition with Control",
+      "year": 2016,
+      "container": "SIAM Journal on Applied Dynamical Systems",
+      "volume": "15",
+      "issue": "1",
+      "pages": "142–161",
+      "doi": "10.1137/15M1013857",
+      "url": "https://epubs.siam.org/doi/10.1137/15M1013857",
+      "primary_sources": [
+        "https://epubs.siam.org/doi/10.1137/15M1013857",
+        "https://epubs.siam.org/doi/pdf/10.1137/15M1013857"
+      ],
+      "verified_scope": "Data-driven state/control separation motivates action and observation-span recording.",
+      "what_not_proven": "Separate affine action fits are not a new general identification theorem.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY_EXISTING_AUDIT",
+        "record": "projects/analysis/fp_agent_submission_reference_audit.json",
+        "checked_on": "2026-10-19",
+        "corrections": [
+          "Full first-author name is Joshua L. Proctor; abbreviated J. L. in the original manuscript is correct."
+        ]
+      }
+    },
+    {
+      "key": "Brunton2016",
+      "author": [
+        "Steven L. Brunton",
+        "Bingni W. Brunton",
+        "Joshua L. Proctor",
+        "J. Nathan Kutz"
+      ],
+      "title": "Koopman Invariant Subspaces and Finite Linear Representations of Nonlinear Dynamical Systems for Control",
+      "year": 2016,
+      "container": "PLOS ONE",
+      "volume": "11",
+      "issue": "2",
+      "pages": "e0150171",
+      "doi": "10.1371/journal.pone.0150171",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0150171",
+      "primary_sources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0150171"
+      ],
+      "verified_scope": "Exact finite linear state-containing representations require restrictive conditions.",
+      "what_not_proven": "The theorem does not directly identify the cause of failure of stochastic coarse-grained JSSP maps.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY_EXISTING_AUDIT",
+        "record": "projects/analysis/fp_agent_submission_reference_audit.json",
+        "checked_on": "2026-10-19",
+        "corrections": []
+      }
+    },
+    {
+      "key": "DaCosta2008",
+      "author": [
+        "Luis Da Costa",
+        "Álvaro Fialho",
+        "Marc Schoenauer",
+        "Michèle Sebag"
+      ],
+      "title": "Adaptive operator selection with dynamic multi-armed bandits",
+      "year": 2008,
+      "container": "Proceedings of the 10th Annual Conference on Genetic and Evolutionary Computation (GECCO 2008)",
+      "volume": null,
+      "issue": null,
+      "pages": "913–920",
+      "doi": "10.1145/1389095.1389272",
+      "url": "https://radar.inria.fr/rapportsactivite/RA2019/tau/bibliography.html",
+      "primary_sources": [
+        "https://radar.inria.fr/rapportsactivite/RA2019/tau/bibliography.html",
+        "https://gpbib.cs.ucl.ac.uk/gecco2008/docs/p913.pdf",
+        "https://www.cs.ubc.ca/~hutter/EARG.shtml/earg/papers08/pap333s1-dacosta.pdf"
+      ],
+      "verified_scope": "Credit assignment and operator selection are distinct; rewards can be nonstationary.",
+      "what_not_proven": "Historical credit or selecting search operators is not novel by itself.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY_EXISTING_AUDIT",
+        "record": "projects/analysis/fp_agent_submission_reference_audit.json",
+        "checked_on": "2026-10-19",
+        "corrections": [
+          "Paper byline typesets Luis DaCosta; the authors’ Inria bibliography uses L. Da Costa. Bibliography retains Da Costa as in the existing citation."
+        ]
+      }
+    },
+    {
+      "key": "Fialho2009",
+      "author": [
+        "Álvaro Fialho",
+        "Marc Schoenauer",
+        "Michèle Sebag"
+      ],
+      "title": "Analysis of adaptive operator selection techniques on the royal road and long k-path problems",
+      "year": 2009,
+      "container": "Proceedings of the 11th Annual Conference on Genetic and Evolutionary Computation (GECCO 2009)",
+      "volume": null,
+      "issue": null,
+      "pages": "779–786",
+      "doi": "10.1145/1569901.1570009",
+      "url": "https://doi.org/10.1145/1569901.1570009",
+      "primary_sources": [
+        "https://doi.org/10.1145/1569901.1570009",
+        "https://www.lri.fr/files/infoScientifique/aeres/LRIreport.pdf",
+        "https://www.isgec.org/gecco-2009/docs/gecco09-conference-program-final-plus2.pdf"
+      ],
+      "verified_scope": "Controlled crossing of four selection rules and four credit assignments on two benchmark problems.",
+      "what_not_proven": "Its results are not a test of current FP features or current JSSP solver.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY_EXISTING_AUDIT",
+        "record": "projects/analysis/fp_agent_submission_reference_audit.json",
+        "checked_on": "2026-10-19",
+        "corrections": []
+      }
+    },
+    {
+      "key": "Zhang2020",
+      "author": [
+        "Cong Zhang",
+        "Wen Song",
+        "Zhiguang Cao",
+        "Jie Zhang",
+        "Puay Siew Tan",
+        "Chi Xu"
+      ],
+      "title": "Learning to Dispatch for Job Shop Scheduling via Deep Reinforcement Learning",
+      "year": 2020,
+      "container": "Advances in Neural Information Processing Systems",
+      "volume": "33",
+      "issue": null,
+      "pages": "1621–1632",
+      "doi": null,
+      "url": "https://proceedings.neurips.cc/paper/2020/hash/11958dfee29b6709f48a9ba0387a2431-Abstract.html",
+      "primary_sources": [
+        "https://proceedings.neurips.cc/paper/2020/hash/11958dfee29b6709f48a9ba0387a2431-Abstract.html",
+        "https://proceedings.neurips.cc/paper/2020/file/11958dfee29b6709f48a9ba0387a2431-Paper.pdf",
+        "https://github.com/zcaicaros/L2D",
+        "https://ink.library.smu.edu.sg/sis_research/8133/"
+      ],
+      "verified_scope": "Learned dispatching from partial JSSP schedules.",
+      "what_not_proven": "Not a directly comparable macro-action selector or evidence for current FP utility.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY_EXISTING_AUDIT",
+        "record": "projects/analysis/fp_agent_submission_reference_audit.json",
+        "checked_on": "2026-10-19",
+        "corrections": [
+          "Add pages 1621–1632 from the author-provided BibTeX and institutional record.",
+          "Printed PDF and author repository narrative say Chi Xu; official proceedings structured metadata and author-recommended BibTeX say Chi, Xu. Preserve full printed name as literal {Chi Xu} in the supplied BibTeX and full Chi Xu in prose; do not infer a surname from this conflict."
+        ]
+      }
+    },
+    {
+      "key": "Falkner2023",
+      "author": [
+        "Jonas K. Falkner",
+        "Daniela Thyssens",
+        "Ahmad Bdeir",
+        "Lars Schmidt-Thieme"
+      ],
+      "title": "Learning to Control Local Search for Combinatorial Optimization",
+      "year": 2023,
+      "container": "Machine Learning and Knowledge Discovery in Databases. ECML PKDD 2022",
+      "volume": "13717",
+      "issue": null,
+      "pages": "361–376",
+      "doi": "10.1007/978-3-031-26419-1_22",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-26419-1_22",
+      "primary_sources": [
+        "https://link.springer.com/chapter/10.1007/978-3-031-26419-1_22"
+      ],
+      "verified_scope": "Sequential local-search control formalized as an MDP; NeuroLS controller.",
+      "what_not_proven": "Not an evaluation of current aggregate four-dimensional state or offline FP macro-actions.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY_EXISTING_AUDIT",
+        "record": "projects/analysis/fp_agent_submission_reference_audit.json",
+        "checked_on": "2026-10-19",
+        "corrections": [
+          "Change publication year from 2022 to 2023 when citing the published chapter. ECML PKDD 2022 remains in the conference/book title.",
+          "Add pages 361–376.",
+          "Springer chapter was first published online 17 March 2023; the 2022 arXiv preprint is a separate publication stage."
+        ]
+      }
+    },
+    {
+      "key": "Zhang2024",
+      "author": [
+        "Cong Zhang",
+        "Zhiguang Cao",
+        "Wen Song",
+        "Yaoxin Wu",
+        "Jie Zhang"
+      ],
+      "title": "Deep Reinforcement Learning Guided Improvement Heuristic for Job Shop Scheduling",
+      "year": 2024,
+      "container": "International Conference on Learning Representations",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "doi": null,
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/c75abb33341363ee874a71f81dc45a3a-Abstract-Conference.html",
+      "primary_sources": [
+        "https://proceedings.iclr.cc/paper_files/paper/2024/hash/c75abb33341363ee874a71f81dc45a3a-Abstract-Conference.html",
+        "https://proceedings.iclr.cc/paper_files/paper/2024/file/c75abb33341363ee874a71f81dc45a3a-Paper-Conference.pdf"
+      ],
+      "verified_scope": "DRL-guided improvement moves over complete JSSP schedules.",
+      "what_not_proven": "Does not establish performance of an unexecuted online FP policy.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY_EXISTING_AUDIT",
+        "record": "projects/analysis/fp_agent_submission_reference_audit.json",
+        "checked_on": "2026-10-19",
+        "corrections": []
+      }
+    },
+    {
+      "key": "Piotrowski2016",
+      "author": [
+        "Adam P. Piotrowski",
+        "Jaroslaw J. Napiorkowski"
+      ],
+      "title": "Searching for structural bias in particle swarm optimization and differential evolution algorithms",
+      "year": 2016,
+      "container": "Swarm Intelligence",
+      "volume": "10",
+      "issue": null,
+      "pages": "307–353",
+      "doi": "10.1007/s11721-016-0129-y",
+      "url": "https://link.springer.com/article/10.1007/s11721-016-0129-y",
+      "primary_sources": [
+        "https://link.springer.com/article/10.1007/s11721-016-0129-y"
+      ],
+      "verified_scope": "Controlled empirical optimization-behavior study and limits of diagnostic/performance association.",
+      "what_not_proven": "Negative results or logging alone do not imply equal scientific contribution.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY_EXISTING_AUDIT",
+        "record": "projects/analysis/fp_agent_submission_reference_audit.json",
+        "checked_on": "2026-10-19",
+        "corrections": []
+      }
+    },
+    {
+      "key": "Demsar2006",
+      "author": [
+        "Janez Demšar"
+      ],
+      "title": "Statistical Comparisons of Classifiers over Multiple Data Sets",
+      "year": 2006,
+      "container": "Journal of Machine Learning Research",
+      "volume": "7",
+      "issue": "1",
+      "pages": "1–30",
+      "doi": null,
+      "url": "https://jmlr.org/papers/v7/demsar06a.html",
+      "primary_sources": [
+        "https://jmlr.org/papers/v7/demsar06a.html"
+      ],
+      "verified_scope": "Paired comparisons across datasets; motivates instance-level reporting.",
+      "what_not_proven": "Does not remove dependencies among learned overlapping cross-validation fits.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY_EXISTING_AUDIT",
+        "record": "projects/analysis/fp_agent_submission_reference_audit.json",
+        "checked_on": "2026-10-19",
+        "corrections": []
+      }
+    },
+    {
+      "key": "Wilder2019",
+      "author": [
+        "Bryan Wilder",
+        "Bistra Dilkina",
+        "Milind Tambe"
+      ],
+      "title": "Melding the Data-Decisions Pipeline: Decision-Focused Learning for Combinatorial Optimization",
+      "year": 2019,
+      "container": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "doi": "10.1609/aaai.v33i01.33011658",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/3982",
+      "verified_scope": "Predictive loss and downstream combinatorial decision utility can be misaligned.",
+      "what_not_proven": "The current unchanged event-probability scorer is not the decision-focused training method.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY",
+        "checked_on": "2026-10-25",
+        "source_access": "Publisher or official proceedings opened"
+      },
+      "volume": "33",
+      "issue": "01",
+      "pages": "1658–1665"
+    },
+    {
+      "key": "Elmachtoub2022",
+      "author": [
+        "Adam N. Elmachtoub",
+        "Paul Grigas"
+      ],
+      "title": "Smart “Predict, then Optimize”",
+      "year": 2022,
+      "container": "Management Science",
+      "doi": "10.1287/mnsc.2020.3922",
+      "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2020.3922",
+      "verified_scope": "Decision-error loss and a convex surrogate use downstream optimization structure.",
+      "what_not_proven": "The study does not implement SPO or infer that it would repair the tested FP selector.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY",
+        "checked_on": "2026-10-25",
+        "source_access": "Publisher or official proceedings opened"
+      },
+      "volume": "68",
+      "issue": "1",
+      "pages": "9–26",
+      "online_year": 2021
+    },
+    {
+      "key": "Mandi2022",
+      "author": [
+        "Jayanta Mandi",
+        "Víctor Bucarey",
+        "Maxime Mulamba Ke Tchomba",
+        "Tias Guns"
+      ],
+      "title": "Decision-Focused Learning: Through the Lens of Learning to Rank",
+      "year": 2022,
+      "container": "Proceedings of the 39th International Conference on Machine Learning",
+      "doi": null,
+      "url": "https://proceedings.mlr.press/v162/mandi22a.html",
+      "verified_scope": "Ranking feasible decisions can be used as decision-focused training.",
+      "what_not_proven": "Improvement-event AP is not equivalent to correct within-state action-gain order.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY",
+        "checked_on": "2026-10-25",
+        "source_access": "Publisher or official proceedings opened"
+      },
+      "volume": "162",
+      "pages": "14935–14947",
+      "doi_status": "NO_FORMAL_PROCEEDINGS_DOI_ESTABLISHED"
+    },
+    {
+      "key": "Mandi2024",
+      "author": [
+        "Jayanta Mandi",
+        "James Kotary",
+        "Senne Berden",
+        "Maxime Mulamba",
+        "Victor Bucarey",
+        "Tias Guns",
+        "Ferdinando Fioretto"
+      ],
+      "title": "Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities",
+      "year": 2024,
+      "container": "Journal of Artificial Intelligence Research",
+      "doi": "10.1613/jair.1.15320",
+      "url": "https://jair.org/index.php/jair/article/view/15320",
+      "verified_scope": "Survey and empirical benchmark of eleven decision-focused methods on seven problems.",
+      "what_not_proven": "General prediction/decision separation is established prior art, not a current first claim.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY",
+        "checked_on": "2026-10-25",
+        "source_access": "Publisher or official proceedings opened"
+      },
+      "volume": "80",
+      "metadata_note": "Official publisher article lists volume 80; author arXiv metadata lists 81. Publisher volume retained; page range omitted rather than silently resolving conflict.",
+      "primary_sources": [
+        "https://jair.org/index.php/jair/article/view/15320",
+        "https://arxiv.org/abs/2307.13565"
+      ]
+    },
+    {
+      "key": "Tsogbetse2024",
+      "author": [
+        "Israël Tsogbetse",
+        "Julien Bernard",
+        "Hervé Manier",
+        "Marie-Ange Manier"
+      ],
+      "title": "Influence of encoding and neighborhood in landscape analysis and tabu search performance for job shop scheduling problem",
+      "year": 2024,
+      "container": "European Journal of Operational Research",
+      "doi": "10.1016/j.ejor.2024.07.028",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0377221724005836",
+      "verified_scope": "Fifteen encoding-neighborhood pairs; 242 classical and 2500 generated JSSP instances. Conventional landscape metrics fail to recommend tabu-search performance reliably, while extreme metrics can flag poor pairs.",
+      "what_not_proven": "It does not test action-conditioned FP, saved-population macro-action choices, matched feature arms or independent repeat evaluation of a noisy sample winner.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY",
+        "checked_on": "2026-10-25",
+        "source_access": "Publisher metadata and full author manuscript opened; sections 4.6 and 5 inspected"
+      },
+      "volume": "319",
+      "issue": "3",
+      "pages": "739–746",
+      "primary_sources": [
+        "https://www.sciencedirect.com/science/article/pii/S0377221724005836",
+        "https://publiweb.femto-st.fr/tntnet/entries/21153/documents/author/data"
+      ]
+    },
+    {
+      "key": "Rosa2024",
+      "author": [
+        "Aparecida de Fátima Castello Rosa",
+        "Fabio Henrique Pereira"
+      ],
+      "title": "An intensification approach based on fitness landscape characteristics for job shop scheduling problem",
+      "year": 2024,
+      "container": "Journal of Combinatorial Optimization",
+      "doi": "10.1007/s10878-024-01176-0",
+      "url": "https://link.springer.com/article/10.1007/s10878-024-01176-0",
+      "verified_scope": "Uses attraction-basin and big-valley ideas for GA intensification and path relinking.",
+      "what_not_proven": "Not the current fixed-action, no-new-operator representation diagnosis.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY",
+        "checked_on": "2026-10-25",
+        "source_access": "Publisher metadata and abstract opened; subscription full text not accessed"
+      },
+      "volume": "47",
+      "article_number": "77"
+    },
+    {
+      "key": "Pei2025",
+      "author": [
+        "Jiyuan Pei",
+        "Yi Mei",
+        "Jialin Liu",
+        "Mengjie Zhang",
+        "Xin Yao"
+      ],
+      "title": "Adaptive Operator Selection for Meta-Heuristics: A Survey",
+      "year": 2025,
+      "container": "IEEE Transactions on Artificial Intelligence",
+      "doi": "10.1109/TAI.2025.3545792",
+      "url": "https://ieeexplore.ieee.org/document/10904096/",
+      "verified_scope": "Classifies AOS as stateless or state-based and reviews constituent design choices.",
+      "what_not_proven": "State-based selection is established; the survey does not validate current FP features.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY",
+        "checked_on": "2026-10-25",
+        "source_access": "IEEE record located, direct content challenge; author-affiliated institution primary record opened"
+      },
+      "volume": "6",
+      "issue": "8",
+      "pages": "1991–2012",
+      "primary_sources": [
+        "https://ieeexplore.ieee.org/document/10904096/",
+        "https://scholars.ln.edu.hk/en/publications/adaptive-operator-selection-for-meta-heuristics-a-survey/"
+      ]
+    },
+    {
+      "key": "Kalatzantonakis2025",
+      "author": [
+        "Panagiotis Kalatzantonakis",
+        "Angelo Sifaleras",
+        "Nikolaos Samaras"
+      ],
+      "title": "An offline data-driven process for learning operator selection from metaheuristic search traces",
+      "year": 2025,
+      "container": "Swarm and Evolutionary Computation",
+      "doi": "10.1016/j.swevo.2025.102058",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2210650225002160",
+      "verified_scope": "TRACE trains improvement-event classifiers from operator traces and deploys neighborhood selection for CVRP.",
+      "what_not_proven": "Offline event prediction, historical features and interpretable selection are not new generic ideas; its CVRP results do not validate JSSP FP.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY",
+        "checked_on": "2026-10-25",
+        "source_access": "Full published PDF on corresponding-author university site opened; publisher search record cross-checked"
+      },
+      "volume": "98",
+      "article_number": "102058",
+      "primary_sources": [
+        "https://www.sciencedirect.com/science/article/pii/S2210650225002160",
+        "https://sites.uom.gr/sifalera/papers/An_offline_data-driven_process_for_learning_operator_selection_from_metaheuristic_search_traces.pdf"
+      ]
+    },
+    {
+      "key": "Wang2025",
+      "author": [
+        "Jiaqi Wang",
+        "Zhiguang Cao",
+        "Peng Zhao",
+        "Rui Cao",
+        "YuBin Xiao",
+        "Yuan Jiang",
+        "You Zhou"
+      ],
+      "title": "Learning Memory-Enhanced Improvement Heuristics for Flexible Job Shop Scheduling",
+      "year": 2025,
+      "container": "Advances in Neural Information Processing Systems 38",
+      "doi": "10.52202/085713-2776",
+      "url": "https://papers.nips.cc/paper_files/paper/2025/hash/77629f2df5ef97ad967157c69cd8af7b-Abstract-Conference.html",
+      "verified_scope": "MIStar uses a heterogeneous graph and memory-enhanced representation of historical trajectories for FJSP improvement.",
+      "what_not_proven": "History and learned improvement are established, but flexible machine assignment and graph policy differ from the current fixed JSSP macro-action experiment.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY",
+        "checked_on": "2026-10-25",
+        "source_access": "Publisher or official proceedings opened"
+      }
+    },
+    {
+      "key": "Oh2026",
+      "author": [
+        "Seung Heon Oh",
+        "Young-in Cho",
+        "Hyunjin Oh",
+        "Jiwon Baek",
+        "Seung Woo Han",
+        "Jong Hun Woo"
+      ],
+      "title": "Framework for state features design in job shop scheduling with deep reinforcement learning: Beyond empirical approaches",
+      "year": 2026,
+      "container": "Journal of Computational Design and Engineering",
+      "doi": "10.1093/jcde/qwaf118",
+      "url": "https://academic.oup.com/jcde/article/13/1/24/8306862",
+      "verified_scope": "Relates state design to dynamics equations and nominal-reward value prediction, using graph/transformer scheduling and lower-bound features.",
+      "what_not_proven": "It does not show the current four aggregate statistics are sufficient or that FP residuals contain new target-time observations.",
+      "verification": {
+        "status": "VERIFIED_PRIMARY",
+        "checked_on": "2026-10-25",
+        "source_access": "Publisher full article opened"
+      },
+      "volume": "13",
+      "issue": "1",
+      "pages": "24–44",
+      "online_date": "2025-10-30",
+      "issue_date": "2026-01"
+    }
+  ],
+  "candidate_not_ready_for_citation": [
+    {
+      "author": null,
+      "title": "Adaptive job shop scheduling via reinforcement learning-guided genetic algorithms with behavioral transparency",
+      "year": 2026,
+      "doi": "10.1016/j.cor.2026.107583",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0305054826002017",
+      "container": "Computers & Operations Research",
+      "volume": "194",
+      "article_number": "107583",
+      "verification_status": "PUBLISHER_TITLE_DOI_SCOPE_VERIFIED_AUTHOR_METADATA_NOT_ESTABLISHED",
+      "verified_scope": "Population-summary tabular RL chooses five operators at fixed intervals; close adjacent work.",
+      "what_not_proven": "No author guessed; excluded from insertable prose until author metadata verified."
+    }
+  ],
+  "journal": {
+    "name": "Journal of Heuristics",
+    "scope_url": "https://link.springer.com/journal/10732/aims-and-scope",
+    "guidelines_url": "https://link.springer.com/journal/10732/submission-guidelines",
+    "checked_on": "2026-10-26",
+    "scope_fit": "Empirical analysis of existing methods is within Metaheuristic Methodologies; contribution threshold still applies.",
+    "requirements_note": "See concise requirements and source links in projects/docs/fp_decision_related_work.md.",
+    "article_type_limit": "No dedicated negative-result, short-note or registered-report type established from these checked pages.",
+    "unresolved_author_facts": [
+      "author identities and affiliations",
+      "corresponding email and available ORCIDs",
+      "funding",
+      "competing interests",
+      "actual contributions",
+      "rights-cleared data/code reviewer or public access",
+      "related-manuscript status and overlap",
+      "verified scope and human review of substantive AI assistance"
+    ]
+  },
+  "limits": [
+    "Bounded search; no claim of exhaustive novelty review.",
+    "No absence of similarly named work used to prove originality.",
+    "Publication URLs or author repositories only; secondary search hits not used as scientific support.",
+    "No solver execution, model change or new statistical analysis."
+  ]
+}

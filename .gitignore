@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+venv_ext/
+env/
+pyvenv.cfg
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Local working data (never commit)
+raw_extracted/
+release_assets/
+*.tmp
+*.log
+verification_report_local.json
+
+# Matplotlib / tool caches
+.matplotlib/

@@ -1,0 +1,130 @@
+{
+  "per_arm": {
+    "A": {
+      "l2": 1.0,
+      "tabu_choices": 789,
+      "first_choices": 6,
+      "best_choices": 5,
+      "distribution": {
+        "CB_TABU": 789,
+        "CB_FIRST_DESCENT": 6,
+        "CB_BEST_DESCENT": 5
+      }
+    },
+    "B": {
+      "l2": 10.0,
+      "tabu_choices": 795,
+      "first_choices": 0,
+      "best_choices": 5,
+      "distribution": {
+        "CB_TABU": 795,
+        "CB_BEST_DESCENT": 5
+      }
+    },
+    "C": {
+      "l2": 100.0,
+      "tabu_choices": 797,
+      "first_choices": 0,
+      "best_choices": 3,
+      "distribution": {
+        "CB_TABU": 797,
+        "CB_BEST_DESCENT": 3
+      }
+    },
+    "D": {
+      "l2": 100.0,
+      "tabu_choices": 794,
+      "first_choices": 2,
+      "best_choices": 4,
+      "distribution": {
+        "CB_TABU": 794,
+        "CB_BEST_DESCENT": 4,
+        "CB_FIRST_DESCENT": 2
+      }
+    },
+    "E": {
+      "l2": 1000.0,
+      "tabu_choices": 783,
+      "first_choices": 4,
+      "best_choices": 13,
+      "distribution": {
+        "CB_TABU": 783,
+        "CB_BEST_DESCENT": 13,
+        "CB_FIRST_DESCENT": 4
+      }
+    },
+    "D_random": {
+      "l2": 10.0,
+      "tabu_choices": 795,
+      "first_choices": 2,
+      "best_choices": 3,
+      "distribution": {
+        "CB_TABU": 795,
+        "CB_BEST_DESCENT": 3,
+        "CB_FIRST_DESCENT": 2
+      }
+    }
+  },
+  "pairwise_agreement": {
+    "A_vs_B": {
+      "identical": 790,
+      "total": 800
+    },
+    "A_vs_C": {
+      "identical": 790,
+      "total": 800
+    },
+    "A_vs_D": {
+      "identical": 787,
+      "total": 800
+    },
+    "A_vs_E": {
+      "identical": 777,
+      "total": 800
+    },
+    "A_vs_D_random": {
+      "identical": 790,
+      "total": 800
+    },
+    "B_vs_C": {
+      "identical": 798,
+      "total": 800
+    },
+    "B_vs_D": {
+      "identical": 797,
+      "total": 800
+    },
+    "B_vs_E": {
+      "identical": 780,
+      "total": 800
+    },
+    "B_vs_D_random": {
+      "identical": 797,
+      "total": 800
+    },
+    "C_vs_D": {
+      "identical": 797,
+      "total": 800
+    },
+    "C_vs_E": {
+      "identical": 780,
+      "total": 800
+    },
+    "C_vs_D_random": {
+      "identical": 796,
+      "total": 800
+    },
+    "D_vs_E": {
+      "identical": 782,
+      "total": 800
+    },
+    "D_vs_D_random": {
+      "identical": 796,
+      "total": 800
+    },
+    "E_vs_D_random": {
+      "identical": 781,
+      "total": 800
+    }
+  }
+}

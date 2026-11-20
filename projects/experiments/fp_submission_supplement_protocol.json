@@ -1,0 +1,74 @@
+{
+  "created_utc": "2026-10-19T06:34:42.553535+00:00",
+  "revision": "submission-evidence-v1",
+  "status": "STAGES_1_2_FROZEN_BEFORE_SUPPLEMENTARY_OUTCOMES",
+  "authorization": "Latest user task explicitly authorizes numerical robustness, additional independent development repeats, second-implementation audit and one final locked confirmation, including stable negative findings. This supersedes older conditional DO_NOT_RUN gates solely for a new frozen empirical confirmation; no online M3 is authorized or implied.",
+  "scientific_boundary": "No new FP functional model, target objective, neural/RL model, search primitive or budget controller. Existing outputs immutable.",
+  "data_roles": {
+    "development": "original16 only for all technical choices",
+    "exposed_validation": "old12 not fresh confirmation, no new method selection",
+    "locked20": "remain unrun until one separate final protocol and executable/source/model artifacts frozen"
+  },
+  "stage1": {
+    "scope": "112 original development nested-OOF fits, seven frozen feature arms A/B/C/D/E/N/P; exact original feature normalization and logistic objective",
+    "scorer_objective": "mean(logaddexp(0,z)-y*z)+L2*sum(nonintercept standardized weights squared)/(2*n)",
+    "L2": 1.0,
+    "FP_ridge": 0.1,
+    "optimizer": "independent analytic Newton with Armijo; no objective changes",
+    "sufficient_convergence": "independently recomputed gradient infinity norm <=1e-7; finite loss/parameters and accepted descent",
+    "maximum_newton_iterations": 200,
+    "maximum_line_search_halvings": 50,
+    "Armijo": 0.0001,
+    "initial_step": 1.0,
+    "backtrack_factor": 0.5,
+    "uniform_failure": "Any fit failing numerical criterion remains FAILED; no FP-favorable iteration selection. A failed stage cannot certify a fully converged comparison or silently unlock testing.",
+    "independent_checks": "separately accumulated objective/gradient and fixed-direction finite-difference derivative checks, mathematical same L2/n with unpenalized intercept",
+    "outputs": [
+      "AP",
+      "Brier",
+      "probability drift from original120",
+      "action counts/change",
+      "selected gain",
+      "oracle regret",
+      "optimizer diagnostics"
+    ],
+    "statistics": "EvsC/N/P x AP/Brier/gain original nine-comparison layout; paired instance exact signed ranks +Holm, marginal instance->trajectory bootstrap10000seed20261019; clearly numerical robustness, not new independent confirmation",
+    "cost_estimate": "112 fits of16200 rows and max148 parameters, dense Newton typically8-20 steps; single-thread BLAS per task; estimated minutes to tens of minutes, <~500MB sequential; maximum200 fixed for every arm"
+  },
+  "stage2": {
+    "sampling": "all original development16 instances; run_index0..4; generations40,100,160,240states/80trajectories. Deterministic and no use of branch outcomes.",
+    "atomic_repeats": "add repeats2..6, five new independent repeats, preserving original0/1; total7 per original action/state",
+    "work_control_repeats": "five new independent repeats for each ofGA/LS/VND with common480 true objective-request ceiling",
+    "work_window": "Repeat existing same-action calls on the evolving branch state until480 requests. GA=6 complete80-request generations, LS repeatedmaxiter100 plus normal returnverification, VND repeatedmaxiter100. Never interleave different actions. No artificial padding. Retain best evaluated incumbent at interruption.",
+    "natural_and_cap_rules": "Record each original call natural return/capped, completed calls, actual queries/decodes/time. VND can finish479 if remaining1 is insufficient for its native minimum2requests; stop and disclose unused1. No empty-query fill. Exact work not claimed where actual differs.",
+    "scoring": "frozen original and stage1 converged development-OOF probabilities; no retraining or new reward objective. Atomic-trained scores on480 mode are explicitly window-transfer stress tests, not models calibrated for that window.",
+    "repeat_inference": "action-specific mean/variance/empirical uncertainty; within-state winner/tie behavior; old2-repeat oracle action evaluated on independent new5 (and leave-one-repeat ranking sensitivity); fixedactions andFP/NoFP paired gains, trajectory/instance grouping; all states retained",
+    "cost_estimate": {
+      "states": 240,
+      "new_atomic_branches": 3600,
+      "new_work_control_branches": 3600,
+      "atomic_query_upper": 1800000,
+      "work_control_query_upper": 1728000,
+      "total_query_upper": 3528000,
+      "estimated_CPU_seconds_from_existing_costs": 376,
+      "workers": 8,
+      "estimated_wall": "1-3min plus I/O; conservative10min, estimate not observed runtime"
+    },
+    "primary_family": "new atomic and480 windows x(EvsC/N/P selectedgain)=6 jointHolm comparisons on independent new5; AP/Brier/mechanism metrics descriptive. Instance->paired trajectory bootstrap10000seed20261020; original2 outcome labels do not enter new5 scores.",
+    "failure_rules": "Keep runtime/interface/infeasible failures explicitly; no replacing states based on quality or eliminating no-improvement actions. Deterministic engineering defects may be fixed before formal batch with new source lock and without outcome-based model changes."
+  },
+  "stage3": "Bounded independent-implementation interface audit; separate protocol required if feasible. Parameter-only variants not counted.",
+  "stage4": "Final protocol not yet frozen. No locked outcome may be collected until stages1/2 technical decisions and stage3 disposition complete, all prediction artifacts/executables fixed.",
+  "input_sha256": {
+    "projects/experiments/fp_agent_decision_protocol.json": "b4eb11aaa4c201b19eafa7b6f0a35c852d53564f1a16027803ebec768003d9a2",
+    "projects/experiments/fp_agent_decision_c_source_lock.json": "c883d5109d2240cd74e28a02d9e37ed9d0f0c3ea983b1ccb09e1d23d0c11440d",
+    "projects/analysis/fp_agent_decision_feature_comparison.json": "b1e3b0c1d9a12e376bbf761293e34244b7a617856b58485912b1faa9647587be",
+    "projects/analysis/fp_decision_oracle.json": "57958d9d0a30bbf9c4c47faede4e0e4b15ef93cfbf6f40ba387f3271f469298c",
+    "projects/analysis/fp_action_development_independent_audit.json": "3a4afcf4c65a0d48d7b7353ee52a8a1ca3b9bb37f0cdd8a835ab9852caa3d651",
+    "projects/experiments/fp_v2_manifest.json": "ed1db9264b399adf8ad5c80e11f77a2ac4880e236d9426c9feebece569996838",
+    "src/tools/action_fp.py": "27ca4e9db7d63b6c8abe55699017dea27d250e1c2ddd77e54ad7098c668f68a6",
+    "analyze_fp_action_diagnostics.py": "1e9d8c98ab4e4a0a99d4e8014d580c26da38e5835a4ddf4d52e640bec8345ef3",
+    "scripts/compare_fp_decision_features.py": "c408a377d81661525ee112a1fa11c0184ad8a72c5c97998528dcc47353ce378c",
+    "run_fp_action_diagnostics.py": "9b7756b83ed39e5cd3ff1579bc7b268db0d73985f2db16a745e992b844de2b6f"
+  }
+}

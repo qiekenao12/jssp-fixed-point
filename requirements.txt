@@ -1,0 +1,29 @@
+# Minimal pinned dependencies for verification, analysis and plotting.
+# Derived from the actual imports of the shipped scripts:
+#   numpy        — all solvers, verifiers, analyses, tests
+#   matplotlib   — figure builders (scripts/build_fp_*.py, plot_ext_summary.py)
+#   scikit-learn — HistGradientBoostingRegressor in fit_ext_scorers.py + frozen GBDT bundles
+#   joblib       — loading the frozen ext GBDT model bundles (fit_ext_scorers / analyze_ext)
+#
+# Reference environments actually used by the study:
+#   primary synthetic cohort : Python 3.13.13, numpy 2.4.6  (final_lock.json "environment")
+#   prospective extension    : Python 3.12.13, numpy 2.4.2, scipy 1.18.1, scikit-learn 1.9.1,
+#                              pandas 2.3.3, matplotlib 3.10.8, joblib 1.6.0
+#                              (experiments/ext_standard_jssp/outputs/manifest_lock.json "environment")
+#
+# The independent verifiers (scripts/verify_all.py and everything it calls) need ONLY numpy
+# plus the standard library. The remaining pins are needed to re-run dev-only fitting,
+# extension analysis, GBDT model loading and figure regeneration.
+#
+# numpy is pinned to the primary-cohort lock value; the extension replay is version-robust
+# (all reconstructed quantities are compared at tolerance 1e-12; see verification_replay.json).
+# scikit-learn MUST stay at 1.9.1 to load the frozen GBDT joblib bundles bit-compatibly.
+
+numpy==2.4.6
+matplotlib==3.10.8
+scikit-learn==1.9.1
+joblib==1.6.0
+
+# Not imported by any shipped script; recorded for exact reference-environment recreation:
+# scipy==1.18.1        # transitive dependency of scikit-learn (installed automatically)
+# pandas==2.3.3        # present in the extension reference environment only

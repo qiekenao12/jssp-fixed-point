@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+"""Outcome-independent, locally frozen design. No search or model fitting."""
+import hashlib
+import json
+from pathlib import Path
+import random
+from datetime import datetime, timezone
+
+ROOT = Path(__file__).resolve().parents[1]
+DEST = ROOT / 'projects/experiments/fp_decision_study'
+
+def canonical(x):
+    return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+
+def main():
+    DEST.mkdir(parents=True,exist_ok=True)
+    if (DEST/'design.json').exists():
+        raise RuntimeError('Do not overwrite frozen design')
+    instances=[]
+    for split,count,offset in [('development',2,0),('validation',1,100),('final',5,200)]:
+        for size_index,(jobs,machines) in enumerate([(6,6),(10,5),(10,10),(15,10)]):
+            for index in range(count):
+                seed=202610250000+offset+size_index*10+index
+                rng=random.Random(seed)
+                routes=[rng.sample(range(machines),machines) for _ in range(jobs)]
+                durations=[[rng.randint(1,99) for _ in range(machines)] for _ in range(jobs)]
+                instances.append(dict(name=f'new_{split}_{jobs}x{machines}_{index:02d}',split=split,
+                    generation_seed=seed,jobs=jobs,machines=machines,routes=routes,durations=durations,
+                    content_hash=canonical([routes,durations])))
+    assert len({x['content_hash'] for x in instances})==32
+    design={
+      'status':'LOCAL_DESIGN_FROZEN_BEFORE_NEW_SEARCH_OUTCOMES',
+      'created_utc':datetime.now(timezone.utc).isoformat(),
+      'title':'Decision sufficiency of empirical fixed-point representations in two JSSP search implementations',
+      'scope':'Finite empirical replication. No new FP mechanism, no changes to old results.',
+      'instance_origin':'Newly generated classical permutation-route JSSP: independent uniform machine permutation per job, integer durations Uniform{1,...,99}. These are synthetic research instances, not new public benchmark records, not a claim of distribution shift.',
+      'split_names':{s:[x['name'] for x in instances if x['split']==s] for s in ['development','validation','final']},
+      'instances_hash':canonical(instances),
+      'runs':{'development':10,'validation':10,'final':20},
+      'seed_namespace':2026102501,
+      'second_solver':{'neutral_action':'CB_TABU','neutral_chunks':[8,16], 'saved_opportunities':2,
+        'actions':['CB_BEST_DESCENT','CB_FIRST_DESCENT','CB_TABU'],'action_steps':8,'tabu_tenure':5,'repeats':5,
+        'window':'Up to eight accepted moves, full sweeps, natural stopping. Unequal evaluations and seconds explicitly retained; not equal computational work.',
+        'dynamics_state':['best/s0','current/s0','critical_path_operation_fraction','operations_in_critical_blocks_fraction']},
+      'original_solver':{'mode':'Frozen old model transfer; no refitting on new final results',
+        'model_bundle':'projects/experiments/fp_submission_frozen_model_bundle.json',
+        'settings':'Original 180 generations, population80,9 atomic checkpoints,5repeats; secondary480 requests at generations40/100/160;20finalseeds'},
+      'second_solver_models':{
+        'dynamics':'Existing affine displacement ridge, raw normal-equation penalty0.1, separate action maps and pooled baseline. Fit training transitions averaged over repeats. No new FP family.',
+        'scorer':'One action-interacted standardized ridge expected-gain regressor, sum squared error plus coefficient L2=1; intercept unpenalized; normal-equation gradient absolute max<=1e-7. Same scorer and optimizer in A-E.',
+        'secondary_scorer':'Same representations with existing converged logistic event scorer, L2=1, gradient tolerance1e-7; secondary only. No target choice by outcomes.',
+        'A':'ordinary dynamics4 + historical features4',
+        'B':'A + structural5 + all upper-triangle degree2 products of dynamics4 (10 terms)',
+        'C':'B + action-conditioned predicted endpoint coordinates (12 terms), same transition supervision as FP',
+        'D':'B + norms of action displacements (3) and all pairwise predicted endpoint differences (3), Euclidean norm on the four dimensionless coordinates',
+        'E':'B + action-conditioned displacement coordinates (12), their coordinate squares(12), all pairwise prediction-difference coordinates(12), their squares(12). Direct expected-gain NoFP, same transition maps/supervision/history; greater expressiveness explicitly disclosed, no claim of identical capacity.',
+        'negative_control':'D_random: six fixed random affine norms of dynamics4, same added width as D; seeded before fitting',
+        'strong_comparators':['B','E'],
+        'train':'Development8 only. Leave-one-development-instance-out transition features for scorer training. Full-development maps for held-out prediction; no final labels.',
+        'validation':'Four disjoint synthetic instances, interface/numerical validity only. No model/threshold/hyperparameter selection.',
+        'oracle':'Choose with repeats0,1, evaluate independently on repeats2,3,4. Reverse split secondary. Same-repeat sample maximum is explicitly optimistic, never true oracle.',
+        'decision_loss':'Only independent-repeat proxy regret and realized cross-instance policy value estimable; do not claim identification of V(S) or irreducible representation loss.'},
+      'statistics':{'primary_endpoint':'Instance-mean normalized offline selected improvement (start best minus endpoint best)/initial makespan, equal weighting of seeds and opportunities',
+        'primary_family':['original_solver frozenE minus frozenC atomic','second_solver gainD minus gainB','second_solver gainD minus gainE'],
+        'test':'Exact two-sided instance-level signed-rank, Holm across3;20000 instance cluster bootstrap draws, seed2026102502;95percentileCI',
+        'secondary':'AP/Brier separate per-action event discrimination; within-state pairwise ranking; state RMSE against identity/pooled; action changes; independent-repeat sample-winner optimism; cost; no secondary promoted to primary',
+        'gate_online':'Both second-solver primary comparisons positive mean,95CI lower>0,Holm p<.05 and every leave-one-instance-out mean>0. Old-solver transfer must also establish benefit for any cross-solver online claim. Otherwise no online FP deployment.',
+        'null':'Failure to reject is not equivalence; no general claim beyond these solvers, sizes and generator.'},
+      'failure_rules':'No outcome-based dropping/rerunning/replacing instances or seeds. Malformed or incomplete cell aborts dependent confirmation. All unsuccessful cells retained. Engineering-only fixes documented with before/after hashes. Final collection only after code/model lock.',
+      'hypotheses':{
+        'H1':'State-error improvement does not imply positive within-state action ranking or selected reward. Counterexample to a universal dissociation would be consistently aligned improvements, but this finite study cannot prove universal implication either way.',
+        'H2':'For a fitted map fixed independently of test outcomes, F=f_D(Z) implies sigma(Z,F,D)=sigma(Z,D); ideal conditional value unchanged. Learned finite-class policies may differ. If F uses omitted historical observations, antecedent is false.',
+        'H3':'Split-repeat optimism and within-state reward variation quantify part of the prediction/decision mismatch; no unidentifiable noise-vs-information decomposition claimed.',
+        'H4':'Test direction and scope independently in a second machine-order/tabu implementation, not merely GA parameter variation.',
+        'H5':'Use historical matched atomic/480 intervention to test LS/VND sensitivity. Do not equate request caps with time or new tabu move windows.'},
+      'compute_limit':'12 concurrent local workers; planned original400 trajectories72000branches, second final400 trajectories12000branches plus development/validation3600branches. Stop corrupted runs; collect complete grids, record runtime. No CPU-time truncation of valid cell selected by reward.',
+      'preregistration_boundary':'Local timestamp/hash freeze, not externally timestamped preregistration. Historical48 andSAFE16 are exposed; new synthetic family is familiar even though exact32 content hashes are new.'}
+    design['design_hash']=canonical(design)
+    (DEST/'instances.json').write_text(json.dumps(instances,indent=2)+'\n')
+    (DEST/'design.json').write_text(json.dumps(design,indent=2)+'\n')
+    print(json.dumps({'instances':len(instances),'design_hash':design['design_hash']}))
+
+if __name__=='__main__': main()

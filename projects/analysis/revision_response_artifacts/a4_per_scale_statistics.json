@@ -1,0 +1,146 @@
+{
+  "10x10": {
+    "n_states": 200,
+    "n_branches": 3000,
+    "all_actions_zero_rate": 0.05,
+    "mean_gain_range": 0.017024397715946455,
+    "per_action_stats": {
+      "CB_BEST_DESCENT": {
+        "mean": 0.0299766166376046,
+        "median": 0.019471488178025034,
+        "mean_decodes": 38.401,
+        "mean_cng": 0.0005953550150746039
+      },
+      "CB_FIRST_DESCENT": {
+        "mean": 0.02636689041004555,
+        "median": 0.019471488178025034,
+        "mean_decodes": 18.314,
+        "mean_cng": 0.0013369668732366074
+      },
+      "CB_TABU": {
+        "mean": 0.041606505538694966,
+        "median": 0.03646656471474774,
+        "mean_decodes": 65.268,
+        "mean_cng": 0.0006645744045088968
+      }
+    },
+    "raw_best_action_counts": {
+      "CB_TABU": 138,
+      "CB_BEST_DESCENT": 51,
+      "CB_FIRST_DESCENT": 11
+    },
+    "cng_best_action_counts": {
+      "CB_FIRST_DESCENT": 131,
+      "CB_TABU": 56,
+      "CB_BEST_DESCENT": 13
+    }
+  },
+  "10x5": {
+    "n_states": 200,
+    "n_branches": 3000,
+    "all_actions_zero_rate": 0.235,
+    "mean_gain_range": 0.015181138386081545,
+    "per_action_stats": {
+      "CB_BEST_DESCENT": {
+        "mean": 0.017688231481469262,
+        "median": 0.0,
+        "mean_decodes": 24.439,
+        "mean_cng": 0.0004261282609934961
+      },
+      "CB_FIRST_DESCENT": {
+        "mean": 0.01724350582629058,
+        "median": 0.0,
+        "mean_decodes": 16.352,
+        "mean_cng": 0.0007476058518729867
+      },
+      "CB_TABU": {
+        "mean": 0.03118914070070631,
+        "median": 0.023761912323728977,
+        "mean_decodes": 65.642,
+        "mean_cng": 0.0004791569372245099
+      }
+    },
+    "raw_best_action_counts": {
+      "CB_TABU": 124,
+      "CB_BEST_DESCENT": 70,
+      "CB_FIRST_DESCENT": 6
+    },
+    "cng_best_action_counts": {
+      "CB_FIRST_DESCENT": 79,
+      "CB_TABU": 71,
+      "CB_BEST_DESCENT": 50
+    }
+  },
+  "15x10": {
+    "n_states": 200,
+    "n_branches": 3000,
+    "all_actions_zero_rate": 0.015,
+    "mean_gain_range": 0.013845874148621812,
+    "per_action_stats": {
+      "CB_BEST_DESCENT": {
+        "mean": 0.03604283129732381,
+        "median": 0.032772746873652434,
+        "mean_decodes": 92.93,
+        "mean_cng": 0.0003220367473317568
+      },
+      "CB_FIRST_DESCENT": {
+        "mean": 0.02938275729701019,
+        "median": 0.02789400278940028,
+        "mean_decodes": 30.332,
+        "mean_cng": 0.0010904520603116535
+      },
+      "CB_TABU": {
+        "mean": 0.04116295759380342,
+        "median": 0.039241052177662786,
+        "mean_decodes": 121.464,
+        "mean_cng": 0.0003402631123812093
+      }
+    },
+    "raw_best_action_counts": {
+      "CB_TABU": 120,
+      "CB_BEST_DESCENT": 70,
+      "CB_FIRST_DESCENT": 10
+    },
+    "cng_best_action_counts": {
+      "CB_FIRST_DESCENT": 167,
+      "CB_TABU": 30,
+      "CB_BEST_DESCENT": 3
+    }
+  },
+  "6x6": {
+    "n_states": 200,
+    "n_branches": 3000,
+    "all_actions_zero_rate": 0.28,
+    "mean_gain_range": 0.024514852635318767,
+    "per_action_stats": {
+      "CB_BEST_DESCENT": {
+        "mean": 0.02000172293535813,
+        "median": 0.0,
+        "mean_decodes": 13.815,
+        "mean_cng": 0.0009834662947033257
+      },
+      "CB_FIRST_DESCENT": {
+        "mean": 0.01834140849388663,
+        "median": 0.0,
+        "mean_decodes": 10.057,
+        "mean_cng": 0.0013778668919800078
+      },
+      "CB_TABU": {
+        "mean": 0.04169999525019195,
+        "median": 0.029905824652509454,
+        "mean_decodes": 34.231,
+        "mean_cng": 0.001204070891882985
+      }
+    },
+    "raw_best_action_counts": {
+      "CB_TABU": 112,
+      "CB_BEST_DESCENT": 86,
+      "CB_FIRST_DESCENT": 2
+    },
+    "cng_best_action_counts": {
+      "CB_TABU": 75,
+      "CB_BEST_DESCENT": 66,
+      "CB_FIRST_DESCENT": 59
+    }
+  }
+}

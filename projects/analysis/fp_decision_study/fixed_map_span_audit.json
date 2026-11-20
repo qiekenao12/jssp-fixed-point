@@ -1,0 +1,19 @@
+{
+  "status": "PASS_FIXED_MAP_POLYNOMIAL_SPAN_AUDIT",
+  "checks": {
+    "C": {
+      "B_intercept_design_rank": 24,
+      "augmented_design_rank": 24,
+      "max_reconstruction_error": 1.9984014443252818e-14,
+      "added_raw_coordinates": 12
+    },
+    "E": {
+      "B_intercept_design_rank": 24,
+      "augmented_design_rank": 24,
+      "max_reconstruction_error": 1.9984014443252818e-14,
+      "added_raw_coordinates": 48
+    }
+  },
+  "scope": "128 artificial real-valued input points, no search runs or reward outcomes. Exact algebra: fixed affine endpoint/ displacement/difference coordinates are affine in x; their squares are degree<=2; B includes x and all degree2 products. Numeric check illustrates proof, does not prove it by sampling. OOF maps vary with excluded training instance, so OOF training columns need not share one global B span.",
+  "correction": "Frozen design called E greater expressiveness. Width was greater but that description of fixed-map unregularized span was inaccurate. No map/scorer/threshold/action/protocol or final statistical result is changed."
+}

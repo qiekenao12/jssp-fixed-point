@@ -1,0 +1,27 @@
+{
+  "historical_exposed": {
+    "atomic": {
+      "C_actions": {
+        "VND": 3547,
+        "LS": 53
+      },
+      "E_actions": {
+        "VND": 3506,
+        "LS": 94
+      },
+      "E_minus_C_mean": 8.15719194323471e-06
+    },
+    "fair480": {
+      "C_actions": {
+        "VND": 1178,
+        "LS": 22
+      },
+      "E_actions": {
+        "VND": 1161,
+        "LS": 39
+      },
+      "E_minus_C_mean": 6.211117184211038e-05
+    }
+  },
+  "note": "new_final genetic 480-window per-arm decisions not available in frozen records; the aggregate LS-VND reversal is in figure_source_data.json. Historical exposed fair480 data shown as supplementary reference."
+}

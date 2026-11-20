@@ -1,0 +1,19 @@
+{
+  "amendment_id": "ext_code_amendment_001",
+  "created_utc": "2026-11-20T03:08:16.969960+00:00",
+  "file": "experiments/ext_standard_jssp/code/analyze_ext.py",
+  "sha256_before": "65cc0861ed1cde8c93b6a1317b544da3d9d710edb23afeb34c36a4609348aac5",
+  "sha256_after": "ee9770f0b65c9535324213b693e98da0017093c9bdfd0dbea47f11d8a3280e7a",
+  "kind": "ENGINEERING_ONLY_OUTPUT_SERIALIZATION_FIX",
+  "reason": "csv_write used first-row fieldnames; logistic_event rows carry extra macro_brier/macro_ap columns, raising ValueError during table serialization.",
+  "change": "csv_write now unions fieldnames across all rows (first-row order preserved). No statistical computation, model, seed, data, or protocol change.",
+  "affected_stage": "analyze_ext.py table writing only; all raw archives, dev-frozen models, locks, and schedule audits unchanged.",
+  "partial_outputs_removed": [
+    "ext_instance_metrics.csv",
+    "ext_predictions.csv",
+    "ext_state_decisions.csv",
+    "ext_transition_errors.csv",
+    "table_ext_raw_gain_scorers.csv",
+    "table_ext_transition_errors.csv"
+  ]
+}

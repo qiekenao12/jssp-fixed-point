@@ -1,0 +1,11 @@
+{
+  "amendment_id": "ext_code_amendment_003",
+  "created_utc": "2026-11-20T03:14:34.024314+00:00",
+  "file": "experiments/ext_standard_jssp/code/plot_ext_summary.py",
+  "sha256_before": "086d049535c44194f4a07a2b6d765bab61204f6f507967626c139df791e381ce",
+  "sha256_after": "8b00349c2a0f5cd5a723801c1e4570037471584b970e16dc555cb3299bba9135",
+  "kind": "COSMETIC_FIGURE_LAYOUT_ONLY",
+  "reason": "Panel-(a) legend overlapped bars and the best-fixed annotation.",
+  "change": "Legend moved to a shared figure-level legend above the panels; tight_layout rect adjusted. No data, statistic, or table change; figures regenerated from the same frozen tables.",
+  "affected_stage": "plot_ext_summary.py only."
+}

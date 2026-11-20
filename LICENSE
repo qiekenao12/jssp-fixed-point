@@ -1,0 +1,58 @@
+MIT License
+
+Copyright (c) 2026 The FP Decision Study Authors
+("Do Fixed-Point Predictions Improve Heuristic Action Selection? Decision
+Sufficiency and Two-Solver Evidence from Job Shop Scheduling" — submitted to
+Swarm and Evolutionary Computation)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+=============================================================================
+SCOPE NOTES (non-binding clarification of the license boundary)
+=============================================================================
+
+1. SOURCE CODE — MIT (above). Applies to all original .py source files in this
+   repository, including the two independent solver implementations, the
+   instance generator, feature extractors, affine-map fitters, scorers,
+   analysis/plotting scripts, independent verifiers and tests.
+
+2. DATA AND OUTPUTS — CC-BY-4.0 (Creative Commons Attribution 4.0 International,
+   https://creativecommons.org/licenses/by/4.0/). Applies to the study-generated
+   data and result artifacts: synthetic instance manifests, frozen model
+   bundles, lock manifests, raw branch archives (core repo and GitHub Release /
+   Zenodo tarballs), result CSV/JSON tables, audits, verification receipts and
+   generated figures. Attribution: cite the manuscript (see README.md citation
+   placeholder) and this repository/DOI.
+
+3. THIRD-PARTY BENCHMARK TEXTS — NOT covered by the MIT/CC-BY grants above.
+   The small benchmark snapshot files are redistributed solely for research
+   reproducibility, with original provenance and SHA256 fingerprints recorded
+   in experiments/ext_standard_jssp/benchmarks/provenance.json and
+   outputs/manifest_lock.json:
+     - jobshop1.txt (Lawrence la01–la40 and other classical instances):
+       OR-Library, J. E. Beasley (1990), http://people.brunel.ac.uk/~mastjjb/jeb/info.html
+     - projects/experiments/benchmark_jobshop.txt, fp_v2_jobshop.txt:
+       local frozen archives of classical benchmark texts (OR-Library / Taillard).
+     - ta01–ta30: É. Taillard's JSSP instances, obtained from the public JSPLIB
+       mirror https://github.com/tamy0612/JSPLIB (instances/ directory).
+     - la21–la40 snapshots: parsed from the local jobshop1.txt (OR-Library).
+   Original authors retain all rights to these benchmark texts. If your use
+   case requires it, obtain the instances directly from the original sources;
+   scripts/…/prepare_benchmarks.py re-downloads and fingerprint-verifies the
+   Taillard mirror copies. See README.md §Attribution for full citations.

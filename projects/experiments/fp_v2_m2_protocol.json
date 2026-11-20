@@ -1,0 +1,135 @@
+{
+  "created_utc": "2026-10-18T14:02:16.830023+00:00",
+  "stage": "M2",
+  "before_formal_development_or_validation_outcomes": true,
+  "manifest_sha256": "ed1db9264b399adf8ad5c80e11f77a2ac4880e236d9426c9feebece569996838",
+  "splits": {
+    "development_instances": 16,
+    "validation_instances": 12,
+    "locked_test_instances": 20,
+    "trajectories_per_instance": 20,
+    "snapshot_generations": [
+      20,
+      40,
+      60,
+      80,
+      100,
+      120,
+      140,
+      160,
+      180
+    ],
+    "repeats_per_action": 2
+  },
+  "action_window": {
+    "unit": "atomic_action_application",
+    "span": 1,
+    "GA": "one existing GA generation; no LS or VND",
+    "LS": "one existing improved-LS call on best individual, max_iter100, then replacement only if improved",
+    "VND": "one existing VND call on best individual, max_iter100, capped at500queries, then incumbent replacement",
+    "cap_queries": 500,
+    "interpretation": "Common atomic opportunity, not equal elapsed GA generations or equal work. Actual objective queries including cache hits, structural decodes and wall time reported. No mixed action sequence is fitted as pure action."
+  },
+  "neutral_trajectory": {
+    "population": 80,
+    "generations": 180,
+    "pc": 0.85,
+    "pm": 0.05,
+    "ordinary_ls_every_generations": 10,
+    "ordinary_ls_iterations": 20,
+    "FP_observations_every_generations": 5,
+    "terminal": false,
+    "diagnostic_feedback_to_main": false
+  },
+  "maps": {
+    "state": [
+      "best/s0",
+      "mean/s0",
+      "std/s0",
+      "diversity"
+    ],
+    "s0": "initial known population best",
+    "family": "pure-action affine displacement regression; standardized X; ridge no intercept penalty; identity shrinkage",
+    "norm_weights": [
+      0.35,
+      0.3,
+      0.15,
+      0.2
+    ],
+    "minimum_collapsed_state_action_transitions": 24,
+    "minimum_training_instances": 3,
+    "reliability": "held-out training-instance weighted error relative to identity; heuristic support penalty, not a confidence probability",
+    "new_model_final_or_current_labels_allowed": false
+  },
+  "predictors": {
+    "common_architecture": "same standardized regularized logistic L-BFGS",
+    "common_context": [
+      "action onehot",
+      "phase",
+      "mean recent six real MAIN gains",
+      "recent real MAIN gain positive fraction",
+      "last real MAIN gain"
+    ],
+    "blocks": {
+      "A": "real stagnation+diversity",
+      "B": "A+remaining three 4D state coordinates",
+      "C": "B+original unified FP residual+ready flag",
+      "D": "B+all action residuals/differences/displacements",
+      "E": "D+OOF error/reliability/readiness",
+      "STATE_QUADRATIC": "B+quadratic ordinary-state features, no FP",
+      "PERMUTED_FP": "B+dimension-matched reassigned training-pool FP features, shared per state across actions/repeats"
+    }
+  },
+  "selection": {
+    "four_configs": [
+      {
+        "ridge": 0.001,
+        "l2": 1.0
+      },
+      {
+        "ridge": 0.001,
+        "l2": 10.0
+      },
+      {
+        "ridge": 0.1,
+        "l2": 1.0
+      },
+      {
+        "ridge": 0.1,
+        "l2": 10.0
+      }
+    ],
+    "rule": "minimum E Brier under development leave-one-instance-out evaluation; fixed config index tie-break",
+    "inner_signals": "exclude entire current outer instance, then inner instance cross-fitting for classifier training; no trajectory/repeat crosses group",
+    "freeze_selected_configuration_before_validation": true,
+    "validation_tuning_allowed": false
+  },
+  "metrics": {
+    "prediction": [
+      "macro AP (stepwise tied scores)",
+      "Brier",
+      "action rank"
+    ],
+    "action": "select one GA/LS/VND at every saved state by predicted improvement probability; fixed GA/LS/VND score tie-break; repeat-average normalized actual gain; no future top-k allocation",
+    "statistical_unit": "instance; trajectories nested, all states/repeats remain with their trajectory",
+    "CI": "10000 instance/paired-trajectory hierarchical bootstrap; seed20261018",
+    "test": "exact signed-rank on instance means, zero exclusion and tied midranks",
+    "Holm_family": "all9 EvsB/EvsSTATE_QUADRATIC/EvsPERMUTED_FP times AP/Brier/selected_gain",
+    "dynamics_family": "all6 per-action weighted prediction-error comparisons vs pooled-action unified and identity baselines, separately Holm-corrected"
+  },
+  "M2_gate": {
+    "all_required": true,
+    "action_gain": "E better than each of B, STATE_QUADRATIC, PERMUTED_FP: positive mean and strictly positive95CI lower bound and joint9Holm p<0.05",
+    "incremental_information": "EvsB AP improvement and Brier reduction both positive mean, strictly positive95CI lower bound and joint9Holm p<0.05",
+    "failure": "STOP_M3; do not deploy newAgent or run locked20; report all variants/configurations and negative/mixed evidence",
+    "success": "Only then implement and freeze M3 architecture-matched seven-arm comparisons before untouched locked tests"
+  },
+  "nonclaims": [
+    "No promise of Gap improvement",
+    "No global fixed-point convergence/optimality guarantee",
+    "Frozen affine FP features are deterministic transforms of x; beating only a linear state model is insufficient",
+    "Computational budget is fairness condition only, not innovation",
+    "A model can predict state transitions yet fail to improve action decisions"
+  ],
+  "preliminary_schema_failures": "v1 relative output-path serialization failed after npz; preserved pilot, fixed engineering path only before formal runs; no quality-based changes"
+}

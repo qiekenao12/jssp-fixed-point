@@ -1,0 +1,215 @@
+{
+  "target": "gain/decode_evaluations * 1e3",
+  "fixed_action_reference": {
+    "CB_BEST_DESCENT": 0.5817465795257956,
+    "CB_FIRST_DESCENT": 1.138222919350314,
+    "CB_TABU": 0.6720163364994003
+  },
+  "arms": {
+    "A": {
+      "loocv_best_l2": 1.0,
+      "loocv_mse_x1e3": 0.7833656790879929,
+      "variants": {
+        "fixed_l2_1": {
+          "l2": 1.0,
+          "selected_cng_x1e3": 1.1327971613791947,
+          "selected_raw_gain": 0.02484212418336572,
+          "tabu_choices": 159,
+          "first_choices": 636,
+          "best_choices": 5,
+          "action_distribution": {
+            "CB_FIRST_DESCENT": 636,
+            "CB_TABU": 159,
+            "CB_BEST_DESCENT": 5
+          }
+        },
+        "tuned": {
+          "l2": 1.0,
+          "selected_cng_x1e3": 1.1327971613791947,
+          "selected_raw_gain": 0.02484212418336572,
+          "tabu_choices": 159,
+          "first_choices": 636,
+          "best_choices": 5,
+          "action_distribution": {
+            "CB_FIRST_DESCENT": 636,
+            "CB_TABU": 159,
+            "CB_BEST_DESCENT": 5
+          }
+        }
+      },
+      "raw_trained_selected_cng_x1e3": 0.6737508407511738,
+      "raw_trained_tabu_choices": 789
+    },
+    "B": {
+      "loocv_best_l2": 10.0,
+      "loocv_mse_x1e3": 0.661467361590457,
+      "variants": {
+        "fixed_l2_1": {
+          "l2": 1.0,
+          "selected_cng_x1e3": 1.1284433978285975,
+          "selected_raw_gain": 0.02590530105293092,
+          "tabu_choices": 199,
+          "first_choices": 590,
+          "best_choices": 11,
+          "action_distribution": {
+            "CB_FIRST_DESCENT": 590,
+            "CB_TABU": 199,
+            "CB_BEST_DESCENT": 11
+          }
+        },
+        "tuned": {
+          "l2": 10.0,
+          "selected_cng_x1e3": 1.118294060161523,
+          "selected_raw_gain": 0.024896281367332577,
+          "tabu_choices": 164,
+          "first_choices": 622,
+          "best_choices": 14,
+          "action_distribution": {
+            "CB_FIRST_DESCENT": 622,
+            "CB_TABU": 164,
+            "CB_BEST_DESCENT": 14
+          }
+        }
+      },
+      "raw_trained_selected_cng_x1e3": 0.6743170487837701,
+      "raw_trained_tabu_choices": 782
+    },
+    "C": {
+      "loocv_best_l2": 100.0,
+      "loocv_mse_x1e3": 0.6628246825500875,
+      "variants": {
+        "fixed_l2_1": {
+          "l2": 1.0,
+          "selected_cng_x1e3": 1.1179274520442664,
+          "selected_raw_gain": 0.02625293499395787,
+          "tabu_choices": 213,
+          "first_choices": 574,
+          "best_choices": 13,
+          "action_distribution": {
+            "CB_FIRST_DESCENT": 574,
+            "CB_TABU": 213,
+            "CB_BEST_DESCENT": 13
+          }
+        },
+        "tuned": {
+          "l2": 100.0,
+          "selected_cng_x1e3": 1.1347025601875165,
+          "selected_raw_gain": 0.02445572770495273,
+          "tabu_choices": 135,
+          "first_choices": 647,
+          "best_choices": 18,
+          "action_distribution": {
+            "CB_FIRST_DESCENT": 647,
+            "CB_TABU": 135,
+            "CB_BEST_DESCENT": 18
+          }
+        }
+      },
+      "raw_trained_selected_cng_x1e3": 0.6685985397689488,
+      "raw_trained_tabu_choices": 773
+    },
+    "D": {
+      "loocv_best_l2": 100.0,
+      "loocv_mse_x1e3": 0.6873553635112087,
+      "variants": {
+        "fixed_l2_1": {
+          "l2": 1.0,
+          "selected_cng_x1e3": 1.1148773755580725,
+          "selected_raw_gain": 0.025670043475182695,
+          "tabu_choices": 166,
+          "first_choices": 609,
+          "best_choices": 25,
+          "action_distribution": {
+            "CB_FIRST_DESCENT": 609,
+            "CB_TABU": 166,
+            "CB_BEST_DESCENT": 25
+          }
+        },
+        "tuned": {
+          "l2": 100.0,
+          "selected_cng_x1e3": 1.1211910032852392,
+          "selected_raw_gain": 0.024009840259365846,
+          "tabu_choices": 115,
+          "first_choices": 670,
+          "best_choices": 15,
+          "action_distribution": {
+            "CB_FIRST_DESCENT": 670,
+            "CB_TABU": 115,
+            "CB_BEST_DESCENT": 15
+          }
+        }
+      },
+      "raw_trained_selected_cng_x1e3": 0.6670246373616296,
+      "raw_trained_tabu_choices": 770
+    },
+    "E": {
+      "loocv_best_l2": 1000.0,
+      "loocv_mse_x1e3": 0.722948239809901,
+      "variants": {
+        "fixed_l2_1": {
+          "l2": 1.0,
+          "selected_cng_x1e3": 1.0969811613535123,
+          "selected_raw_gain": 0.025438314675986496,
+          "tabu_choices": 135,
+          "first_choices": 580,
+          "best_choices": 85,
+          "action_distribution": {
+            "CB_FIRST_DESCENT": 580,
+            "CB_TABU": 135,
+            "CB_BEST_DESCENT": 85
+          }
+        },
+        "tuned": {
+          "l2": 1000.0,
+          "selected_cng_x1e3": 1.125973415686943,
+          "selected_raw_gain": 0.023910363301475876,
+          "tabu_choices": 97,
+          "first_choices": 669,
+          "best_choices": 34,
+          "action_distribution": {
+            "CB_FIRST_DESCENT": 669,
+            "CB_TABU": 97,
+            "CB_BEST_DESCENT": 34
+          }
+        }
+      },
+      "raw_trained_selected_cng_x1e3": 0.6630659446136561,
+      "raw_trained_tabu_choices": 739
+    },
+    "D_random": {
+      "loocv_best_l2": 10.0,
+      "loocv_mse_x1e3": 0.6616602446546979,
+      "variants": {
+        "fixed_l2_1": {
+          "l2": 1.0,
+          "selected_cng_x1e3": 1.126884686986095,
+          "selected_raw_gain": 0.025941510512945083,
+          "tabu_choices": 201,
+          "first_choices": 588,
+          "best_choices": 11,
+          "action_distribution": {
+            "CB_FIRST_DESCENT": 588,
+            "CB_TABU": 201,
+            "CB_BEST_DESCENT": 11
+          }
+        },
+        "tuned": {
+          "l2": 10.0,
+          "selected_cng_x1e3": 1.1179574898123907,
+          "selected_raw_gain": 0.024928324483759,
+          "tabu_choices": 167,
+          "first_choices": 618,
+          "best_choices": 15,
+          "action_distribution": {
+            "CB_FIRST_DESCENT": 618,
+            "CB_TABU": 167,
+            "CB_BEST_DESCENT": 15
+          }
+        }
+      },
+      "raw_trained_selected_cng_x1e3": 0.6741057041590176,
+      "raw_trained_tabu_choices": 782
+    }
+  },
+  "note": "Post-collection secondary diagnostic. Development-only fitting; final outcomes used for evaluation only, never for fitting or selection."
+}

@@ -1,0 +1,24 @@
+{
+  "archive": "projects/experiments/fp_empirical_repeatability_collection_sources.zip",
+  "archive_sha256": "bf7e78cf0ddd9363d57f2c893abbf74ac6da120bc20ec23ceaa04a297619fe74",
+  "frozen_sources": {
+    "run_fp_action_diagnostics.py": "9b7756b83ed39e5cd3ff1579bc7b268db0d73985f2db16a745e992b844de2b6f",
+    "run_ablation_test.py": "ee0b9eb2d68ed3c5e85a837e8beca81305d58c46e4895dbb45ee3ed097443818",
+    "run_orchestration_baselines.py": "98add1813522720439d3d1aa455f31d626ff6ccaf650a1b2a72dbeef19b3d950",
+    "run_trigger_comparison.py": "a17138a3155dc2604d1693f7045812dd6b60c07fe7a358df56284af50df2e280",
+    "src/tools/controller.py": "5e5f8bdde3a18c1cd6846e87721c9a203f66789856a96d340f0ab757b615a63e",
+    "src/tools/executor.py": "0d044f86096f26b871f45cad04884ec0ad6df451ee1f5c8446c725c176433484",
+    "src/tools/fixed_point_detector.py": "47b665ac136e18ad5edf0eaab057b8b2b713136c8e360db47c470345c18aa116",
+    "src/tools/fp_signals.py": "dcce67407645fc3dc8ea985220e3f33da39c49f8dd46d6d7c1e94ecf6b46d5d9",
+    "src/tools/jssp_core.py": "4b3e4023e9bb1a47ea0371dd92acd145e554237e275f17c597e219af934a57e3",
+    "src/tools/meta_scheduler.py": "56fe8a941ba41c972e71766218c1bebb6c26bf290fcc76509fb33a05e97590ad",
+    "src/tools/observer.py": "6ef2c1a08e7125daba7c698caa336663ad4ff2c2a41f0a8774b28a5bbc8449b1",
+    "src/tools/paper_q.py": "ae3e3466f77b4ca1b36832e6daaedae6d3e75e0640ca34491a2eb59a37032838",
+    "src/tools/search_orchestration.py": "a8f6f4e004dd9fdac9edf02212717a3daafd3fdf118802b04d603376ee963541",
+    "scripts/fp_empirical_repeatability.py": "fd17c90213f16b998240ddeca45acd0b780a5f90c252b788eed2360877d0fca7",
+    "scripts/analyze_fp_empirical_repeatability.py": "6cb505ed100482c2ef3e5e01bf6530536c3f278097bc1e2160594410fb011720",
+    "scripts/audit_fp_action_data.py": "34f5cea76ac1f332ca2d33e0d7c0872f26d50f3abdb7f46cfc1676ae7b49f456",
+    "tests/test_fp_empirical_repeatability.py": "2d8d7c04b4d1bfc8e43d8af5174812dd00b041325213e4b8977102a27d5e8727"
+  },
+  "purpose": "Exact collection lock source bytes; frozen analyzer restored from preserved pre-dependency-fix copy. Analysis uses separately documented dependency amendment. Saved-state arrays/results remain separate hashed files."
+}
