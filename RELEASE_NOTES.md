@@ -35,6 +35,9 @@ present study were selected:
   `__pycache__/`, `.pytest_cache/`, `.ipynb_checkpoints/`, `.DS_Store`, `.env*`, `.aws/`, `.codex/`,
   `.trae/`, `.agents/`, `.paper_work/`, `pipeline.log`, temporary logs, review ZIPs, `uv.lock`,
   `environment.yml`, root `README.md` (describes a different orchestration study).
+  The superseded v1 figure builder `scripts/build_fp_decision_figures.py` was removed on
+  2026-11-20 after the initial push (unlocked, unreferenced; `build_fp_decision_figures_v2.py`
+  is the canonical builder used by `regenerate_figures.py`).
 - `scripts/fp_decision_history_audit.py` is not shipped because it requires 26 private historical
   context documents (`projects/docs/*.md` drafts) that are intentionally not redistributed; its
   frozen outputs (`history_audit.json`, `history_final_audit.json`) **are** shipped, and all
@@ -42,7 +45,7 @@ present study were selected:
 
 ## 2. Split rationale
 
-- **Core Git repo (`github_release/`)**: 2,269 files, ~173 MB. Contains all source code, the
+- **Core Git repo (`github_release/`)**: 2,268 files, ~173 MB. Contains all source code, the
   synthetic instance generator, benchmark manifests/hashes, lock manifests, frozen models, all
   paper result CSVs/JSONs, S8 artifacts, plotting scripts, both independent verifier families,
   the historical closed-loop trigger cohort (800 runs, 45.9 MB; see §8), and the raw branches of

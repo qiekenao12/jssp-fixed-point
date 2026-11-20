@@ -1,8 +1,9 @@
 # GITHUB UPLOAD GUIDE — exact commands and pre-push checklist
 
 > **Status (2026-11-20): DONE.** Core repo pushed to
-> `git@github.com:qiekenao12/jssp-fixed-point.git` (HEAD `1e48ba1`, 2,269 files incl. the
-> historical trigger cohort added same day; verified via the GitHub API). Release **v1.0.0**
+> `git@github.com:qiekenao12/jssp-fixed-point.git` (2,268 files, verified via the GitHub API;
+> same-day changes: historical trigger cohort added, superseded v1 figure builder removed).
+> Release **v1.0.0**
 > published with all 7 assets; every GitHub-reported SHA256
 > digest matches `release_assets/SHA256SUMS.txt`, and a test download re-verified byte integrity.
 > Remaining: Zenodo DOI (§4) and the author inputs in §6. The commands below are kept as the
@@ -21,7 +22,7 @@ Prepared 2026-11-20. Two deliverables were staged from the private source worksp
 |---|---|---|---|
 | Max single file | < 50 MB (GitHub hard block: 100 MB) | 10.37 MB (`projects/analysis/fp_decision_study/original_final_analysis.json`) | PASS |
 | Core repo size | < 300 MB | ~173 MB | PASS |
-| Core file count | no tens of thousands of tiny files | ~2,269 files | PASS |
+| Core file count | no tens of thousands of tiny files | ~2,268 files | PASS |
 | Virtualenvs / caches | none shipped (`venv_ext/`, `venv/`, `__pycache__/`, `.pytest_cache/`, `.ipynb_checkpoints/`, `.DS_Store`) | none | PASS |
 | Manuscript drafts | no Word/PDF drafts, no unrelated-project files | none (only the hash-referenced study Markdown source, see `RELEASE_NOTES.md` §4–5) | PASS |
 | Secrets / personal paths | no `.env`, API keys, `/Users/`, `/home/`, `C:\Users`, usernames | none outside the documented hash-lock allowlist (`RELEASE_NOTES.md` §4) | PASS |
@@ -47,7 +48,7 @@ git init -b main
 git add -A
 # sanity: confirm nothing ignored slipped in and no large file is staged
 git status --short | head
-git ls-files | wc -l                      # expect ~2,269
+git ls-files | wc -l                      # expect ~2,268
 git ls-files -z | xargs -0 -I{} sh -c 'test $(stat -c%s "{}") -lt 52428800 || echo "TOO BIG: {}"'
 
 git commit -m "Reproducibility package: FP decision sufficiency, two-solver JSSP evidence + prospective 50-instance extension
