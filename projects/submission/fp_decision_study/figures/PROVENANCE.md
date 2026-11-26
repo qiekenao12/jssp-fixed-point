@@ -1,7 +1,7 @@
 # Official paper figures — provenance
 
 These eight files are the **official submission renderings**, archived byte-identically; each
-SHA256 equals the corresponding embedded image in the submitted `Manuscript.docx`
+SHA256 equals the corresponding embedded image in the submitted Word manuscript
 (SWEVO submission package, 2026-11-24). File names follow the official sequential convention
 `Figure1`…`Figure8` (iteration suffixes of the working copies removed; bytes unchanged).
 

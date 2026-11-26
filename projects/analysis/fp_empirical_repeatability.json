@@ -1,0 +1,1104 @@
+{
+  "stage": "frozen_development_repeatability_audit",
+  "protocol_hash": "963b8e174cf8ed4a8caa1bd7cf72948110444beff88914d3800de37bba6578a9",
+  "inputs": {
+    "projects/experiments/fp_empirical_repeatability_protocol.json": "fd3911d39127caae2a4cc4a2f173a196c8172397385b47328693619e6a89289e",
+    "projects/analysis/fp_v2_development_analysis.json": "028efab16d6ceddf4501828874523634e15694dcffb4560b15fe741efa327e42",
+    "projects/analysis/fp_agent_decision_feature_comparison.json": "b1e3b0c1d9a12e376bbf761293e34244b7a617856b58485912b1faa9647587be",
+    "projects/analysis/fp_submission_convergence_selector_map.json": "e4b9035afb6c1720670fe6f13d3ec567b1006def5e5d3ad7d34b52d5e84963af",
+    "results/fp_empirical_repeatability_development/ft06_00.json": "d8633188107571b8542a3d25665df78fa752f0189225b0b12b6dfa171fac9fd5",
+    "results/fp_empirical_repeatability_development/ft06_01.json": "3b04217b3175699aebbb6a44457450dd7b96506222ec21d31ded637889d33c27",
+    "results/fp_empirical_repeatability_development/ft06_02.json": "bf119c3930be2ca53311212efc95b61c5668e2bcc563b9ae4c336e42f30fcf91",
+    "results/fp_empirical_repeatability_development/ft06_03.json": "67e8705a01e08b603a26a7ad11f3224ac3314d8663e5e2483b1888499351e423",
+    "results/fp_empirical_repeatability_development/ft06_04.json": "fbf1472bbf8d662ad10ffb88731703c3e4345345a364359c938988214fe9a4cc",
+    "results/fp_empirical_repeatability_development/ft10_00.json": "a3aa12080fbf08effea1ab3ecdd5e8adb12a837fce61b2f4fb3a865637858676",
+    "results/fp_empirical_repeatability_development/ft10_01.json": "97cba3f475a20528e2379de135af4b4a0a91696fa951f4a3206283f6f7d8d9e8",
+    "results/fp_empirical_repeatability_development/ft10_02.json": "4f41f6a01f5a80cf461c4f6afd91477afe378803a4405972b879465a14638107",
+    "results/fp_empirical_repeatability_development/ft10_03.json": "f70ce495ad084da8a321880fba989713ba259bd593308e1f8ba03b0ed7b69383",
+    "results/fp_empirical_repeatability_development/ft10_04.json": "62f8d0b77a79340b7f1bb18219fa48b55c87286f87c1c1e3beff430dbc2a9d29",
+    "results/fp_empirical_repeatability_development/la04_00.json": "ec609fc38dbc6f44f46fbc958b3a4bf40e063f3790e26a9eb5179b25526a7a76",
+    "results/fp_empirical_repeatability_development/la04_01.json": "c23d4b5f0c0191779511cab991bf94c9747b5c7424797b51596e51c2fe402e6b",
+    "results/fp_empirical_repeatability_development/la04_02.json": "8b47812a0f04809f5b6652af0183332676d8e336b1293f53bba08326ed2cddaa",
+    "results/fp_empirical_repeatability_development/la04_03.json": "9b5aa220fa58250db5b596cbfc4f3db044f28a2c2c74479daa47427700879d53",
+    "results/fp_empirical_repeatability_development/la04_04.json": "ea71d9ffdd4792b5b822a1e02365ee620511e23cbb2e62987dba0de47695bcf0",
+    "results/fp_empirical_repeatability_development/la08_00.json": "3ada6456d485c2ed399d365e50157b4f2804e0dcf65f30aba3cd89e7495c742b",
+    "results/fp_empirical_repeatability_development/la08_01.json": "45e8aa7c760e36b55cb76b223cc0991cdff4f7f7f05751c65a925816af549c4d",
+    "results/fp_empirical_repeatability_development/la08_02.json": "124885c2df0a8e9587f8472690bcd34fcb4795af43bdd3eff1de1bc860aa96c3",
+    "results/fp_empirical_repeatability_development/la08_03.json": "95f83f34c4949defb58796cb5bda987fc2d2c4a89f0c3ec802238f9429c1ceab",
+    "results/fp_empirical_repeatability_development/la08_04.json": "bb89c270dd0449475eb24b35cdc067eeab055022c71b92cd95926bd92439d196",
+    "results/fp_empirical_repeatability_development/la21_00.json": "7a4a62ef8f7a62b9bb7490213bc2be049f1e04025ed5619a09258b3269a33f42",
+    "results/fp_empirical_repeatability_development/la21_01.json": "33ca1a406e668f145c27396205e445d7550cda4528d80220b9cd421d6066d4d3",
+    "results/fp_empirical_repeatability_development/la21_02.json": "405213872ab879d57ff40599a4c22de0b7ed4b4b996ca13789e9a5f8c0e3556b",
+    "results/fp_empirical_repeatability_development/la21_03.json": "a4e33ec75efec12889cd9749556c13a4f31ad8cf6106713911cca1b7be7b17d4",
+    "results/fp_empirical_repeatability_development/la21_04.json": "bb8646ba26bf6f0ccbd1b8dff93a5b5ae56fa11b77699c0cf529b6dce8f5ce41",
+    "results/fp_empirical_repeatability_development/la40_00.json": "44e15b308d16f176d484d09b0f19052e90b8983b75c2c13a76a1307cc512517b",
+    "results/fp_empirical_repeatability_development/la40_01.json": "0c9bf223f68594b37bce4204bb198532d1b9e787510068757a4798ace5874b3b",
+    "results/fp_empirical_repeatability_development/la40_02.json": "c1487b9d68e98071bcd86734daf35fb9122958aa819f13ed5505ad716b343dbd",
+    "results/fp_empirical_repeatability_development/la40_03.json": "b9e33c1eaa796074f5022ecbdc664dd2b9eaf03a53c82247631834e73943dd1f",
+    "results/fp_empirical_repeatability_development/la40_04.json": "ce2f71a3deef9a0979a216c5c4237521a5dff3c03ad7c05b3c1b48c3b3af1bf6",
+    "results/fp_empirical_repeatability_development/orb01_00.json": "99fe07d89680a93c29ad4742ea6c213b48e3797a5eda4739d08658d083e82f0d",
+    "results/fp_empirical_repeatability_development/orb01_01.json": "8a138e2282f53040199b4113641fd25c1a741d4549c1a4aed7d254f39104f6a2",
+    "results/fp_empirical_repeatability_development/orb01_02.json": "a964b836216850c2c0ad38e2fcb604031b2c3950d5bda50afc849e2bcef52ed3",
+    "results/fp_empirical_repeatability_development/orb01_03.json": "4b403f30a7f39992c864eb5caf42cc5885e3a43cd29d1fefa7e9fde863725056",
+    "results/fp_empirical_repeatability_development/orb01_04.json": "eb1d44c3f2745a41d87f3905a01891a738e8fa306cd4c23e8967f0acc8054eb8",
+    "results/fp_empirical_repeatability_development/orb02_00.json": "f5ba9870d1fabf4e6a920da183e8dc0a52ea03539001920903312e7944ceaa4b",
+    "results/fp_empirical_repeatability_development/orb02_01.json": "239005d23f4847820022106646290b426bd8180ea07a551a134806da0b729f25",
+    "results/fp_empirical_repeatability_development/orb02_02.json": "c3a36612828f718aed69cad9e0ab6a902dd7f8b6b9b2ba0554d5f491db381d34",
+    "results/fp_empirical_repeatability_development/orb02_03.json": "a1370f5958304030abac621ebcf4823a922b3426d266008913d49fb9138f609d",
+    "results/fp_empirical_repeatability_development/orb02_04.json": "e96d4635e4c5ad0e76cfa8c8cf1223b4d0c4b586688c52ac88742045c2bdac22",
+    "results/fp_empirical_repeatability_development/abz5_00.json": "4830eaad0d1076b729a7378187853c47490b6df9f81ddef169357579b44a5df0",
+    "results/fp_empirical_repeatability_development/abz5_01.json": "df6baeb2c75c4a7c686b5d48bad12e0c24d032086863a34adbeb800c7efb2144",
+    "results/fp_empirical_repeatability_development/abz5_02.json": "682b92ef1bad3b37287efb7396be4e7a21ed3bdb921ba2ef0f83ff6093b38380",
+    "results/fp_empirical_repeatability_development/abz5_03.json": "b5403d9962610419a123f3ccf1260b5112f4e71891672436be41b188e376c337",
+    "results/fp_empirical_repeatability_development/abz5_04.json": "39b157a57847d6f399fcdb28068b42f54963affa2c99a6ccf84398b5a2b93838",
+    "results/fp_empirical_repeatability_development/abz6_00.json": "b24c54d94b44425f1a262527fa50e23a3302ca604bdcb2094cf9f255d772a88c",
+    "results/fp_empirical_repeatability_development/abz6_01.json": "443f8b4d7ca4afe3024cef241b08263fb0ad41869f895ca54b7a8d4cb58cdaed",
+    "results/fp_empirical_repeatability_development/abz6_02.json": "bbbaf20a2a8d0460708a3f05dbb3255e6220800b2a4a451c5638f1d5801fb0e0",
+    "results/fp_empirical_repeatability_development/abz6_03.json": "08b6a666418e147afa390881e6fecb5a1505a4ccd243734b5be98b6d3f18ac0e",
+    "results/fp_empirical_repeatability_development/abz6_04.json": "b56501cb8cb1753c1104a91d337773ef740efca41be1161fd6cadcfc8a3f5581",
+    "results/fp_empirical_repeatability_development/abz7_00.json": "b71ac3350675c856a90d37057e0e9f894406e70c3ce555d635a77c8d1f49a3c5",
+    "results/fp_empirical_repeatability_development/abz7_01.json": "b6e0634478c35fd22dd8a2b0a4ac3595203decf68ad891a1adb7f5f3be1ace08",
+    "results/fp_empirical_repeatability_development/abz7_02.json": "4cb2f4db391eb47835d8e013c05423859613ef7c944254998d1b46ee6327bae3",
+    "results/fp_empirical_repeatability_development/abz7_03.json": "a1f06ca0ac80de3b06fe402e16facbc9b66ee061d8de177b5e8cfbdede21d06a",
+    "results/fp_empirical_repeatability_development/abz7_04.json": "f0f6a3e4258716959f086a0888b6cdc5275d87f2656a33f63d1c8af461bec2d7",
+    "results/fp_empirical_repeatability_development/swv01_00.json": "cdbe05aa698b48ebc650ee6d474b312bb5b8706492335562ea715665b97a3fb5",
+    "results/fp_empirical_repeatability_development/swv01_01.json": "b8c757d3bd8cc8e6f69729a2cd1678fc5f501ad9807c435e060da9d5907509d3",
+    "results/fp_empirical_repeatability_development/swv01_02.json": "54590784235fb325a70709e2c58663c002ec395c2dba02a50b8b3c57d6ae23db",
+    "results/fp_empirical_repeatability_development/swv01_03.json": "d2045856b45172abcedafc4030be1d26ad09fba47c386600f637f77a43ad3bf8",
+    "results/fp_empirical_repeatability_development/swv01_04.json": "76a57ed378f6f2ed978fb3a1f973b9d0b74c652ff63253fb5423847e432fe103",
+    "results/fp_empirical_repeatability_development/swv11_00.json": "d645ab47e905c0aa278195d5927def3d104bc341b75bbdd0120c7cd21df9ed6a",
+    "results/fp_empirical_repeatability_development/swv11_01.json": "bff244833aeae98c1446bb929971a7fc1fdda1eb971b713087f59e9b1ccb976b",
+    "results/fp_empirical_repeatability_development/swv11_02.json": "c96b868f53d2346267d555c8827cdebe2457a1027c38a517189e1be9eeed48d6",
+    "results/fp_empirical_repeatability_development/swv11_03.json": "e7a55d7d4df8ecb9a9975ae06f05bc6a85970a674de8edfe385786d5a73ab7ef",
+    "results/fp_empirical_repeatability_development/swv11_04.json": "f47516f4ce284f0f02a22231c75b1ef3fd4ee740d7268883e14c85bc98ea620b",
+    "results/fp_empirical_repeatability_development/ta31_00.json": "6b76c2cb9cf57e955cafbf8219745a8762ed791184a8ad7013c5ce3411123c56",
+    "results/fp_empirical_repeatability_development/ta31_01.json": "6536c9fec392091f42dd9f61ba414469aadbde68e1512450489ccf81e6d6d109",
+    "results/fp_empirical_repeatability_development/ta31_02.json": "1f9bf731e464c28ec7776a797337dffb19eac9196aae9f1587746cb1068cd9be",
+    "results/fp_empirical_repeatability_development/ta31_03.json": "085af47a85219d2a5e538a46c6fad0252753c9f7360b04ab412e770688ad9762",
+    "results/fp_empirical_repeatability_development/ta31_04.json": "a6c84bf80db5eea4b0794277e165e286d015b5b96f48426afc786265f1cc05d6",
+    "results/fp_empirical_repeatability_development/ta51_00.json": "cfe0ba4417ec30e90cf8ae66fd80efa86bcaeda13dfd961a1671443625b16259",
+    "results/fp_empirical_repeatability_development/ta51_01.json": "8d2b2faa66fcc5639eab7b63bb8b474e397b9c60c4b9ac0872eb4cb76ad8ce85",
+    "results/fp_empirical_repeatability_development/ta51_02.json": "e537ab2c0fbf7ca197c31519f7f921fcc32cbcfbc54fefb093d6f1b98683f1c2",
+    "results/fp_empirical_repeatability_development/ta51_03.json": "79aa0a6b6381c72b69bf66a08f6cbc2799979fa58fe044495ad55e45e8ef2558",
+    "results/fp_empirical_repeatability_development/ta51_04.json": "0eb7fd4f1a4582449abd9eba2f895b42044c0cbaf985e488a67e17fc06d07862",
+    "results/fp_empirical_repeatability_development/ta70_00.json": "028f04d3c0f4c9b76de9cf0e55eab2e23039861c3a5a8e7bf548880c5cfd90bc",
+    "results/fp_empirical_repeatability_development/ta70_01.json": "d3955d3c0364b3f9955011581cac7e693a9af4688b84675e9de1e7cb2f3fc4d8",
+    "results/fp_empirical_repeatability_development/ta70_02.json": "52e0753204ee37276ca8e074b7acde2d1e7c6ffce631b81bce5695ca14687e7d",
+    "results/fp_empirical_repeatability_development/ta70_03.json": "dc763c156f01835aaeec31d13f5fc4bebf8c0bbb5e487fd911101fa444eb0e94",
+    "results/fp_empirical_repeatability_development/ta70_04.json": "4196f3e2af8cee02069697cabf3d8f600c6147b3e9b9afd2e72ceb09b04ce59d"
+  },
+  "counts": {
+    "new_branches": 7200,
+    "sampled_states": 240
+  },
+  "endpoint_independent_DAG_audit": "PASS_ALL_NEW_BRANCHES",
+  "summaries": {
+    "atomic": {
+      "states": 240,
+      "instances": 16,
+      "trajectories": 80,
+      "means": {
+        "GA_gain": 1.2590969756490645e-06,
+        "GA_repeat_sd": 3.3312574740809733e-06,
+        "GA_new5_gain": 1.7627357659086903e-06,
+        "GA_improvement_frequency": 0.0005952380952380952,
+        "GA_queries_mean": 80.0,
+        "LS_gain": 0.0033493516604633086,
+        "LS_repeat_sd": 0.00343722360675634,
+        "LS_new5_gain": 0.003259012591909043,
+        "LS_improvement_frequency": 0.32738095238095233,
+        "LS_queries_mean": 102.0,
+        "VND_gain": 0.006200930097203434,
+        "VND_repeat_sd": 0.0036486600167271533,
+        "VND_new5_gain": 0.006203342135449006,
+        "VND_improvement_frequency": 0.4392857142857142,
+        "VND_queries_mean": 411.8625,
+        "sample_oracle_gain": 0.006800498583117051,
+        "fixed_VND_gain": 0.006200930097203434,
+        "sample_oracle_minus_VND": 0.0005995684859136161,
+        "VND_strictly_nonoptimal": 0.35,
+        "original2_oracle_minus_VND": 0.001008754175484895,
+        "original2_choice_new5_gain": 0.005832659767935249,
+        "original2_choice_new5_minus_VND": -0.0003706823675137573,
+        "original2_choice_preserveVNDties_new5_minus_VND": -0.00017781620099983388,
+        "original2_oracle_selection_optimism": 0.001379436542998652,
+        "original2_choice_new_best": 0.6666666666666666,
+        "LS_minus_VND": -0.002851578436740125,
+        "winner_pair_bestset_overlap": 0.8974206349206351,
+        "winner_pair_same_unique": 0.2543650793650793,
+        "LOO_oracle_gain": 0.006320893138050188,
+        "LOO_oracle_minus_VND": 0.00011996304084675389,
+        "LOO_oracle_preserveVNDties_gain": 0.006406080134800872,
+        "LOO_oracle_preserveVNDties_minus_VND": 0.00020515003759743802,
+        "m2_original_B_gain": 0.006203342135449006,
+        "m2_original_B_minus_VND": 0.0,
+        "m2_original_E_gain": 0.006203342135449006,
+        "m2_original_E_minus_VND": 0.0,
+        "decision_original_C_gain": 0.0062070261908572,
+        "decision_original_C_minus_VND": 3.6840554081933395e-06,
+        "decision_original_E_gain": 0.006202614479814585,
+        "decision_original_E_minus_VND": -7.27655634421995e-07,
+        "decision_converged_C_gain": 0.006213570693475001,
+        "decision_converged_C_minus_VND": 1.0228558025994385e-05,
+        "decision_converged_E_gain": 0.006198653195969133,
+        "decision_converged_E_minus_VND": -4.6889394798729435e-06,
+        "decision_converged_N_gain": 0.006108686306885153,
+        "decision_converged_N_minus_VND": -9.465582856385428e-05,
+        "decision_converged_P_gain": 0.006198653195969133,
+        "decision_converged_P_minus_VND": -4.6889394798729435e-06,
+        "decision_original_N_gain": 0.006108158213311323,
+        "decision_original_N_minus_VND": -9.51839221376836e-05,
+        "decision_original_P_gain": 0.0061928943796757275,
+        "decision_original_P_minus_VND": -1.0447755773278848e-05,
+        "m2_original_FP_minus_NoFP": 0.0,
+        "decision_original_FP_minus_NoFP": -4.411711042615334e-06,
+        "decision_converged_FP_minus_NoFP": -1.4917497505867328e-05
+      },
+      "intervals": {
+        "sample_oracle_minus_VND": {
+          "mean": 0.000599568485913616,
+          "ci95": [
+            0.00032180922484740626,
+            0.0009398041649387647
+          ],
+          "instance_win_tie_loss": [
+            16,
+            0,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "VND_strictly_nonoptimal": {
+          "mean": 0.35,
+          "ci95": [
+            0.23333333333333334,
+            0.475
+          ],
+          "instance_win_tie_loss": [
+            16,
+            0,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "original2_oracle_minus_VND": {
+          "mean": 0.001008754175484895,
+          "ci95": [
+            0.0005088721356431346,
+            0.0016038502979042926
+          ],
+          "instance_win_tie_loss": [
+            15,
+            1,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "original2_choice_new5_minus_VND": {
+          "mean": -0.0003706823675137573,
+          "ci95": [
+            -0.0008655466896217482,
+            3.688111638049853e-05
+          ],
+          "instance_win_tie_loss": [
+            6,
+            0,
+            10
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "original2_choice_preserveVNDties_new5_minus_VND": {
+          "mean": -0.00017781620099983385,
+          "ci95": [
+            -0.0005741738152455156,
+            0.00014834956654156373
+          ],
+          "instance_win_tie_loss": [
+            7,
+            2,
+            7
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "original2_oracle_selection_optimism": {
+          "mean": 0.001379436542998652,
+          "ci95": [
+            0.0006575413353902938,
+            0.0022551996383546992
+          ],
+          "instance_win_tie_loss": [
+            16,
+            0,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "LS_minus_VND": {
+          "mean": -0.002851578436740125,
+          "ci95": [
+            -0.005090747338653477,
+            -0.001007205688691469
+          ],
+          "instance_win_tie_loss": [
+            4,
+            0,
+            12
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "LOO_oracle_minus_VND": {
+          "mean": 0.00011996304084675389,
+          "ci95": [
+            -0.0001492687319992272,
+            0.0004075912984784824
+          ],
+          "instance_win_tie_loss": [
+            10,
+            0,
+            6
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "LOO_oracle_preserveVNDties_minus_VND": {
+          "mean": 0.000205150037597438,
+          "ci95": [
+            -4.900823940258279e-05,
+            0.0004887460831845105
+          ],
+          "instance_win_tie_loss": [
+            11,
+            1,
+            4
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "m2_original_B_minus_VND": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "instance_win_tie_loss": [
+            0,
+            16,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "m2_original_E_minus_VND": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "instance_win_tie_loss": [
+            0,
+            16,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_original_C_minus_VND": {
+          "mean": 3.6840554081933395e-06,
+          "ci95": [
+            0.0,
+            1.4736221632773358e-05
+          ],
+          "instance_win_tie_loss": [
+            1,
+            15,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_original_E_minus_VND": {
+          "mean": -7.27655634421994e-07,
+          "ci95": [
+            -3.349197955226513e-05,
+            2.837968374289067e-05
+          ],
+          "instance_win_tie_loss": [
+            1,
+            14,
+            1
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_converged_C_minus_VND": {
+          "mean": 1.0228558025994385e-05,
+          "ci95": [
+            0.0,
+            3.436972948617649e-05
+          ],
+          "instance_win_tie_loss": [
+            2,
+            14,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_converged_E_minus_VND": {
+          "mean": -4.688939479872943e-06,
+          "ci95": [
+            -3.349197955226513e-05,
+            1.4736221632773358e-05
+          ],
+          "instance_win_tie_loss": [
+            1,
+            14,
+            1
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_converged_N_minus_VND": {
+          "mean": -9.465582856385428e-05,
+          "ci95": [
+            -0.00041420133220059456,
+            5.564472638294119e-05
+          ],
+          "instance_win_tie_loss": [
+            4,
+            10,
+            2
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_converged_P_minus_VND": {
+          "mean": -4.688939479872943e-06,
+          "ci95": [
+            -3.349197955226513e-05,
+            1.4736221632773358e-05
+          ],
+          "instance_win_tie_loss": [
+            1,
+            14,
+            1
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_original_N_minus_VND": {
+          "mean": -9.518392213768361e-05,
+          "ci95": [
+            -0.0004141937055055695,
+            5.463108986495463e-05
+          ],
+          "instance_win_tie_loss": [
+            4,
+            10,
+            2
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_original_P_minus_VND": {
+          "mean": -1.0447755773278848e-05,
+          "ci95": [
+            -8.466603951081842e-05,
+            3.0458656388798717e-05
+          ],
+          "instance_win_tie_loss": [
+            2,
+            13,
+            1
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "m2_original_FP_minus_NoFP": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "instance_win_tie_loss": [
+            0,
+            16,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_original_FP_minus_NoFP": {
+          "mean": -4.4117110426153335e-06,
+          "ci95": [
+            -3.717603496045847e-05,
+            2.6178010471204184e-05
+          ],
+          "instance_win_tie_loss": [
+            1,
+            13,
+            2
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_converged_FP_minus_NoFP": {
+          "mean": -1.4917497505867328e-05,
+          "ci95": [
+            -4.8409477058132456e-05,
+            0.0
+          ],
+          "instance_win_tie_loss": [
+            0,
+            14,
+            2
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        }
+      },
+      "selector_action_counts": {
+        "m2_original_B": {
+          "VND": 240
+        },
+        "m2_original_E": {
+          "VND": 240
+        },
+        "decision_original_C": {
+          "VND": 237,
+          "LS": 3
+        },
+        "decision_original_E": {
+          "VND": 236,
+          "LS": 4
+        },
+        "decision_converged_C": {
+          "VND": 237,
+          "LS": 3
+        },
+        "decision_converged_E": {
+          "VND": 238,
+          "LS": 2
+        },
+        "decision_converged_N": {
+          "VND": 226,
+          "LS": 14
+        },
+        "decision_converged_P": {
+          "VND": 237,
+          "LS": 3
+        },
+        "decision_original_N": {
+          "VND": 229,
+          "LS": 11
+        },
+        "decision_original_P": {
+          "VND": 235,
+          "LS": 5
+        }
+      },
+      "costs": {
+        "GA": {
+          "branches": 1200,
+          "queries": {
+            "mean": 80.0,
+            "min": 80,
+            "max": 80
+          },
+          "decodes": {
+            "mean": 56.134166666666665,
+            "min": 39,
+            "max": 68
+          },
+          "wall_seconds": {
+            "mean": 0.010848545675301769,
+            "min": 0.0021587879164144397,
+            "max": 0.05934665899258107
+          },
+          "termination_counts": {
+            "action_return": 1200
+          }
+        },
+        "LS": {
+          "branches": 1200,
+          "queries": {
+            "mean": 102.0,
+            "min": 102,
+            "max": 102
+          },
+          "decodes": {
+            "mean": 97.39333333333333,
+            "min": 81,
+            "max": 101
+          },
+          "wall_seconds": {
+            "mean": 0.012120626450826724,
+            "min": 0.0018709040014073253,
+            "max": 0.07064107700716704
+          },
+          "termination_counts": {
+            "action_return": 1200
+          }
+        },
+        "VND": {
+          "branches": 1200,
+          "queries": {
+            "mean": 411.8625,
+            "min": 318,
+            "max": 500
+          },
+          "decodes": {
+            "mean": 294.95166666666665,
+            "min": 176,
+            "max": 454
+          },
+          "wall_seconds": {
+            "mean": 0.048057175277984546,
+            "min": 0.005466392962262034,
+            "max": 0.3357768279965967
+          },
+          "termination_counts": {
+            "action_return": 875,
+            "query_cap": 325
+          }
+        }
+      }
+    },
+    "equal480": {
+      "states": 240,
+      "instances": 16,
+      "trajectories": 80,
+      "means": {
+        "GA_gain": 4.967709885742673e-06,
+        "GA_repeat_sd": 1.110813699701833e-05,
+        "GA_new5_gain": 4.967709885742673e-06,
+        "GA_improvement_frequency": 0.0008333333333333334,
+        "GA_queries_mean": 480.0,
+        "LS_gain": 0.009976772502435187,
+        "LS_repeat_sd": 0.004906602473498311,
+        "LS_new5_gain": 0.009976772502435187,
+        "LS_improvement_frequency": 0.6516666666666667,
+        "LS_queries_mean": 480.0,
+        "VND_gain": 0.00658853821636479,
+        "VND_repeat_sd": 0.0035123396619063337,
+        "VND_new5_gain": 0.00658853821636479,
+        "VND_improvement_frequency": 0.4475,
+        "VND_queries_mean": 480.0,
+        "sample_oracle_gain": 0.010949501817734138,
+        "fixed_VND_gain": 0.00658853821636479,
+        "sample_oracle_minus_VND": 0.004360963601369348,
+        "VND_strictly_nonoptimal": 0.6875,
+        "original2_oracle_minus_VND": 0.001008754175484895,
+        "original2_choice_new5_gain": 0.007924533224744477,
+        "original2_choice_new5_minus_VND": 0.0013359950083796873,
+        "original2_choice_preserveVNDties_new5_minus_VND": 0.0013087490494911927,
+        "original2_oracle_selection_optimism": -0.0003272408328947923,
+        "original2_choice_new_best": 0.5041666666666667,
+        "LS_minus_VND": 0.003388234286070395,
+        "winner_pair_bestset_overlap": 0.8770833333333333,
+        "winner_pair_same_unique": 0.3558333333333333,
+        "LOO_oracle_gain": 0.01039173616215459,
+        "LOO_oracle_minus_VND": 0.0038031979457898,
+        "LOO_oracle_preserveVNDties_gain": 0.010443632340999615,
+        "LOO_oracle_preserveVNDties_minus_VND": 0.0038550941246348245,
+        "m2_original_B_gain": 0.00658853821636479,
+        "m2_original_B_minus_VND": 0.0,
+        "m2_original_E_gain": 0.00658853821636479,
+        "m2_original_E_minus_VND": 0.0,
+        "decision_original_C_gain": 0.006605465280566604,
+        "decision_original_C_minus_VND": 1.6927064201813922e-05,
+        "decision_original_E_gain": 0.006643437879756956,
+        "decision_original_E_minus_VND": 5.4899663392166176e-05,
+        "decision_converged_C_gain": 0.0066190072191212096,
+        "decision_converged_C_minus_VND": 3.0469002756419258e-05,
+        "decision_converged_E_gain": 0.006625792828921651,
+        "decision_converged_E_minus_VND": 3.7254612556860954e-05,
+        "decision_converged_N_gain": 0.006830472955876217,
+        "decision_converged_N_minus_VND": 0.00024193473951142745,
+        "decision_converged_P_gain": 0.006625792828921651,
+        "decision_converged_P_minus_VND": 3.7254612556860954e-05,
+        "decision_original_N_gain": 0.00681698200030064,
+        "decision_original_N_minus_VND": 0.0002284437839358497,
+        "decision_original_P_gain": 0.006654971379009059,
+        "decision_original_P_minus_VND": 6.643316264426903e-05,
+        "m2_original_FP_minus_NoFP": 0.0,
+        "decision_original_FP_minus_NoFP": 3.797259919035226e-05,
+        "decision_converged_FP_minus_NoFP": 6.785609800441701e-06
+      },
+      "intervals": {
+        "sample_oracle_minus_VND": {
+          "mean": 0.004360963601369349,
+          "ci95": [
+            0.002750008335390458,
+            0.00608764863496136
+          ],
+          "instance_win_tie_loss": [
+            16,
+            0,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "VND_strictly_nonoptimal": {
+          "mean": 0.6875,
+          "ci95": [
+            0.5541666666666667,
+            0.8084374999999985
+          ],
+          "instance_win_tie_loss": [
+            16,
+            0,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "original2_oracle_minus_VND": {
+          "mean": 0.001008754175484895,
+          "ci95": [
+            0.0005088721356431346,
+            0.0016038502979042926
+          ],
+          "instance_win_tie_loss": [
+            15,
+            1,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "original2_choice_new5_minus_VND": {
+          "mean": 0.0013359950083796873,
+          "ci95": [
+            0.00048361560316384966,
+            0.0022501494130218605
+          ],
+          "instance_win_tie_loss": [
+            14,
+            0,
+            2
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "original2_choice_preserveVNDties_new5_minus_VND": {
+          "mean": 0.0013087490494911925,
+          "ci95": [
+            0.000681511497897315,
+            0.0020451556272133415
+          ],
+          "instance_win_tie_loss": [
+            15,
+            1,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "original2_oracle_selection_optimism": {
+          "mean": -0.00032724083289479227,
+          "ci95": [
+            -0.0010064450880085277,
+            0.00036431005208792427
+          ],
+          "instance_win_tie_loss": [
+            5,
+            0,
+            11
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "LS_minus_VND": {
+          "mean": 0.0033882342860703956,
+          "ci95": [
+            0.0009296260198202517,
+            0.005617179059224297
+          ],
+          "instance_win_tie_loss": [
+            15,
+            0,
+            1
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "LOO_oracle_minus_VND": {
+          "mean": 0.0038031979457898006,
+          "ci95": [
+            0.002188481183741539,
+            0.0056289097261515335
+          ],
+          "instance_win_tie_loss": [
+            15,
+            0,
+            1
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "LOO_oracle_preserveVNDties_minus_VND": {
+          "mean": 0.003855094124634825,
+          "ci95": [
+            0.0022769303249288433,
+            0.005660445894160571
+          ],
+          "instance_win_tie_loss": [
+            15,
+            1,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "m2_original_B_minus_VND": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "instance_win_tie_loss": [
+            0,
+            16,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "m2_original_E_minus_VND": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "instance_win_tie_loss": [
+            0,
+            16,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_original_C_minus_VND": {
+          "mean": 1.6927064201813922e-05,
+          "ci95": [
+            0.0,
+            6.770825680725569e-05
+          ],
+          "instance_win_tie_loss": [
+            1,
+            15,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_original_E_minus_VND": {
+          "mean": 5.489966339216618e-05,
+          "ci95": [
+            0.0,
+            0.0001608426019205637
+          ],
+          "instance_win_tie_loss": [
+            2,
+            14,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_converged_C_minus_VND": {
+          "mean": 3.0469002756419254e-05,
+          "ci95": [
+            0.0,
+            0.00010027703067963043
+          ],
+          "instance_win_tie_loss": [
+            2,
+            14,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_converged_E_minus_VND": {
+          "mean": 3.7254612556860954e-05,
+          "ci95": [
+            0.0,
+            0.00012298445867621092
+          ],
+          "instance_win_tie_loss": [
+            2,
+            14,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_converged_N_minus_VND": {
+          "mean": 0.00024193473951142743,
+          "ci95": [
+            -3.024567698922277e-05,
+            0.0008253082875689845
+          ],
+          "instance_win_tie_loss": [
+            5,
+            10,
+            1
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_converged_P_minus_VND": {
+          "mean": 3.7254612556860954e-05,
+          "ci95": [
+            0.0,
+            0.00012298445867621092
+          ],
+          "instance_win_tie_loss": [
+            2,
+            14,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_original_N_minus_VND": {
+          "mean": 0.00022844378393584966,
+          "ci95": [
+            -3.7941401733623345e-05,
+            0.0008096987095822074
+          ],
+          "instance_win_tie_loss": [
+            5,
+            10,
+            1
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_original_P_minus_VND": {
+          "mean": 6.643316264426903e-05,
+          "ci95": [
+            0.0,
+            0.00019033336766435864
+          ],
+          "instance_win_tie_loss": [
+            3,
+            13,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "m2_original_FP_minus_NoFP": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "instance_win_tie_loss": [
+            0,
+            16,
+            0
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_original_FP_minus_NoFP": {
+          "mean": 3.7972599190352264e-05,
+          "ci95": [
+            -4.6871124179244306e-05,
+            0.00015148895054637964
+          ],
+          "instance_win_tie_loss": [
+            2,
+            13,
+            1
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        },
+        "decision_converged_FP_minus_NoFP": {
+          "mean": 6.785609800441703e-06,
+          "ci95": [
+            -6.980802792321117e-05,
+            9.695046712497798e-05
+          ],
+          "instance_win_tie_loss": [
+            1,
+            14,
+            1
+          ],
+          "instances": 16,
+          "bootstrap_repetitions": 10000,
+          "interpretation": "exploratory development instance->paired trajectory bootstrap; repeats/states never treated as independent instances"
+        }
+      },
+      "selector_action_counts": {
+        "m2_original_B": {
+          "VND": 240
+        },
+        "m2_original_E": {
+          "VND": 240
+        },
+        "decision_original_C": {
+          "VND": 237,
+          "LS": 3
+        },
+        "decision_original_E": {
+          "VND": 236,
+          "LS": 4
+        },
+        "decision_converged_C": {
+          "VND": 237,
+          "LS": 3
+        },
+        "decision_converged_E": {
+          "VND": 238,
+          "LS": 2
+        },
+        "decision_converged_N": {
+          "VND": 226,
+          "LS": 14
+        },
+        "decision_converged_P": {
+          "VND": 237,
+          "LS": 3
+        },
+        "decision_original_N": {
+          "VND": 229,
+          "LS": 11
+        },
+        "decision_original_P": {
+          "VND": 235,
+          "LS": 5
+        }
+      },
+      "costs": {
+        "GA": {
+          "branches": 1200,
+          "queries": {
+            "mean": 480.0,
+            "min": 480,
+            "max": 480
+          },
+          "decodes": {
+            "mean": 304.62916666666666,
+            "min": 209,
+            "max": 360
+          },
+          "wall_seconds": {
+            "mean": 0.06353450032494341,
+            "min": 0.012236592010594904,
+            "max": 0.3504010100150481
+          },
+          "termination_counts": {
+            "request_ceiling": 1200
+          }
+        },
+        "LS": {
+          "branches": 1200,
+          "queries": {
+            "mean": 480.0,
+            "min": 480,
+            "max": 480
+          },
+          "decodes": {
+            "mean": 450.06,
+            "min": 355,
+            "max": 472
+          },
+          "wall_seconds": {
+            "mean": 0.05750215215162219,
+            "min": 0.008643081993795931,
+            "max": 0.3399640539428219
+          },
+          "termination_counts": {
+            "request_ceiling": 1200
+          }
+        },
+        "VND": {
+          "branches": 1200,
+          "queries": {
+            "mean": 480.0,
+            "min": 480,
+            "max": 480
+          },
+          "decodes": {
+            "mean": 327.3875,
+            "min": 220,
+            "max": 442
+          },
+          "wall_seconds": {
+            "mean": 0.05029330327156155,
+            "min": 0.007894914015196264,
+            "max": 0.21549932495690882
+          },
+          "termination_counts": {
+            "request_ceiling": 1200
+          }
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Development robustness, not new confirmation data.",
+    "State t intervals with 5 or7 repeats are descriptive and neither distribution-free nor simultaneous.",
+    "Sample oracle is optimistic and is not an estimate of the true conditional-mean oracle.",
+    "Selectors are frozen atomic-window learners; equal480 selection is window-transport audit without refitting.",
+    "480 requests equalizes evaluated requests, not fresh decodes, primitive call count or wall time.",
+    "Original2 oracle evaluation on equal480 additionally changes execution window; interpret transfer rather than same-window winner bias."
+  ]
+}
