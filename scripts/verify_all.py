@@ -30,7 +30,7 @@ Usage:
     python scripts/verify_all.py --figures       # additionally regenerate all figures in sandbox
     python scripts/verify_all.py --historical    # also audit extracted historical raw archives
                                                  # (requires release_assets tarballs extracted to
-                                                 #  ./raw_extracted/ — see GITHUB_UPLOAD_GUIDE.md)
+                                                 #  ./raw_extracted/ — see README §6)
     python scripts/verify_all.py --report out.json
 """
 from __future__ import annotations
@@ -244,7 +244,7 @@ def check_primary(sb: Path, env: dict, tmp: Path):
         rb = frozen.pop('reviewed_sha256', {})
         mismatch = approx_equal(fresh, frozen)
         doc = 'projects/docs/fp_decision_empirical_manuscript.md'
-        # Documented provenance exception (see RELEASE_NOTES.md §5): the frozen receipt
+        # Documented provenance exception (see README §5): the frozen receipt
         # reviewed the pre-revision 2026-10-26 document (hash 550e0070...), which was
         # revised in place later that day; the reviewed version no longer exists. Every
         # other reviewed hash must match exactly, and the document mismatch must be
@@ -348,10 +348,9 @@ def check_figures(sb: Path, env: dict):
                     'fig7_action_window']
         missing = [f for f in expected if not (fig / f'{f}.png').exists()]
         ext_fig = sb / 'experiments/ext_standard_jssp/outputs/fig_ext_summary.png'
-        mc = fig / 'manuscript_current'
-        mc_expected = ['fig1_overview_architecture.jpeg', 'fig4_scorer_sensitivity.png',
-                       'fig5_choices_and_scope.jpeg', 'fig6_ext_summary.png', 'PROVENANCE.md']
-        missing += [f'manuscript_current/{f}' for f in mc_expected if not (mc / f).exists()]
+        official = ['Figure1.jpeg', 'Figure2.png', 'Figure3.png', 'Figure4.png',
+                    'Figure5.png', 'Figure6.png', 'Figure7.png', 'Figure8.png', 'PROVENANCE.md']
+        missing += [f'official/{f}' for f in official if not (fig / f).exists()]
         record(name, not missing and ext_fig.exists(), f'missing: {missing}')
     except Exception as e:
         record(name, False, str(e))
@@ -444,13 +443,12 @@ def check_historical(sb: Path, env: dict, tmp: Path):
 # ---------------------------------------------------------------- step 5: hygiene
 # Documented exceptions: hash-locked / frozen provenance records that mention a
 # forbidden token as a *relative path or disclosure sentence*. No actual venv,
-# cache, Word document or unrelated-project file is shipped. See RELEASE_NOTES.md.
+# cache, Word document or unrelated-project file is shipped. See README §11.
 TOKEN_ALLOWLIST = {
     'experiments/ext_standard_jssp/outputs/manifest_lock.json': {'venv_ext'},
     'experiments/ext_standard_jssp/code/run_ext_pipeline.py': {'venv_ext'},
     'experiments/ext_standard_jssp/code/prepare_ext_lock.py': {'venv_ext', '__pycache__', '.docx'},
     'experiments/ext_standard_jssp/STEP0_REPORT.md': {'venv_ext'},
-    'experiments/ext_standard_jssp/outputs/SUMMARY.md': {'venv_ext'},
     # whole-workspace hash snapshots enumerate paths of excluded assets (hashes only,
     # no content): they necessarily mention cache/Word paths that are NOT shipped.
     'experiments/ext_standard_jssp/outputs/frozen_snapshot_before.json': {'__pycache__', '.docx'},
@@ -458,19 +456,18 @@ TOKEN_ALLOWLIST = {
     'projects/docs/fp_decision_empirical_manuscript.md': {'resource-allocation'},
     # release documentation / config that describes these exceptions or ignores them:
     'README.md': {'venv_ext', '__pycache__', '.docx'},
-    'RELEASE_NOTES.md': {'venv_ext', '__pycache__', '.docx', 'resource-allocation',
-                         '/Users/', '/home/', 'C:\\Users'},
-    'GITHUB_UPLOAD_GUIDE.md': {'venv_ext', '__pycache__', '.docx', 'resource-allocation',
-                               '/Users/', '/home/', 'C:\\Users'},
     '.gitignore': {'__pycache__', '.docx', 'venv_ext'},
     # the scanner itself necessarily contains the forbidden tokens as literals:
     'scripts/verify_all.py': {'venv_ext', '__pycache__', '.docx', 'resource-allocation',
-                              '/Users/', '/home/', 'C:\\Users', 'unitree', 'API_KEY', 'api_key'},
+                              '/Users/', '/home/', 'C:\\Users', 'API_KEY', 'api_key'},
+    # public OR-Library maintainer contacts shipped inside the hash-locked benchmark text:
+    'jobshop1.txt': {'EMAIL'},
 }
-FORBIDDEN = ['/Users/', '/home/', 'C:\\Users', 'unitree', 'venv_ext', '__pycache__',
+FORBIDDEN = ['/Users/', '/home/', 'C:\\Users', 'venv_ext', '__pycache__',
              '.docx', 'resource-allocation', 'API_KEY', 'api_key']
 import re
 API_KEY_RE = re.compile(r'sk-[A-Za-z0-9]{20,}')
+EMAIL_RE = re.compile(r'[\w.+-]+@[\w-]+\.[\w.]{2,}')
 TEXT_SUFFIX = {'.py', '.md', '.json', '.txt', '.csv', '.svg', '.sh', '.toml', '.cfg'}
 LOCAL_DIRS = {'.git', '.venv', 'venv', 'raw_extracted', 'release_assets'}
 
@@ -509,7 +506,9 @@ def check_hygiene():
                 hits.append(f'{rel}: {tok}')
         if API_KEY_RE.search(text):
             hits.append(f'{rel}: API-key-like token')
-    record('forbidden-pattern scan (allowlist documented in RELEASE_NOTES.md)', not hits,
+        if EMAIL_RE.search(text) and 'EMAIL' not in allowed:
+            hits.append(f'{rel}: e-mail address')
+    record('forbidden-pattern scan (allowlist documented in README §11)', not hits,
            '; '.join(hits[:10]))
 
 

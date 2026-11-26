@@ -11,14 +11,14 @@ baselines?) from **decision utility** (Hurdle II: do FP-derived decision feature
 action returns over strong NoFP controls on detached, independently repeated branches?), across
 **two independent solver implementations** and a **prospective standard-benchmark extension**.
 All models, seeds, splits and comparisons were locked locally before final/test collection;
-every raw branch, frozen model, lock manifest and verification receipt is archived here.
+every raw branch, frozen model, lock manifest and verification receipt used by the paper is archived here.
 
 **Headline findings (bounded, offline):** action-conditioned transition maps beat identity/pooled
 baselines in the structurally informed critical-block stack (and in the 50-instance extension), yet
 **no FP decision arm beats the strong NoFP controls or the best fixed static action** in either
 reward regime; the apparent raw-reward action dominance reverses under cost normalization; the
 noisy sample winner fails on fresh repeats under raw reward. No online FP-agent performance,
-equivalence, or SOTA claim is made. See the manuscript and `RELEASE_NOTES.md` for scope boundaries.
+equivalence, or SOTA claim is made. See the manuscript and §11 for scope boundaries.
 
 ---
 
@@ -58,29 +58,32 @@ The original workspace-relative module layout is **preserved byte-for-byte**: ev
 resolves paths relative to the repository root (`projects/experiments/…`, `results/…`,
 `experiments/…`), and all SHA256 lock manifests reference these relative paths. Renaming folders
 would break the locked code and the lock hashes, so the layout below is intentional.
+Only artifacts used by the paper (main text + supplementary) and their verification dependencies
+are shipped; private drafts, internal notes and superseded renderings are not redistributed.
 
 | Content | Path |
 |---|---|
 | Genetic/memetic solver stack (historical + new-final transfer) | `run_fp_action_diagnostics.py`, `run_ablation_test.py`, `run_trigger_comparison.py`, `run_orchestration_baselines.py`, `src/tools/` (`jssp_core`, `controller`, `executor`, `meta_scheduler`, `observer`, `fixed_point_detector`, `fp_signals`, `paper_q`, `search_orchestration`, `action_fp`, `benchmark_data`) |
-| Independent critical-block tabu solver (both new cohorts) | `src/tools/independent_tabu_jssp.py` (+ design doc `projects/docs/fp_second_solver_implementation.md`) |
+| Independent critical-block tabu solver (both new cohorts) | `src/tools/independent_tabu_jssp.py` |
 | Synthetic instance generator + frozen design/instances | `scripts/prepare_fp_decision_study.py`, `projects/experiments/fp_decision_study/{design,instances}.json` |
 | Primary collection / models / analysis | `scripts/run_fp_decision_collection.py`, `scripts/fp_decision_models.py`, `scripts/analyze_fp_decision_study.py` |
 | Primary frozen models + locks | `projects/experiments/fp_decision_study/{tabu_models,final_lock,tabu_fit_receipt}.json`, `projects/experiments/fp_submission_frozen_model_bundle.json` (genetic) |
 | Primary raw branches (87,600) | `results/fp_decision_study/{original,tabu}/…` (write-once `*.json.gz` + receipts) |
-| Primary paper results / audits / S8 diagnostics | `projects/analysis/fp_decision_study/` (incl. `primary_results.json`, `tabu_final_analysis.json`, `original_final_analysis.json`, history CSVs, independent audits) and `projects/analysis/revision_response_artifacts/` (Section S8: a1, a1b, a2, a2b, a4, genetic_480_window) |
+| Primary paper results / audits / post-collection diagnostics | `projects/analysis/fp_decision_study/` (`primary_results.json`, `tabu_final_analysis.json`, `original_final_analysis.json`, the history CSVs cited by the paper, independent audits) and `projects/analysis/revision_response_artifacts/` (a1, a1b, a2, a2b, a4, genetic_480_window) |
 | Post-collection representation/span audits | `scripts/compare_fp_decision_features.py`, `scripts/audit_fp_decision_span.py`, `scripts/revision_response_analysis.py` |
 | Independent verifiers (primary) | `scripts/audit_fp_decision_collection.py` (synchronous-relaxation schedule checks), `scripts/verify_fp_decision_statistics.py`, `scripts/verify_fp_decision_analysis_independent.py` (scalar replays) |
-| Prospective 50-instance extension (locked) | `experiments/ext_standard_jssp/`: `code/` (10 scripts), `outputs/` (`manifest_lock.json`, `verification_report.json`, `verification_replay.json`, `verification_schedules_*.json`, `code_amendment_001–003.json`, 7 `table_ext_*.csv`, `ext_*.csv/json`, `SUMMARY.md`, `fig_ext_summary.png/pdf`), `models/` (dev-frozen ridge/RFF/GBDT bundles), `benchmarks/` (attributed snapshots + `provenance.json`), `raw/` (24,000 branches), `instances.json`, `step0/` |
+| Prospective 50-instance extension (locked) | `experiments/ext_standard_jssp/`: `code/`, `outputs/` (`manifest_lock.json`, `verification_report.json`, `verification_replay.json`, `verification_schedules_*.json`, `code_amendment_001–003.json`, 7 `table_ext_*.csv`, `ext_analysis.json`, `frozen_snapshot_{before,after}.json`), `models/` (dev-frozen ridge/RFF/GBDT bundles), `benchmarks/` (attributed snapshots + `provenance.json`), `raw/` (24,000 branches), `instances.json`, `step0/` |
 | Independent verifiers (extension) | `experiments/ext_standard_jssp/code/verify_ext_schedules.py` (stdlib-only), `verify_ext_replay.py` (numpy+stdlib only) |
-| Paper figures + editable tables | `projects/submission/fp_decision_study/{figures,tables}/`, `projects/analysis/fp_decision_study/figures/` |
-| Plotting scripts | `scripts/build_fp_overview_figure.py`, `scripts/build_fp_decision_figures_v2.py`, `scripts/build_fp_fig4_fig5.py`, `experiments/ext_standard_jssp/code/plot_ext_summary.py` (1×3 panels; the manuscript's 2×2 master is archived in `figures/manuscript_current/`); wrapper `scripts/regenerate_figures.py` |
+| **Official paper figures** (byte-identical to the submitted DOCX) | `projects/submission/fp_decision_study/figures/Figure1.jpeg`, `Figure2.png` … `Figure8.png` (+ `PROVENANCE.md`) |
+| Supplementary tables (official formatted spreadsheets) | `supplementary/Table_S1.xlsx`, `Table_S2.xlsx`, `Table_S3.xlsx` (author metadata stripped; sheet data untouched) |
+| Paper table exports cited by the supplement | `projects/submission/fp_decision_study/tables/{tabu_predictions,tabu_paired_action_differences,new_neutral_trajectory_outcomes}.csv` |
+| Plotting scripts | `scripts/build_fp_overview_figure.py`, `scripts/build_fp_decision_figures_v2.py`, `scripts/build_fp_fig4_fig5.py`, `scripts/build_nature_final_figures_2_7_8.py`, `experiments/ext_standard_jssp/code/plot_ext_summary.py`; wrapper `scripts/regenerate_figures.py` |
 | Historical protocols / benchmark texts | `projects/experiments/fp_v2_*`, `fp_submission_*_protocol.json`, `fp_empirical_repeatability_protocol.json`, `jobshop1.txt`, `projects/experiments/benchmark_jobshop.txt`, `fp_v2_jobshop.txt` |
 | Historical collection / independent audits | `scripts/run_fp_empirical_confirmation.py`, `scripts/fp_empirical_repeatability.py`, `scripts/audit_fp_action_data.py`, `scripts/audit_fp_empirical_confirmation.py`, `scripts/analyze_fp_empirical_repeatability.py`, `scripts/fp_submission_frozen_models.py` |
-| Historical closed-loop trigger comparison (800 runs, 30,000 queries/run, 10 benchmarks × 20 paired seeds × 4 policy arms + probe) | `results/trigger_controlled_20runs/` (run JSONs, `events.csv`, `summary.json/csv`, `per_instance.csv`, `protocol.json`, `report.md`, figures) + `run_trigger_comparison.py`, `analyze_trigger_comparison.py`; re-audited and replayed byte-identically by `verify_all.py` (provenance note: `RELEASE_NOTES.md` §8) |
+| Historical closed-loop trigger comparison (800 runs, 30,000 queries/run, 10 benchmarks × 20 paired seeds × 4 policy arms + probe) | `results/trigger_controlled_20runs/` (run JSONs, `events.csv`, `summary.json/csv`, `per_instance.csv`, `protocol.json`, `report.md`, figures) + `run_trigger_comparison.py`, `analyze_trigger_comparison.py`; re-audited and replayed byte-identically by `verify_all.py` (provenance: §11) |
 | Frozen historical source snapshots (replay) | `projects/experiments/fp_v2_full_replay_sources.zip`, `fp_empirical_repeatability_collection_sources.zip`, `fp_submission_final_replay_sources.zip` (+ manifests). The fp_v2 cohorts lock pre-2026-10-26 versions of three solver modules; `verify_all.py --historical` extracts the canonical snapshot over its sandbox before auditing them |
 | Unit tests | `tests/test_fp_decision_study.py`, `tests/test_independent_tabu_jssp.py` |
 | One-command verification | `scripts/verify_all.py` |
-| Release audit, sanitization exceptions, upload guide | `RELEASE_NOTES.md`, `GITHUB_UPLOAD_GUIDE.md` |
 | Bulky historical raw archives (>200 MB) | **not in Git** — see §6 (`release_assets/` → GitHub Releases / Zenodo) |
 
 ## 3. Quickstart
@@ -98,71 +101,69 @@ pins are for dev-only refitting, extension analysis, GBDT model loading and plot
 
 ## 4. Paper-to-artifact mapping
 
-Every table/figure below is regenerated from frozen records only (no search, no refits on test
-data). Numbering is aligned with the **finalized manuscript (DOCX, 2026-11-20): Tables 1–15,
-Figures 1–8**. Paths are relative to the repository root. `AN = projects/analysis/fp_decision_study`,
-`ART = projects/analysis/revision_response_artifacts`,
-`EXT = experiments/ext_standard_jssp/outputs`,
+Numbering follows the **finalized SWEVO submission** (`Manuscript.docx` /
+`Supplementary_Material.docx`, 2026-11-24): main **Tables 1–11**, **Figures 1–8**; supplementary
+**S1–S8** (including Tables S1, S2, S2b, S2c, S3). The mapping below reproduces the supplement's
+script map (S8.3). Every item is regenerated from frozen records only (no search, no refits on
+test data). Paths are relative to the repository root.
+`AN = projects/analysis/fp_decision_study`, `ART = projects/analysis/revision_response_artifacts`,
+`EXT = experiments/ext_standard_jssp/outputs`, `EXP = projects/experiments/fp_decision_study`,
 `TAB = projects/submission/fp_decision_study/tables`.
 
-### Tables
+### Main tables
 
 | Paper item | Content | Exact data artifact(s) | Regeneration / verification script |
 |---|---|---|---|
-| Table 1 | Hypotheses and scope | `projects/experiments/fp_decision_study/design.json` (`hypotheses`), `final_lock.json` (`design_clarifications`) | frozen design: `scripts/prepare_fp_decision_study.py` |
-| Table 2 | Critical-block representations A–E, D_random (widths) | `design.json` (`second_solver_models`), `projects/experiments/fp_decision_study/tabu_models.json` | `scripts/fp_decision_models.py` (`ARMS`, `vector`) |
-| Table 3 | Data stages / cohort provenance | `design.json`, `instances.json`, `AN/history_final_cohorts.csv`, `EXT/manifest_lock.json` (`grids`, `split_names`) | `scripts/prepare_fp_decision_study.py`; `EXT/../code/prepare_ext_lock.py` |
-| Table 4 | Mean state prediction error, new final 20 (both solvers) | `AN/tabu_transition_errors.csv`, `AN/original_final_analysis.json` (`dynamics`), `AN/figure_source_data.json` | `scripts/analyze_fp_decision_study.py`; `scripts/fp_decision_models.py` |
-| Table 5 | Prespecified selected-gain contrasts (primary family, Holm) | `AN/primary_results.json`, `TAB/primary_contrasts.csv` | `scripts/analyze_fp_decision_study.py`; independent: `scripts/verify_fp_decision_statistics.py` |
-| Table 6 | Complete critical-block arm results (gain + event scorers) | `AN/tabu_final_analysis.json`, `AN/tabu_decisions.csv`, `AN/tabu_instance_metrics.csv` | `scripts/analyze_fp_decision_study.py` |
-| Table 7 | Post-collection scorer sensitivity (LOOCV-tuned ridge, RFF) | `ART/a2_tuned_ridge_nonlinear.json`, `ART/a2b_tuned_choice_counts.json` | `scripts/revision_response_analysis.py` |
-| Table 8 | Supporting historical closed-loop comparison: four online VND trigger policies, 10 OR-Library/Taillard benchmarks × 20 paired seeds (800 runs, 30,000 queries/run) | `results/trigger_controlled_20runs/summary.json` (+ `summary.csv`, `per_instance.csv`, `events.csv`, `protocol.json`, run JSONs) | `run_trigger_comparison.py` (collection); `analyze_trigger_comparison.py` (audit + summary); replayed byte-identically by `scripts/verify_all.py` |
-| Table 9 | Two-stage attribution funnel summary (genetic/memetic + independent critical-block stacks) | Compiled from `AN/history_final_dynamics_effects.csv`, `AN/history_final_selected_gain_effects.csv` (genetic hurdles), `AN/primary_results.json` + `AN/tabu_final_analysis.json` (CB hurdles), `EXT/ext_analysis.json` (extension) | narrative summary table; every cell traceable to the shipped analyses above |
-| Table 10 | Per-size state statistics, 12,000 final CB branches | `ART/a4_per_scale_statistics.json` | `scripts/revision_response_analysis.py` |
-| Table 11 | Prospective extension main results: 30 held-out standard benchmarks (1,200 test states, 18,000 branches) | `EXT/table_ext_raw_gain_scorers.csv`, `EXT/table_ext_cost_normalized_scorers.csv`, `EXT/table_ext_transition_errors.csv`, `EXT/table_ext_paired_contrasts.csv` (+ `EXT/ext_analysis.json`) | `experiments/ext_standard_jssp/code/analyze_ext.py`; independent: `verify_ext_replay.py` |
-| Table 12 | Extension split-repeat sample-winner diagnostics (both targets/directions) | `EXT/table_ext_split_repeat_diagnostics.csv` | `experiments/ext_standard_jssp/code/analyze_ext.py`; independent: `verify_ext_replay.py` |
-| Table 13 | Actual critical-block action intensity (decodes, accepted moves) | `AN/tabu_instance_metrics.csv`, `AN/tabu_final_data_audit.json` (`cost_totals`) | `scripts/audit_fp_decision_collection.py`; `scripts/analyze_fp_decision_study.py` |
-| Table 14 | Fixed-action returns: raw vs per decoder request | `ART/a1_cost_normalized_gain.json` | `scripts/revision_response_analysis.py` |
-| Table 15 | Scorers refitted on per-request target (dev-only) | `ART/a1b_cost_normalised_refit.json` | `scripts/revision_response_analysis.py` |
+| Table 1 | Hypotheses and scope | `EXP/design.json` (`hypotheses`); narrative | `scripts/prepare_fp_decision_study.py` (frozen design) |
+| Table 2 | Critical-block representations A–E, D_random (widths) | `EXP/design.json` (`second_solver_models`); `scripts/fp_decision_models.py` | `scripts/fp_decision_models.py`; `scripts/audit_fp_decision_span.py` |
+| Table 3 | Data stages / cohort provenance | `AN/history_final_cohorts.csv`; `AN/tabu_final_analysis.json`; `EXT/ext_analysis.json`; this README | `scripts/analyze_fp_decision_study.py`; `EXT/../code/analyze_ext.py` |
+| Table 4 | Prespecified selected-gain contrasts (primary family, Holm) | `AN/primary_results.json`; `AN/original_final_analysis.json`; `AN/tabu_final_analysis.json` | `scripts/analyze_fp_decision_study.py`; replay `scripts/verify_fp_decision_statistics.py` |
+| Table 5 | Stage-1 arm results (frozen + tuned + RFF scorers) | `AN/tabu_final_analysis.json`; `ART/a2_tuned_ridge_nonlinear.json`; `ART/a2b_tuned_choice_counts.json` | `scripts/analyze_fp_decision_study.py`; `scripts/revision_response_analysis.py` |
+| Table 6 | Supporting historical closed-loop VND-trigger comparison (10 OR-Library/Taillard benchmarks × 20 paired seeds, 800 runs, 30,000 queries/run) | `results/trigger_controlled_20runs/summary.json` (+ `per_instance.csv`, `events.csv`, `protocol.json`, run JSONs) | `run_trigger_comparison.py`; `analyze_trigger_comparison.py`; replay `scripts/verify_all.py` |
+| Table 7 | Two-stage attribution funnel (genetic/memetic + independent critical-block stacks) | `AN/history_final_dynamics_effects.csv`; `AN/history_final_selected_gain_effects.csv`; `AN/primary_results.json`; `AN/tabu_final_analysis.json`; `EXT/ext_analysis.json` | narrative summary; every cell traceable to the listed analyses |
+| Table 8 | Stage-2 extension: 4 scorers × 2 targets (30 held-out benchmarks, 1,200 test states, 18,000 branches) | `EXT/table_ext_raw_gain_scorers.csv`; `EXT/table_ext_cost_normalized_scorers.csv`; `EXT/table_ext_paired_contrasts.csv` | `experiments/ext_standard_jssp/code/analyze_ext.py`; replay `verify_ext_replay.py` |
+| Table 9 | Stage-2 split-repeat sample-winner diagnostics | `EXT/table_ext_split_repeat_diagnostics.csv`; `EXT/ext_analysis.json` | `experiments/ext_standard_jssp/code/analyze_ext.py`; `verify_ext_replay.py` |
+| Table 10 | Action intensity + fixed-action returns (12,000 Stage-1 final branches; raw and per-request) | `AN/tabu_final_analysis.json` (costs); `AN/tabu_final_data_audit.json` (`cost_totals`); `ART/a1_cost_normalized_gain.json` | `scripts/audit_fp_decision_collection.py`; `scripts/revision_response_analysis.py` |
+| Table 11 | Four-point evaluation checklist for offline data-driven AOS | synthesis of Tables 4–10 and the ART diagnostics | narrative; every cell traceable to the frozen analyses |
 
-Extension supporting tables (supplementary): `EXT/table_ext_per_size_descriptives.csv` (per-size
-stratification), `EXT/table_ext_paired_contrasts.csv` (all 72 paired contrasts incl. arm-vs-best-fixed),
-`EXT/table_ext_dev_loocv.csv` (full dev LOOCV grids), `EXT/ext_analysis.json` (machine-readable master),
-`EXT/ext_predictions.csv`, `EXT/ext_state_decisions.csv`, `EXT/ext_instance_metrics.csv`.
-Historical-cohort supporting tables: `AN/history_*.csv` and `TAB/history_*.csv` (editable copies).
+### Main figures
 
-*Numbering note:* numbers follow the **finalized manuscript (DOCX, 2026-11-20)**: Tables 1–15 and
-Figures 1–8. The workspace Markdown/LaTeX snapshot (Nov 19) uses an older order; if your copy
-numbers items differently, match by content — each row names the exact artifact. Figure file
-names `fig6_independent_repeat_winners` and `fig7_action_window` retain legacy builder indices
-and correspond to manuscript **Figures 7 and 8** respectively (byte-identical to the DOCX embeds).
+Official files live in `projects/submission/fp_decision_study/figures/` and are **byte-identical
+to the submitted manuscript's embedded images** (`word/media/image1…image8`); see
+`figures/PROVENANCE.md` for SHA256s. The listed builders regenerate the same panels from the
+frozen sources; `scripts/build_nature_final_figures_2_7_8.py` produces the Nature-style renderings
+of Figures 2, 7, 8 (read-only; means and CIs plotted verbatim). The official files are the
+authors' final revision exports of those renderings.
 
-### Figures
-
-| Paper item | File (PNG/PDF/SVG) | Data source | Plotting script |
+| Paper item | Official file | Data source | Plotting script |
 |---|---|---|---|
-| Figure 1 | `fig1_overview_architecture` | study design (schematic) | `scripts/build_fp_overview_figure.py` |
-| Figure 2 | `fig2_transition_errors` | `AN/tabu_transition_errors.csv`, `AN/original_final_analysis.json` | `scripts/build_fp_decision_figures_v2.py` |
-| Figure 3 | `fig3_primary_decision_contrasts` | `AN/primary_results.json` | `scripts/build_fp_decision_figures_v2.py` |
-| Figure 4 | `fig4_scorer_sensitivity` | `ART/a2_tuned_ridge_nonlinear.json`, `ART/a1b_cost_normalised_refit.json` | `scripts/build_fp_fig4_fig5.py` |
-| Figure 5 | `fig5_choices_and_scope` — CB gain-policy action distributions + descriptive D−B by size | `ART/a2b_tuned_choice_counts.json`, `ART/a1_cost_normalized_gain.json`, `ART/a4_per_scale_statistics.json` | `scripts/build_fp_fig4_fig5.py` |
-| Figure 6 | `EXT/fig_ext_summary.png/pdf` (1×3 panels); manuscript master (2×2): `figures/manuscript_current/fig6_ext_summary.png` | `EXT/table_ext_raw_gain_scorers.csv`, `table_ext_cost_normalized_scorers.csv`, `table_ext_split_repeat_diagnostics.csv`, `table_ext_transition_errors.csv` | `experiments/ext_standard_jssp/code/plot_ext_summary.py` (amendment 003 = cosmetic legend fix) |
-| Figure 7 | `fig6_independent_repeat_winners` (legacy file index; = DOCX `image7`) | `results/fp_decision_study/tabu/final/` raw + frozen historical constants (traceable to `AN/history_final_repeat_effects.csv`) | `scripts/build_fp_decision_figures_v2.py` (emits `fig5_independent_repeat_winners`, renamed) |
-| Figure 8 | `fig7_action_window` (legacy file index; = DOCX `image8`) | `AN/figure_source_data.json` + frozen historical constants (traceable to `AN/history_final_matched_window_effects.csv`) | `scripts/build_fp_decision_figures_v2.py` (emits `fig6_action_window`, renamed) |
+| Figure 1 | `Figure1.jpeg` | study design (schematic) | `scripts/build_fp_overview_figure.py` |
+| Figure 2 | `Figure2.png` | `AN/original_final_analysis.json` (dynamics); `AN/tabu_final_analysis.json` (dynamics); `AN/tabu_transition_errors.csv` | `scripts/build_fp_decision_figures_v2.py`; `scripts/build_nature_final_figures_2_7_8.py` |
+| Figure 3 | `Figure3.png` | `AN/primary_results.json` | `scripts/build_fp_decision_figures_v2.py` |
+| Figure 4 | `Figure4.png` | `ART/a2_tuned_ridge_nonlinear.json`; `ART/a1b_cost_normalised_refit.json` | `scripts/build_fp_fig4_fig5.py` |
+| Figure 5 | `Figure5.png` | `ART/a2b_tuned_choice_counts.json`; `ART/a1_cost_normalized_gain.json`; `ART/a4_per_scale_statistics.json` | `scripts/build_fp_fig4_fig5.py` |
+| Figure 6 | `Figure6.png` | `EXT/table_ext_raw_gain_scorers.csv`; `EXT/table_ext_cost_normalized_scorers.csv`; `EXT/table_ext_paired_contrasts.csv` | `experiments/ext_standard_jssp/code/plot_ext_summary.py` |
+| Figure 7 | `Figure7.png` | `results/fp_decision_study/tabu/final/` raw; `AN/tabu_final_analysis.json`; `AN/history_audit.json` (historical panel); Release tarball `historical_raw_fp_empirical_repeatability_development.tar.gz` | `scripts/build_fp_decision_figures_v2.py`; `scripts/build_nature_final_figures_2_7_8.py`; `scripts/fp_empirical_repeatability.py`; `scripts/analyze_fp_empirical_repeatability.py` |
+| Figure 8 | `Figure8.png` | `AN/history_final_matched_window_effects.csv`; `AN/figure_source_data.json` | `scripts/build_fp_decision_figures_v2.py`; `scripts/build_nature_final_figures_2_7_8.py` |
 
-The renderings embedded in the current manuscript (overview, scorer sensitivity, choices/scope,
-and the 2×2 extension summary) are archived byte-identically in
-`projects/submission/fp_decision_study/figures/manuscript_current/` — see its `PROVENANCE.md` for
-SHA256s and the DOCX media-part correspondence. The shipped builders reproduce the earlier
-vector-based renderings from the frozen tables; all panel data remains shipped.
+### Supplementary material (S1–S8)
 
-Figure files `fig1`–`fig7` live in `projects/submission/fp_decision_study/figures/` (`fig1/4/5`
-also in `AN/figures/`); the extension figure (manuscript Figure 6) lives in `EXT/`. Regenerate
-**all eight** with final naming:
+| Supplement item | Content | Exact data artifact(s) | Regeneration / verification script |
+|---|---|---|---|
+| S1 | Scope comparison with closest prior art | narrative (related work) | — |
+| S2 / Table S1 | Out-of-instance state-transition prediction errors, new final 20 (both stacks) | `AN/original_final_analysis.json`; `AN/tabu_final_analysis.json`; official spreadsheet `supplementary/Table_S1.xlsx` | `scripts/analyze_fp_decision_study.py`; `scripts/verify_fp_decision_statistics.py` |
+| S3 / Table S2 | Per-scale descriptives | `ART/a4_per_scale_statistics.json`; `AN/figure_source_data.json`; `supplementary/Table_S2.xlsx` | `scripts/revision_response_analysis.py` |
+| S3 / Table S2b | Full 20-instance primary contrasts + leave-one-instance-out means | `AN/primary_results.json`; `AN/original_final_analysis.json`; `AN/tabu_final_analysis.json` | `scripts/analyze_fp_decision_study.py`; `scripts/verify_fp_decision_analysis_independent.py` |
+| S3 / Table S2c | Instance identities and generation seeds | `EXP/instances.json` | `scripts/prepare_fp_decision_study.py` |
+| S4 / Tables S4a–b | Five-repeat action statistics (critical-block stack) | `TAB/tabu_predictions.csv`; `TAB/tabu_paired_action_differences.csv` | `scripts/analyze_fp_decision_study.py` (exports); aggregation in the supplement |
+| S5 / Tables S5a–b | Neutral-trajectory outcomes and coverage limits | `TAB/new_neutral_trajectory_outcomes.csv`; `AN/original_final_data_audit.json`; `AN/tabu_final_data_audit.json` | frozen export of `results/fp_decision_study/{original,tabu}/final/` raw; `scripts/audit_fp_decision_collection.py` |
+| S6 / Tables S6a–g | Stage-2 full tables (24-cell scorer grids, per-size + GBDT D−B, all 8 contrast families, split-repeat, transition errors) | `EXT/table_ext_*.csv`; `EXT/ext_analysis.json` | `experiments/ext_standard_jssp/code/analyze_ext.py`; `verify_ext_replay.py`; `verify_ext_schedules.py` |
+| S7 / Tables S7a–d | Lock manifests, seeds, verification gates, replay commands | `EXP/design.json`; `EXP/final_lock.json`; `EXP/tabu_fit_receipt.json`; `EXT/manifest_lock.json`; `EXT/verification_*.json`; `AN/*_audit.json` | `scripts/verify_all.py`; `scripts/audit_fp_decision_collection.py`; `EXT/../code/verify_ext_*.py` |
+| S8 / Table S3 | Cost-normalized retraining (matches Figure 4(b)) | `ART/a1b_cost_normalised_refit.json`; `supplementary/Table_S3.xlsx` | `scripts/revision_response_analysis.py`; `scripts/build_fp_fig4_fig5.py` |
+| S8 / Tables S8a–b | Tuned ridge/RFF diagnostics; dominance shift under cost normalization | `ART/a2_tuned_ridge_nonlinear.json`; `ART/a2b_tuned_choice_counts.json`; `ART/a1_cost_normalized_gain.json` | `scripts/revision_response_analysis.py` |
 
-```bash
-python scripts/regenerate_figures.py
-```
+The three `.xlsx` files are the official formatted supplementary tables; author-identifying
+document metadata was stripped before upload and the sheet data is untouched.
 
 ## 5. One-command independent verification
 
@@ -190,7 +191,8 @@ This runs, **from inside this repository**, using only numpy + stdlib:
    (initialization fingerprints, 30,000-query budgets, VND sub-budgets, event gain accounting) and
    recomputes every statistic from the saved run JSONs; regenerated `summary.json`, CSVs and
    `report.md` must match the shipped receipts byte-for-byte.
-6. **Repository hygiene** — max file < 50 MB, total < 300 MB, file count, forbidden-pattern scan.
+6. **Repository hygiene** — max file < 50 MB, total < 300 MB, file count, forbidden-pattern scan
+   (no credentials, no personal names/emails, no local absolute paths).
 
 Because the shipped receipts are **write-once** (each verifier refuses to overwrite an existing
 audit), `verify_all.py` executes everything in a fresh temporary sandbox copy and compares each
@@ -201,19 +203,20 @@ modified. Expected final line:
 TOTAL: 25 PASS / 0 FAIL        # 26 with --figures; 29 with --historical; 30 with both
 ```
 
-Useful variants:
+Useful variants (identical to supplement S7.4):
 
 ```bash
 python scripts/verify_all.py --quick       # locks + hygiene only (seconds)
-python scripts/verify_all.py --figures     # additionally regenerate all 8 figures in the sandbox
+python scripts/verify_all.py --figures     # additionally regenerate all figures in the sandbox
 python scripts/verify_all.py --historical  # also audit the extracted historical raw archives (§6)
 python scripts/verify_all.py --report verification_summary.json
 ```
 
 One documented provenance exception is checked explicitly (not skipped): the frozen independent
-review receipt records the hash of the *pre-revision* 2026-10-26 study document; the shipped
-document is the revised version. The mismatch must equal exactly the documented revision pair,
-and all six other reviewed hashes must match — see `RELEASE_NOTES.md` §5.
+review receipt (`AN/independent_analysis_review_replay.json`) records seven reviewed hashes, one
+of which belongs to a pre-revision prose study document. That private draft is **not
+redistributed**; the verifier checks the six retained reviewed hashes and asserts that the
+seventh mismatch is exactly the documented revision pair recorded in the receipt.
 
 ## 6. Large historical raw archives (GitHub Releases / Zenodo)
 
@@ -251,9 +254,8 @@ re-decoded and re-scored. `--historical` runs the cohort-specific independent au
 `scripts/audit_fp_action_data.py` (fp_v2 development/validation),
 `scripts/analyze_fp_empirical_repeatability.py` (supplementary repeats; endpoint-independent DAG
 audit of all new branches) and `scripts/audit_fp_empirical_confirmation.py` (former final-20
-confirmation, against the frozen model bundle). Historical source fingerprints are preserved in
-`AN/history_final_sources.csv` (relative paths + SHA256; the referenced historical context
-documents are private drafts and are not redistributed — see `RELEASE_NOTES.md`).
+confirmation, against the frozen model bundle). Historical context documents referenced by the
+old source manifests are private drafts and are not redistributed.
 
 ## 7. Full re-collection (optional; not required for verification)
 
@@ -283,7 +285,9 @@ Taillard mirror download, reproducible via `code/prepare_benchmarks.py` with fin
   techniques," GSIA, Carnegie Mellon University. Distributed via the **OR-Library**:
   J. E. Beasley (1990), "OR-Library: distributing test problems by electronic mail,"
   *J. Oper. Res. Soc.* 41(11):1069–1072. <http://people.brunel.ac.uk/~mastjjb/jeb/info.html>
-  Local snapshot: `jobshop1.txt` (SHA256 in `EXT/manifest_lock.json`).
+  Local snapshot: `jobshop1.txt` (SHA256 in `EXT/manifest_lock.json`). The e-mail addresses
+  embedded in that file are the **public OR-Library maintainer contacts** shipped with the
+  official benchmark text; they are retained verbatim because the file is hash-locked.
 - **Taillard instances** (`ta01–ta30`): É. Taillard (1993), "Benchmarks for basic scheduling
   problems," *EJOR* 64(2):278–285. Obtained from the public **JSPLIB mirror**
   [`tamy0612/JSPLIB`](https://github.com/tamy0612/JSPLIB) (`instances/` directory); per-file URLs,
@@ -317,11 +321,22 @@ Taillard mirror copies if you prefer to fetch them yourself.
 Source code: **MIT** (`LICENSE`). Study-generated data/outputs: **CC-BY-4.0** (see `LICENSE` scope
 note 2). Third-party benchmark texts: original provenance retained (scope note 3).
 
-## 11. Important caveats
+## 11. Important caveats and provenance notes
 
 - All locks are **local timestamp + SHA256 freezes**, not externally witnessed preregistration.
 - Receipts are write-once; verification runs in a sandbox (§5). Three engineering-only post-lock
   amendments are recorded with before/after hashes (`EXT/code_amendment_001–003.json`).
-- Sanitization exceptions required by hash-lock integrity are documented in `RELEASE_NOTES.md` §4–5.
+- **Privacy:** no personal names, private e-mails, credentials or local absolute paths are
+  shipped. Supplementary spreadsheets had author metadata stripped (sheet data untouched). The
+  only e-mails present are the public OR-Library maintainer contacts inside the hash-locked
+  `jobshop1.txt` (§8).
+- **Historical trigger cohort (Table 6):** `protocol.json` locks 2026-10-17 versions of four
+  solver modules that are not preserved in any available source snapshot; the cohort is therefore
+  verified at the saved-log + byte-identical replay level (§5 step 5). A same-day second-environment
+  rerun (different Python/numpy) produced identical scientific content (only wall-clock fields
+  differ), providing cross-environment determinism evidence; that duplicate is not redistributed.
+- **Official figures:** the eight shipped figure files are the authors' final revision exports,
+  byte-identical to the submitted DOCX embeds; the shipped builders (including the Nature-style
+  builder for Figures 2/7/8) regenerate the same panels from the frozen sources.
 - Offline detached-branch outcomes are **not** online policy performance; synthetic gaps are
   relative to a workload lower bound, not known optima; failure to reject is not equivalence.
